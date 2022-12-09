@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="900">
     <Grid Margin="0,0,0,5">
-        <Button x:Name="Hokkaido" Content="北海道" HorizontalAlignment="Left" Height="117" Margin="688,30,0,0" VerticalAlignment="Top" Width="116" Background="Green" Foreground="White" Click="Button_Click"/>
+        <Button Content="北海道" HorizontalAlignment="Left" Height="117" Margin="688,30,0,0" VerticalAlignment="Top" Width="116" Background="Green" Foreground="White" Click="Button_Click"/>
         <Button Content="青森" HorizontalAlignment="Left" Height="42" Margin="664,161,0,0" VerticalAlignment="Top" Width="42" Background="Green" Foreground="White"/>
         <Button Content="秋田" HorizontalAlignment="Left" Height="42" Margin="620,204,0,0" VerticalAlignment="Top" Width="43" Background="Green" Foreground="White"/>
         <Button Content="山形" HorizontalAlignment="Left" Height="42" Margin="620,248,0,0" VerticalAlignment="Top" Width="43" Background="Green" Foreground="White"/>
