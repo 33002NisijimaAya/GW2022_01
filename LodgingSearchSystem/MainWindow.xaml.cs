@@ -21,10 +21,8 @@ namespace LodgingSearchSystem {
         public MainWindow() {
             InitializeComponent();
 
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e) {
-            
+            Uri uri = new Uri("Japan.xaml", UriKind.Relative);
+            frame.Source = uri;
         }
     }
 }
