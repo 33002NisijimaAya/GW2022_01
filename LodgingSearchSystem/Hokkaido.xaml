@@ -9,8 +9,9 @@
       Title="Hokkaido">
 
     <Grid>
-        <Image HorizontalAlignment="Left" Height="500" Margin="350,40,0,0" VerticalAlignment="Top" Width="500" Source="Hokkaido_x.gif"/>
+        <Image Margin="323,10,10,23" Source="Image2.png" Stretch="Fill" Width="567"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="37" Margin="44,86,0,0" VerticalAlignment="Top" Width="210" BorderBrush="Transparent" Background="Transparent" Foreground="#DD803737" >
 
+        </Button>
     </Grid>
-
 </Page>
