@@ -26,6 +26,7 @@ namespace LodgingSearchSystem {
         }
        
         private void btHokkaido_Click(object sender, RoutedEventArgs e) {
+            
             var hokkaido = new Hokkaido();
             NavigationService.Navigate(hokkaido);
 
@@ -97,9 +98,18 @@ namespace LodgingSearchSystem {
         }
 
         private void btGet_Click(object sender, RoutedEventArgs e) {
-            
+            if (cbPrefecture.Text == "北海道") {
+                var hokkaido = new Hokkaido();
+                NavigationService.Navigate(hokkaido);
+            }else if(cbPrefecture.Text == "青森県") {
+                var Aomori = new Aomori();
+                NavigationService.Navigate(Aomori);
+            }
         }
 
-        
+        private void btAomori_Click(object sender, RoutedEventArgs e) {
+            var Aomori = new Aomori();
+            NavigationService.Navigate(Aomori);
+        }
     }
 }

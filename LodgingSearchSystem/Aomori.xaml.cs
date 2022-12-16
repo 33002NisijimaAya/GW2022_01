@@ -15,15 +15,15 @@ using System.Windows.Shapes;
 
 namespace LodgingSearchSystem {
     /// <summary>
-    /// Hokkaido.xaml の相互作用ロジック
+    /// Aomori.xaml の相互作用ロジック
     /// </summary>
-    public partial class Hokkaido : Page {
-        public Hokkaido() {
+    public partial class Aomori : Page {
+        public Aomori() {
             InitializeComponent();
         }
 
         private void Grid_Loaded(object sender, RoutedEventArgs e) {
-            wbHokkaido.NavigateToString(@"<html><body>test</body></html>");
+
         }
     }
 }
