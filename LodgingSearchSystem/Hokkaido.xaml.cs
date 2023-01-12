@@ -28,13 +28,20 @@ namespace LodgingSearchSystem {
 
         private void btsupporo_Click(object sender, RoutedEventArgs e)
         {
-
+            var sapporo = new sapporo();
+            NavigationService.Navigate(sapporo);
         }
 
         private void btZyozankei_Click(object sender, RoutedEventArgs e)
         {
-            var zyozankei = new Zyozankei();
-            NavigationService.Navigate(zyozankei);
+            HotelSearch();
         }
+
+        private void HotelSearch()
+        {
+            var hotelShow = new hotelShow();
+            NavigationService.Navigate(hotelShow);
+        }
+
     }
 }

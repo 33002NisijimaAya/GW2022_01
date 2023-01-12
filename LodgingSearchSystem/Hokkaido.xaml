@@ -9,197 +9,162 @@
       Title="Hokkaido">
 
     <Grid Loaded="Grid_Loaded">
-        <Grid HorizontalAlignment="Left" Height="540" VerticalAlignment="Top" Width="267" Margin="0,10,0,0">
-
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-
-            <Button x:Name="btsupporo" Content="▶札幌" Grid.Row="1" Background="Transparent" BorderBrush="Transparent" Foreground="Blue" Grid.ColumnSpan="2" Click="btsupporo_Click">
-                <Button.Style>
-                    <Style TargetType="Button">
-                        <Style.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
-                </Button.Style>
-            </Button>
-            <Button x:Name="btZyozankei" Content="▶定山渓" Grid.Row="2" Background="Transparent" BorderBrush="Transparent" Foreground="Blue" Grid.ColumnSpan="2" Click="btZyozankei_Click">
-                <Button.Style>
-                    <Style TargetType="Button">
-                        <Style.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
-                </Button.Style>
-            </Button>
-            <Button Content="▶稚内・留萌・利尻・礼文" Grid.Row="3" Background="Transparent" BorderBrush="Transparent" Foreground="Blue" Grid.ColumnSpan="2">
-                <Button.Style>
-                    <Style TargetType="Button">
-                        <Style.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
-                </Button.Style>
-            </Button>
-            <Button Content="▶網走・紋別・北見・知床" Grid.Row="4" Background="Transparent" BorderBrush="Transparent" Foreground="Blue" Grid.ColumnSpan="2">
-                <Button.Style>
-                    <Style TargetType="Button">
-                        <Style.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
-                </Button.Style>
-            </Button>
-            <Button Content="▶釧路・阿寒・川湯・根室" Grid.Row="5" Background="Transparent" BorderBrush="Transparent" Foreground="Blue" Grid.ColumnSpan="2">
-                <Button.Style>
-                    <Style TargetType="Button">
-                        <Style.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
-                </Button.Style>
-            </Button>
-            <Button Content="▶帯広・十勝" Grid.Row="6" Background="Transparent" BorderBrush="Transparent" Foreground="Blue" Grid.ColumnSpan="2">
-                <Button.Style>
-                    <Style TargetType="Button">
-                        <Style.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
-                </Button.Style>
-            </Button>
-            <Button Content="▶日高・えりも" Grid.Row="7" Background="Transparent" BorderBrush="Transparent" Foreground="Blue" Grid.ColumnSpan="2">
-                <Button.Style>
-                    <Style TargetType="Button">
-                        <Style.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
-                </Button.Style>
-            </Button>
-            <Button Content="▶富良野・美瑛・トマム" Grid.Row="8" Background="Transparent" BorderBrush="Transparent" Foreground="Blue" Grid.ColumnSpan="2">
-                <Button.Style>
-                    <Style TargetType="Button">
-                        <Style.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
-                </Button.Style>
-            </Button>
-            <Button Content="▶旭川・層雲峡・旭岳" Grid.Row="9" Background="Transparent" BorderBrush="Transparent" Foreground="Blue" Grid.ColumnSpan="2">
-                <Button.Style>
-                    <Style TargetType="Button">
-                        <Style.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
-                </Button.Style>
-            </Button>
-            <Button Content="▶千歳・支笏・苫小牧・滝川・夕張・空知" Grid.Row="10" Background="Transparent" BorderBrush="Transparent" Foreground="Blue" Grid.ColumnSpan="2">
-                <Button.Style>
-                    <Style TargetType="Button">
-                        <Style.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
-                </Button.Style>
-            </Button>
-            <Button Content="▶小樽・キロロ・積丹・余市" Grid.Row="11" Background="Transparent" BorderBrush="Transparent" Foreground="Blue" Grid.ColumnSpan="2">
-                <Button.Style>
-                    <Style TargetType="Button">
-                        <Style.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
-                </Button.Style>
-            </Button>
-            <Button Content="▶ルスツ・ニセコ・倶知安" Grid.Row="12" Background="Transparent" BorderBrush="Transparent" Foreground="Blue" Grid.ColumnSpan="2">
-                <Button.Style>
-                    <Style TargetType="Button">
-                        <Style.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
-                </Button.Style>
-            </Button>
-            <Button Content="▶函館・湯の川・大沼・奥尻" Grid.Row="13" Background="Transparent" BorderBrush="Transparent" Foreground="Blue" Grid.ColumnSpan="2">
-                <Button.Style>
-                    <Style TargetType="Button">
-                        <Style.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
-                </Button.Style>
-            </Button>
-            <Button Content="▶洞爺・室蘭・登別" Grid.Row="14" Background="Transparent" BorderBrush="Transparent" Foreground="Blue" Grid.ColumnSpan="2">
-                <Button.Style>
-                    <Style TargetType="Button">
-                        <Style.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
-                </Button.Style>
-            </Button>
-
-        </Grid>
-        <Image Margin="326,10,-18.6,-15.6" Source="hokkaido.png" Stretch="Fill"/>
-        <RadioButton Content="稚内・留萌・利尻・礼文" HorizontalAlignment="Left" Margin="561,93,0,0" VerticalAlignment="Top" Background="#FF0117FF" Foreground="Black" FontSize="16"/>
-        <RadioButton HorizontalAlignment="Left" Margin="603,215,0,0" VerticalAlignment="Top" Background="#FF0117FF" Foreground="Black" FontSize="16" Height="23" Width="22"/>
-
-        <RadioButton Content="釧路・阿寒・川湯・根室" HorizontalAlignment="Left" Margin="801,312,0,0" VerticalAlignment="Top" Background="#FF0117FF" Foreground="Black" FontSize="16"/>
-        <RadioButton Content="帯広・十勝" HorizontalAlignment="Left" Margin="681,363,0,0" VerticalAlignment="Top" Background="#FF0117FF" Foreground="Black" FontSize="16"/>
-        <RadioButton Content="富良野・美瑛・トマム" HorizontalAlignment="Left" Margin="603,330,0,0" VerticalAlignment="Top" Background="#FF0117FF" Foreground="Black" FontSize="16"/>
-        <RadioButton Content="日高・えりも" HorizontalAlignment="Left" Margin="630,395,0,0" VerticalAlignment="Top" Background="#FF0117FF" Foreground="Black" FontSize="16"/>
-        <RadioButton Content="千歳・支笏・苫小牧・滝川・夕張・空知" HorizontalAlignment="Left" Margin="561,284,0,0" VerticalAlignment="Top" Background="#FF0117FF" Foreground="Black" FontSize="16"/>
-        <RadioButton Content="札幌" HorizontalAlignment="Left" Margin="510,312,0,0" VerticalAlignment="Top" Background="#FF0117FF" Foreground="Black" FontSize="16"/>
-        <RadioButton Content="定山渓" HorizontalAlignment="Left" Margin="470,349,0,0" VerticalAlignment="Top" Background="#FF0117FF" Foreground="Black" FontSize="16"/>
-        <RadioButton Content="洞爺・室蘭・登別" HorizontalAlignment="Left" Margin="470,391,0,0" VerticalAlignment="Top" Background="#FF0117FF" Foreground="Black" FontSize="16"/>
-        <RadioButton HorizontalAlignment="Left" Margin="432,312,0,0" VerticalAlignment="Top" Background="#FF0117FF" Foreground="Black" FontSize="16" RenderTransformOrigin="0.439,0.655"/>
-        <RadioButton Content="旭川・層雲峡・旭岳" HorizontalAlignment="Left" Margin="414,363,0,0" VerticalAlignment="Top" Background="#FF0117FF" Foreground="Black" FontSize="16" Visibility="Collapsed"/>
-        <RadioButton HorizontalAlignment="Left" Margin="414,368,0,0" VerticalAlignment="Top" Background="#FF0117FF" Foreground="Black" FontSize="16" RenderTransformOrigin="0.5,0.5"/>
-        <Label Content="ルスツ・ニセコ・倶知安" HorizontalAlignment="Left" Height="31" Margin="272,355,0,0" VerticalAlignment="Top" Width="145" Foreground="Black" FontSize="16"/>
-        <RadioButton Content="函館・湯の川・大沼・奥尻" HorizontalAlignment="Left" Margin="414,437,0,0" VerticalAlignment="Top" Background="#FF0117FF" Foreground="Black" FontSize="16"/>
-        <Label Content="小樽・キロロ・積丹・余市" HorizontalAlignment="Left" Height="34" Margin="280,282,0,0" VerticalAlignment="Top" Width="170" FontSize="16"/>
-        <Label Content="旭川・層雲峡・旭岳" HorizontalAlignment="Left" Margin="470,194,0,0" VerticalAlignment="Top" Height="31" Width="134" FontSize="16"/>
-        <RadioButton Content="網走・紋別・北見・知床" HorizontalAlignment="Left" Margin="687,215,0,0" VerticalAlignment="Top" FontSize="16" Background="#FF0117FF"/>
 
 
 
+        <Image Margin="92,9,-32,25" Source="unnamed.png" Stretch="Fill"/>
 
-
-
-
-
-
+        <Button x:Name="btsupporo" Content="▶札幌" Background="Transparent" BorderBrush="Transparent" Foreground="Blue" Click="btsupporo_Click" Margin="222,306,676,219">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button x:Name="btZyozankei" Content="▶定山渓" Background="Transparent" BorderBrush="Transparent" Foreground="Blue" Click="btZyozankei_Click" Margin="136,320,758,204">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="▶稚内・留萌・利尻・礼文" Background="Transparent" BorderBrush="Transparent" Foreground="Blue" Margin="322,64,472,462">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="▶網走・紋別・北見・知床" Background="Transparent" BorderBrush="Transparent" Foreground="Blue" Margin="436,153,356,374">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="▶釧路・阿寒・川湯・根室" Background="Transparent" BorderBrush="Transparent" Foreground="Blue" Margin="580,284,220,238" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.033"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="▶帯広・十勝" Background="Transparent" BorderBrush="Transparent" Foreground="Blue" Margin="474,306,392,224">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="▶日高・えりも" Background="Transparent" BorderBrush="Transparent" Foreground="Blue" Margin="378,395,493,131">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="▶富良野・美瑛・トマム" Background="Transparent" BorderBrush="Transparent" Foreground="Blue" Margin="378,337,440,184">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="▶旭川・層雲峡・旭岳" Background="Transparent" BorderBrush="Transparent" Foreground="Blue" Margin="378,195,448,333">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="▶千歳・支笏・苫小牧・滝川・夕張・空知" Background="Transparent" BorderBrush="Transparent" Foreground="Blue" Margin="166,252,536,270">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="▶小樽・キロロ・積丹・余市" Background="Transparent" BorderBrush="Transparent" Foreground="Blue" Margin="10,363,782,160">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="▶ルスツ・ニセコ・倶知安"  Background="Transparent" BorderBrush="Transparent" Foreground="Blue" Margin="120,400,701,122">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="▶函館・湯の川・大沼・奥尻"  Background="Transparent" BorderBrush="Transparent" Foreground="Blue" Margin="166,438,642,82">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="▶洞爺・室蘭・登別" Background="Transparent" BorderBrush="Transparent" Foreground="Blue" Margin="236,352,604,160">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        
     </Grid>
+
+
+
 </Page>

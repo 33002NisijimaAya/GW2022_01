@@ -13,21 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace LodgingSearchSystem {
+namespace LodgingSearchSystem
+{
     /// <summary>
-    /// MainWindow.xaml の相互作用ロジック
+    /// sapporo.xaml の相互作用ロジック
     /// </summary>
-    public partial class MainWindow : Window {
-        public MainWindow() {
-            InitializeComponent();
-
-            Uri uri = new Uri("Japan.xaml", UriKind.Relative);
-            frame.Source = uri;
-        }
-
-        private void frame_Navigated(object sender, NavigationEventArgs e)
+    public partial class sapporo : Page
+    {
+        public sapporo()
         {
-
+            InitializeComponent();
         }
     }
 }

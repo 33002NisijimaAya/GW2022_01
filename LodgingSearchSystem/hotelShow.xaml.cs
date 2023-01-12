@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -13,19 +14,21 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace LodgingSearchSystem {
+namespace LodgingSearchSystem
+{
     /// <summary>
-    /// MainWindow.xaml の相互作用ロジック
+    /// hotelShow.xaml の相互作用ロジック
     /// </summary>
-    public partial class MainWindow : Window {
-        public MainWindow() {
-            InitializeComponent();
+    public partial class hotelShow : Page
+    {
+        WebClient wc;
 
-            Uri uri = new Uri("Japan.xaml", UriKind.Relative);
-            frame.Source = uri;
+        public hotelShow()
+        {
+            InitializeComponent();
         }
 
-        private void frame_Navigated(object sender, NavigationEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
 
         }
