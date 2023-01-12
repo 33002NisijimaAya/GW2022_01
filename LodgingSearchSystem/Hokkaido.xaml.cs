@@ -23,7 +23,18 @@ namespace LodgingSearchSystem {
         }
 
         private void Grid_Loaded(object sender, RoutedEventArgs e) {
-            wbHokkaido.NavigateToString(@"<html><body>test</body></html>");
+            
+        }
+
+        private void btsupporo_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btZyozankei_Click(object sender, RoutedEventArgs e)
+        {
+            var zyozankei = new Zyozankei();
+            NavigationService.Navigate(zyozankei);
         }
     }
 }
