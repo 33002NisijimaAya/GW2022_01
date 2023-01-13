@@ -16,32 +16,13 @@ using System.Windows.Shapes;
 namespace LodgingSearchSystem
 {
     /// <summary>
-    /// Aomori.xaml の相互作用ロジック
+    /// Akita2.xaml の相互作用ロジック
     /// </summary>
-    public partial class Aomori : Page
+    public partial class Akita : Page
     {
-        public Aomori()
+        public Akita()
         {
             InitializeComponent();
-        }
-
-        
-        private void btAkita_Click(object sender, RoutedEventArgs e)
-        {
-            var Akita = new Akita();
-            NavigationService.Navigate(Akita);
-        }
-
-        private void btIwate_Click(object sender, RoutedEventArgs e)
-        {
-            var Iwate = new Iwate();
-            NavigationService.Navigate(Iwate);
-        }
-
-        private void btHokkaido_Click(object sender, RoutedEventArgs e)
-        {
-            var Hokkaido = new Hokkaido();
-            NavigationService.Navigate(Hokkaido);
         }
 
         private void btHome_Click(object sender, RoutedEventArgs e)

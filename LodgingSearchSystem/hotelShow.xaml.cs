@@ -32,5 +32,10 @@ namespace LodgingSearchSystem
         {
 
         }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            string facilitySearch = string.Format("https://app.rakuten.co.jp/services/api/Travel/SimpleHotelSearch/20170426?format=json&largeClassCode=japan&middleClassCode=hokkaido&smallClassCode=jozankei&applicationId=1023910507139864215");
+        }
     }
 }

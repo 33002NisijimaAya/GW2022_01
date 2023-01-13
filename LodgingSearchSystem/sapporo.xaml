@@ -10,7 +10,7 @@
 
     <Grid>
         <Image Margin="175,0,174,0" Source="sapporo_h.gif" Stretch="Fill"/>
-        <Button x:Name="btsupporo" Content="▶札幌・新札幌・琴似" Background="Transparent" BorderBrush="Transparent" Foreground="Blue" Margin="80,89,588,337" >
+        <Button x:Name="btsupporo" Content="▶札幌・新札幌・琴似" Background="Transparent" BorderBrush="Transparent" Foreground="Blue" Margin="21,83,647,343" >
             <Button.Style>
                 <Style TargetType="Button">
                     <Style.Triggers>

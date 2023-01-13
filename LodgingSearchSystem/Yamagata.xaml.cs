@@ -16,18 +16,13 @@ using System.Windows.Shapes;
 namespace LodgingSearchSystem
 {
     /// <summary>
-    /// Zyozankei.xaml の相互作用ロジック
+    /// Yamagata.xaml の相互作用ロジック
     /// </summary>
-    public partial class Zyozankei : Page
+    public partial class Yamagata : Page
     {
-        public Zyozankei()
+        public Yamagata()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

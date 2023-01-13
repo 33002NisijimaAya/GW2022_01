@@ -5,16 +5,12 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:LodgingSearchSystem"
       mc:Ignorable="d" 
-      d:DesignHeight="550" d:DesignWidth="950"
+      d:DesignHeight="600" d:DesignWidth="1000"
       Title="Hokkaido">
 
     <Grid Loaded="Grid_Loaded">
-
-
-
-        <Image Margin="92,9,-32,25" Source="unnamed.png" Stretch="Fill"/>
-
-        <Button x:Name="btsupporo" Content="▶札幌" Background="Transparent" BorderBrush="Transparent" Foreground="Blue" Click="btsupporo_Click" Margin="222,306,676,219">
+        <Image Margin="407,6,10,10" Source="hokkaido.png" Stretch="Fill"/>
+        <Button x:Name="btsupporo" Content="札幌" ToolTip="札幌" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontSize="12" FontWeight="Bold" Margin="686,412,270,166">
             <Button.Style>
                 <Style TargetType="Button">
                     <Style.Triggers>
@@ -24,7 +20,8 @@
                 </Style>
             </Button.Style>
         </Button>
-        <Button x:Name="btZyozankei" Content="▶定山渓" Background="Transparent" BorderBrush="Transparent" Foreground="Blue" Click="btZyozankei_Click" Margin="136,320,758,204">
+        
+        <Button x:Name="btZyozankei" Content="定山渓" ToolTip="定山渓" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontSize="12" FontWeight="Bold" Click="btZyozankei_Click" Margin="550,352,404,225">
             <Button.Style>
                 <Style TargetType="Button">
                     <Style.Triggers>
@@ -34,7 +31,7 @@
                 </Style>
             </Button.Style>
         </Button>
-        <Button Content="▶稚内・留萌・利尻・礼文" Background="Transparent" BorderBrush="Transparent" Foreground="Blue" Margin="322,64,472,462">
+        <Button x:Name="btTinai" Content="稚内" ToolTip="稚内・留萌・利尻・礼文" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontSize="12" FontWeight="Bold" Margin="613,63,335,510">
             <Button.Style>
                 <Style TargetType="Button">
                     <Style.Triggers>
@@ -44,7 +41,7 @@
                 </Style>
             </Button.Style>
         </Button>
-        <Button Content="▶網走・紋別・北見・知床" Background="Transparent" BorderBrush="Transparent" Foreground="Blue" Margin="436,153,356,374">
+        <Button x:Name="btRumoi" Content="留萌" ToolTip="稚内・留萌・利尻・礼文" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontSize="12" FontWeight="Bold" Margin="594,217,347,353">
             <Button.Style>
                 <Style TargetType="Button">
                     <Style.Triggers>
@@ -54,15 +51,7 @@
                 </Style>
             </Button.Style>
         </Button>
-        <Button Content="▶釧路・阿寒・川湯・根室" Background="Transparent" BorderBrush="Transparent" Foreground="Blue" Margin="580,284,220,238" RenderTransformOrigin="0.5,0.5">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.033"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
+        <Button x:Name="btHabasiri" Content="利尻" ToolTip="稚内・留萌・利尻・礼文" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontSize="12" FontWeight="Bold" Margin="550,103,392,470">
             <Button.Style>
                 <Style TargetType="Button">
                     <Style.Triggers>
@@ -72,7 +61,7 @@
                 </Style>
             </Button.Style>
         </Button>
-        <Button Content="▶帯広・十勝" Background="Transparent" BorderBrush="Transparent" Foreground="Blue" Margin="474,306,392,224">
+        <Button x:Name="btRebun" Content="礼文" ToolTip="稚内・留萌・利尻・礼文" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontSize="12" FontWeight="Bold" Margin="550,36,392,537">
             <Button.Style>
                 <Style TargetType="Button">
                     <Style.Triggers>
@@ -82,7 +71,7 @@
                 </Style>
             </Button.Style>
         </Button>
-        <Button Content="▶日高・えりも" Background="Transparent" BorderBrush="Transparent" Foreground="Blue" Margin="378,395,493,131">
+        <Button x:Name="btTunabasi" Content="網走" ToolTip="網走・紋別・北見・知床" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontSize="12" FontWeight="Bold" Margin="815,247,102,327">
             <Button.Style>
                 <Style TargetType="Button">
                     <Style.Triggers>
@@ -92,7 +81,7 @@
                 </Style>
             </Button.Style>
         </Button>
-        <Button Content="▶富良野・美瑛・トマム" Background="Transparent" BorderBrush="Transparent" Foreground="Blue" Margin="378,337,440,184">
+        <Button x:Name="btMombetu" Content="紋別" ToolTip="網走・紋別・北見・知床" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontSize="12" FontWeight="Bold" Margin="703,174,221,393">
             <Button.Style>
                 <Style TargetType="Button">
                     <Style.Triggers>
@@ -102,7 +91,87 @@
                 </Style>
             </Button.Style>
         </Button>
-        <Button Content="▶旭川・層雲峡・旭岳" Background="Transparent" BorderBrush="Transparent" Foreground="Blue" Margin="378,195,448,333">
+        <Button x:Name="btKitami" Content="北見" ToolTip="網走・紋別・北見・知床" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontSize="12" FontWeight="Bold" Margin="764,247,170,322">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button x:Name="btSiretoko" Content="知床" ToolTip="網走・紋別・北見・知床" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontSize="12" FontWeight="Bold" Margin="880,180,50,399">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button x:Name="btKusiro" Content="釧路" ToolTip="釧路・阿寒・川湯・根室" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontSize="12" FontWeight="Bold" Margin="834,327,93,250" RenderTransformOrigin="0.5,0.5">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button x:Name="btNemuro" Content="根室" ToolTip="釧路・阿寒・川湯・根室" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontSize="12" FontWeight="Bold" Margin="909,291,23,284" RenderTransformOrigin="0.5,0.5">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button x:Name="btObihiro" Content="帯広" ToolTip="帯広・十勝" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontSize="12" FontWeight="Bold" Margin="236,177,644,373">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button x:Name="btTokati" Content="十勝" ToolTip="帯広・十勝" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontSize="12" FontWeight="Bold" Margin="443,174,411,353">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="▶日高・えりも" Background="Transparent" BorderBrush="Transparent" Foreground="Blue" Margin="291,190,604,369">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="▶富良野・美瑛・トマム" Background="Transparent" BorderBrush="Transparent" Foreground="Blue" Margin="-150,400,968,121">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="▶旭川・層雲峡・旭岳" Background="Transparent" BorderBrush="Transparent" Foreground="Blue" Margin="-98,227,924,301">
             <Button.Style>
                 <Style TargetType="Button">
                     <Style.Triggers>
@@ -142,7 +211,7 @@
                 </Style>
             </Button.Style>
         </Button>
-        <Button Content="▶函館・湯の川・大沼・奥尻"  Background="Transparent" BorderBrush="Transparent" Foreground="Blue" Margin="166,438,642,82">
+        <Button Content="函館・湯の川・大沼・奥尻"  Background="Transparent" BorderBrush="Transparent" Foreground="Blue" Margin="166,478,644,47">
             <Button.Style>
                 <Style TargetType="Button">
                     <Style.Triggers>
@@ -163,6 +232,10 @@
             </Button.Style>
         </Button>
         
+
+
+
+
     </Grid>
 
 
