@@ -30,5 +30,29 @@ namespace LodgingSearchSystem
             var japan = new Japan();
             NavigationService.Navigate(japan);
         }
+
+        private void btMiyagi_Click(object sender, RoutedEventArgs e)
+        {
+            var Miyagi = new Miyagi();
+            NavigationService.Navigate(Miyagi);
+        }
+
+        private void btIwate_Click(object sender, RoutedEventArgs e)
+        {
+            var Iwate = new Iwate();
+            NavigationService.Navigate(Iwate);
+        }
+
+        private void btAomori_Click(object sender, RoutedEventArgs e)
+        {
+            var Aomori = new Aomori();
+            NavigationService.Navigate(Aomori);
+        }
+
+        private void btYamagata_Click(object sender, RoutedEventArgs e)
+        {
+            var Yamagata = new Yamagata();
+            NavigationService.Navigate(Yamagata);
+        }
     }
 }

@@ -49,5 +49,11 @@ namespace LodgingSearchSystem
             var japan = new Japan();
             NavigationService.Navigate(japan);
         }
+
+        private void btAomori_Click(object sender, RoutedEventArgs e)
+        {
+            var Hotelshow = new HotelShow();
+            NavigationService.Navigate(Hotelshow);
+        }
     }
 }

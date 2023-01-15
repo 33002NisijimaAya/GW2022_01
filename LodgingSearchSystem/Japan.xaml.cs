@@ -69,5 +69,11 @@ namespace LodgingSearchSystem {
             var Yamagata = new Yamagata();
             NavigationService.Navigate(Yamagata);
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            var Miyagi = new Miyagi();
+            NavigationService.Navigate(Miyagi);
+        }
     }
 }

@@ -133,7 +133,7 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Button Content="▶青森　全域" HorizontalAlignment="Left" VerticalAlignment="Top" Width="341" Height="67" Grid.Row="1" Background="Transparent" BorderBrush="Transparent" Foreground="Black"/>
+            <Button x:Name="btAomori" Content="▶青森　全域" HorizontalAlignment="Left" VerticalAlignment="Top" Width="341" Height="67" Grid.Row="1" Background="Transparent" BorderBrush="Transparent" Foreground="Black" Click="btAomori_Click" />
             <Button Content="▶青森・浅虫温泉" HorizontalAlignment="Left" VerticalAlignment="Top" Width="341" Height="67" Grid.Row="2" Background="Transparent" BorderBrush="Transparent" Foreground="Black"/>
             <Button Content="▶津軽半島・五所川原" HorizontalAlignment="Left" VerticalAlignment="Top" Width="341" Height="67" Grid.Row="3" Background="Transparent" BorderBrush="Transparent" Foreground="Black"/>
             <Button Content="▶白神山地・西津軽" HorizontalAlignment="Left" VerticalAlignment="Top" Width="341" Height="67" Grid.Row="4" Background="Transparent" BorderBrush="Transparent" Foreground="Black"/>

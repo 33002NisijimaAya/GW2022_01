@@ -167,7 +167,7 @@
             </Grid>
             <Button x:Name="btAkita" Content="秋田県" HorizontalAlignment="Left" Height="29" Margin="364,173,0,0" VerticalAlignment="Top" Width="109" FontSize="12" Background="White" Foreground="Black" BorderBrush="Transparent" Click="btAkita_Click"/>
             <Button x:Name="btMiyagi" Content="宮城県" HorizontalAlignment="Left" Height="28" Margin="442,502,0,0" VerticalAlignment="Top" Width="96" FontSize="12" Background="White" Foreground="Black" BorderBrush="Transparent" Click="btMiyagi_Click"/>
-            <Button x:Name="btAomori" Content="青森県" HorizontalAlignment="Left" Height="32" Margin="528,0,0,0" VerticalAlignment="Top" Width="112" FontSize="12" Background="White" Foreground="Black" BorderBrush="Transparent" Click="btAomori_Click"/>
+            <Button x:Name="btAomori" Content="青森県" HorizontalAlignment="Left" Height="32" Margin="528,0,0,518.4" VerticalAlignment="Bottom" Width="112" FontSize="12" Background="White" Foreground="Black" BorderBrush="Transparent" Click="btAomori_Click"/>
         </Grid>
     </Grid>
 </Page>

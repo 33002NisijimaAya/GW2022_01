@@ -19,11 +19,11 @@ namespace LodgingSearchSystem
     /// <summary>
     /// hotelShow.xaml の相互作用ロジック
     /// </summary>
-    public partial class hotelShow : Page
+    public partial class HotelShow : Page
     {
         WebClient wc;
 
-        public hotelShow()
+        public HotelShow()
         {
             InitializeComponent();
         }

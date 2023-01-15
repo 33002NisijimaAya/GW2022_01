@@ -40,7 +40,8 @@ namespace LodgingSearchSystem {
 
         private void btMiyagi_Click(object sender, RoutedEventArgs e)
         {
-           
+            var Miyagi = new Miyagi();
+            NavigationService.Navigate(Miyagi);
         }
 
         private void btAomori_Click(object sender, RoutedEventArgs e)

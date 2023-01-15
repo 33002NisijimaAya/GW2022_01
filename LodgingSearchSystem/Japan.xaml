@@ -15,7 +15,7 @@
         <Button Content="秋田" HorizontalAlignment="Left" Height="42" Margin="795,212,0,0" VerticalAlignment="Top" Width="60" Background="CornflowerBlue" Foreground="White" Click="Button_Click"/>
         <Button Content="山形" HorizontalAlignment="Left" Height="42" Margin="795,256,0,0" VerticalAlignment="Top" Width="60" Background="CornflowerBlue" Foreground="White" Click="Button_Click_1"/>
         <Button x:Name="btIwate" Content="岩手" HorizontalAlignment="Left" Height="42" Margin="855,212,0,0" VerticalAlignment="Top" Width="60" Background="CornflowerBlue" Foreground="White" Click="btIwate_Click"/>
-        <Button Content="宮城" HorizontalAlignment="Left" Height="42" Margin="855,256,0,0" VerticalAlignment="Top" Width="60" Background="CornflowerBlue" Foreground="White"/>
+        <Button Content="宮城" HorizontalAlignment="Left" Height="42" Margin="855,256,0,0" VerticalAlignment="Top" Width="60" Background="CornflowerBlue" Foreground="White" Click="Button_Click_2"/>
         <Button Content="新潟" HorizontalAlignment="Left" Height="42" Margin="795,300,0,0" VerticalAlignment="Top" Width="60" Background="#FF5AD64E" Foreground="White"/>
         <Button Content="福島" HorizontalAlignment="Left" Height="42" Margin="855,300,0,0" VerticalAlignment="Top" Width="60" Background="CornflowerBlue" Foreground="White"/>
         <Button Content="茨城" HorizontalAlignment="Left" Height="42" Margin="855,344,0,0" VerticalAlignment="Top" Width="60" Background="#FF21831C" Foreground="White"/>
