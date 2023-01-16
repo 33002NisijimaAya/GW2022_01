@@ -65,5 +65,7 @@ namespace LodgingSearchSystem
             Hotelshow.hotelname = btOma.ToolTip.ToString();
             NavigationService.Navigate(Hotelshow);
         }
+
+        
     }
 }
