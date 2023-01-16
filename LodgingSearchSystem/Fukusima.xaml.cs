@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace LodgingSearchSystem
 {
     /// <summary>
-    /// Yamagata.xaml の相互作用ロジック
+    /// Fukusima.xaml の相互作用ロジック
     /// </summary>
-    public partial class Yamagata : Page
+    public partial class Fukusima : Page
     {
-        public Yamagata()
+        public Fukusima()
         {
             InitializeComponent();
         }
@@ -31,16 +31,10 @@ namespace LodgingSearchSystem
             NavigationService.Navigate(japan);
         }
 
-        private void btAkita_Click(object sender, RoutedEventArgs e)
+        private void btYamagata_Click(object sender, RoutedEventArgs e)
         {
-            var Akita = new Akita();
-            NavigationService.Navigate(Akita);
-        }
-
-        private void btIwate_Click(object sender, RoutedEventArgs e)
-        {
-            var Iwate = new Iwate();
-            NavigationService.Navigate(Iwate);
+            var Yamagata = new Yamagata();
+            NavigationService.Navigate(Yamagata);
         }
 
         private void btMiyagi_Click(object sender, RoutedEventArgs e)
@@ -49,10 +43,9 @@ namespace LodgingSearchSystem
             NavigationService.Navigate(Miyagi);
         }
 
-        private void btFukusima_Click(object sender, RoutedEventArgs e)
+        private void btNigata_Click(object sender, RoutedEventArgs e)
         {
-            var Fukusima = new Fukusima();
-            NavigationService.Navigate(Fukusima);
+            
         }
     }
 }

@@ -137,13 +137,13 @@
             <Button Content="▶寒河江・月山" HorizontalAlignment="Left" VerticalAlignment="Top" Width="341" Height="67" Grid.Row="4" Background="Transparent" BorderBrush="Transparent" Foreground="Black"/>
             <Button Content="▶尾花沢・新庄・村山" HorizontalAlignment="Left" VerticalAlignment="Top" Width="341" Height="67" Grid.Row="5" Background="Transparent" BorderBrush="Transparent" Foreground="Black"/>
             <Button Content="▶酒田・鶴岡・湯野浜・温海" HorizontalAlignment="Left" VerticalAlignment="Top" Width="341" Height="67" Grid.Row="6" Background="Transparent" BorderBrush="Transparent" Foreground="Black"/>
-            <Image Margin="10,10,19,20.2" Source="rakuten.gif" Stretch="Fill"/>
+            <Image Margin="0,10,45,34" Source="rakuten.gif" Stretch="Fill"/>
             <Button x:Name="btHome" Content="日本地図" HorizontalAlignment="Left" Height="30" Margin="0,6.4,0,0" Grid.Row="7" VerticalAlignment="Top" Width="142" Click="btHome_Click"/>
             <Button x:Name="btAkita" Content="秋田県" HorizontalAlignment="Left" Height="29" Margin="714,36,-483,0" VerticalAlignment="Top" Width="109" FontSize="12" Background="White" Foreground="Black" BorderBrush="Transparent" Click="btAkita_Click"/>
             <Button x:Name="btIwate" Content="岩手県" HorizontalAlignment="Left" Height="29" Margin="885,67,-649,0" VerticalAlignment="Top" Width="104" FontSize="12" Background="White" Foreground="Black" BorderBrush="Transparent" Grid.RowSpan="2" Click="btIwate_Click" />
             <Button x:Name="btNiigata" Content="新潟県" HorizontalAlignment="Left" Height="29" Margin="442,38,-211,0" VerticalAlignment="Top" Width="109" FontSize="12" Background="White" Foreground="Black" BorderBrush="Transparent" Grid.Row="4" />
             <Button x:Name="btMiyagi" Content="宮城県" HorizontalAlignment="Left" Height="29" Margin="815,0.2,-584,0" VerticalAlignment="Top" Width="109" FontSize="12" Background="White" Foreground="Black" BorderBrush="Transparent" Grid.Row="3" Click="btMiyagi_Click"  />
-            <Button x:Name="btFukusima" Content="福島県" HorizontalAlignment="Left" Height="24" Margin="556,22.4,-327,0" VerticalAlignment="Top" Width="111" FontSize="12" Background="White" Foreground="Black" BorderBrush="Transparent" Grid.Row="7"  />
+            <Button x:Name="btFukusima" Content="福島県" HorizontalAlignment="Left" Height="24" Margin="556,22.4,-327,0" VerticalAlignment="Top" Width="111" FontSize="12" Background="White" Foreground="Black" BorderBrush="Transparent" Grid.Row="7" Click="btFukusima_Click"  />
         </Grid>
     </Grid>
 </Page>

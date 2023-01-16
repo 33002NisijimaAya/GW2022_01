@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -22,6 +23,8 @@ namespace LodgingSearchSystem
     public partial class HotelShow : Page
     {
         WebClient wc;
+        public string hotelname;
+
 
         public HotelShow()
         {
@@ -35,7 +38,14 @@ namespace LodgingSearchSystem
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            string facilitySearch = string.Format("https://app.rakuten.co.jp/services/api/Travel/SimpleHotelSearch/20170426?format=json&largeClassCode=japan&middleClassCode=hokkaido&smallClassCode=jozankei&applicationId=1023910507139864215");
+            var wc = new WebClient()
+            {
+                Encoding = Encoding.UTF8
+            };
+
+            string regionnum = string.Format("https://app.rakuten.co.jp/services/api/Travel/GetAreaClass/20131024?format=json&applicationId=1023910507139864215");
+            var dString1 = wc.DownloadString(regionnum);
+            var json1 = JsonConvert.DeserializeObject<Rootobject>(dString1);
         }
     }
 }

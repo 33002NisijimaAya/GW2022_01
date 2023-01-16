@@ -20,6 +20,9 @@ namespace LodgingSearchSystem
     /// </summary>
     public partial class Aomori : Page
     {
+        public string middleClassName;
+        public string smallClassName;
+        public string detailClassName;
         public Aomori()
         {
             InitializeComponent();
@@ -53,6 +56,13 @@ namespace LodgingSearchSystem
         private void btAomori_Click(object sender, RoutedEventArgs e)
         {
             var Hotelshow = new HotelShow();
+            NavigationService.Navigate(Hotelshow);
+        }
+
+        private void btOma_Click(object sender, RoutedEventArgs e)
+        {
+            var Hotelshow = new HotelShow();
+            Hotelshow.hotelname = btOma.ToolTip.ToString();
             NavigationService.Navigate(Hotelshow);
         }
     }

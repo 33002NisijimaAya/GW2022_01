@@ -75,5 +75,11 @@ namespace LodgingSearchSystem {
             var Miyagi = new Miyagi();
             NavigationService.Navigate(Miyagi);
         }
+
+        private void btFukusima_Click(object sender, RoutedEventArgs e)
+        {
+            var Fukusima = new Fukusima();
+            NavigationService.Navigate(Fukusima);
+        }
     }
 }

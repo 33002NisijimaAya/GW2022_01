@@ -110,7 +110,7 @@
                 </Style>
             </Button.Style>
         </Button>
-        <Button x:Name="btOma" Content="大間" ToolTip="下北・大間・むつ" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontWeight="Bold" FontSize="12" Margin="694,97,217,477">
+        <Button x:Name="btOma" Content="大間" ToolTip="下北・大間・むつ" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontWeight="Bold" FontSize="12" Margin="694,97,217,477" Click="btOma_Click">
             <Button.Style>
                 <Style TargetType="Button">
                     <Style.Triggers>
