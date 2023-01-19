@@ -81,5 +81,11 @@ namespace LodgingSearchSystem {
             var Fukusima = new Fukusima();
             NavigationService.Navigate(Fukusima);
         }
+
+        private void btGunma_Click(object sender, RoutedEventArgs e)
+        {
+            var Gunma = new Gunma();
+            NavigationService.Navigate(Gunma);
+        }
     }
 }

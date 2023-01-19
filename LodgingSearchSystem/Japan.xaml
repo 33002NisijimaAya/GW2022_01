@@ -25,7 +25,7 @@
         <Button Content="東京" HorizontalAlignment="Left" Height="42" Margin="795,431,0,0" VerticalAlignment="Top" Width="60" Background="#FF21831C" Foreground="White"/>
         <Button Content="石川" HorizontalAlignment="Left" Height="42" Margin="673,300,0,0" VerticalAlignment="Top" Width="60" Background="#FF5AD64E" Foreground="White"/>
         <Button Content="富山" HorizontalAlignment="Left" Height="42" Margin="735,300,0,0" VerticalAlignment="Top" Width="60" Background="#FF5AD64E" Foreground="White"/>
-        <Button Content="群馬" HorizontalAlignment="Left" Height="42" Margin="735,344,0,0" VerticalAlignment="Top" Width="60" Background="#FF21831C" Foreground="White"/>
+        <Button x:Name="btGunma" Content="群馬" HorizontalAlignment="Left" Height="42" Margin="735,344,0,0" VerticalAlignment="Top" Width="60" Background="#FF21831C" Foreground="White" Click="btGunma_Click"/>
         <Button Content="山梨" HorizontalAlignment="Left" Height="42" Margin="735,387,0,0" VerticalAlignment="Top" Width="60" Background="#FF5AD64E" Foreground="White"/>
         <Button Content="神奈川" HorizontalAlignment="Left" Height="85" Margin="735,431,0,0" VerticalAlignment="Top" Width="60" Background="#FF21831C" Foreground="White" FontSize="8"/>
         <Button Content="長野" HorizontalAlignment="Left" Height="85" Margin="675,344,0,0" VerticalAlignment="Top" Width="60" Background="#FF5AD64E" Foreground="White"/>

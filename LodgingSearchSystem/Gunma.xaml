@@ -1,0 +1,34 @@
+﻿<Page x:Class="LodgingSearchSystem.Gunma"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:LodgingSearchSystem"
+      mc:Ignorable="d" 
+      Height="600" Width="1000"
+      Title="Gunma">
+
+    <Grid>
+        <Image Margin="371,0,36,9" Source="gunma.png" Stretch="Fill"/>
+        <Button x:Name="btMaebasi" Content="前橋" ToolTip="前橋・赤城" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontSize="12" FontWeight="Bold" Margin="676,358,281,220">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button x:Name="btSibukawa" Content="渋川" ToolTip="伊香保温泉・渋川" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontSize="12" FontWeight="Bold" Margin="603,342,354,236">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+    </Grid>
+</Page>

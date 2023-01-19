@@ -20,7 +20,7 @@
                 </Style>
             </Button.Style>
         </Button>
-        <Button x:Name="btTugaru" Content="津軽半島" ToolTip="津軽半島・五所川原" Background="Transparent" BorderBrush="Transparent" Foreground="Black"  FontSize="12" FontWeight="Bold" Margin="542,198,382,372">
+        <Button x:Name="btTugaru" Content="津軽半島" ToolTip="津軽半島・五所川原" Background="Transparent" BorderBrush="Transparent" Foreground="Black"  FontSize="12" FontWeight="Bold" Margin="542,198,382,372" Click="btTugaru_Click">
             <Button.Style>
                 <Style TargetType="Button">
                     <Style.Triggers>

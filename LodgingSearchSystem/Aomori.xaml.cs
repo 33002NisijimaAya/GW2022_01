@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +21,41 @@ namespace LodgingSearchSystem
     /// </summary>
     public partial class Aomori : Page
     {
-        public string middleClassName;
-        public string smallClassName;
-        public string detailClassName;
+        private IEnumerable<Area> _areanames;
+
+        public Aomori(string filePath)
+        {
+            _areanames = ReadAreas(filePath);
+        }
+
+        //public IDictionary<string,int> GetPerAreas()
+        //{
+        //    var dict = new Dictionary<string, int>();
+        //    foreach (Area area in _areanames)
+        //    {
+        //        if (dict.ContainsKey(area.AreaName))
+        //        {
+                   
+        //        }
+        //    }
+        //}
+        public static IEnumerable<Area> ReadAreas(string filePath)
+        {
+            List<Area> areas = new List<Area>();
+            string[] lines = File.ReadAllLines(filePath);
+            foreach (string line in lines)
+            {
+                string[] items = line.Split(',');
+                Area area = new Area
+                {
+                    AreaName = items[0],
+                    AreaCode = items[1]
+                };
+                areas.Add(area);
+            }
+            return areas;
+        }
+
         public Aomori()
         {
             InitializeComponent();
@@ -64,8 +97,13 @@ namespace LodgingSearchSystem
             var Hotelshow = new HotelShow();
             Hotelshow.hotelname = btOma.ToolTip.ToString();
             NavigationService.Navigate(Hotelshow);
+
+            
         }
 
-        
+        private void btTugaru_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
