@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,16 +19,33 @@ namespace LodgingSearchSystem {
     /// MainWindow.xaml の相互作用ロジック
     /// </summary>
     public partial class MainWindow : Window {
+        public IDictionary<string, string> Areanames;
+
+        private NavigationService _navi;    //ナビゲーションサービス
         public MainWindow() {
             InitializeComponent();
+            _navi = this.frame.NavigationService;
 
-            Uri uri = new Uri("Japan.xaml", UriKind.Relative);
-            frame.Source = uri;
+            Areanames = ReadAreas("areaname.csv");
+        }
+        public static IDictionary<string, string> ReadAreas(string filePath)
+        {
+            var dict = new Dictionary<string, string>();
+            //List<Area> areas = new List<Area>();
+            string[] lines = File.ReadAllLines(filePath);
+
+            foreach (string line in lines)
+            {
+                string[] items = line.Split(',');
+                dict.Add(items[0], items[1]);
+            }
+            return dict;
         }
 
-        private void frame_Navigated(object sender, NavigationEventArgs e)
+        private void frame_Loaded(object sender, RoutedEventArgs e)
         {
-
+            Uri uri = new Uri("Japan.xaml", UriKind.Relative);
+            frame.Source = uri;
         }
     }
 }

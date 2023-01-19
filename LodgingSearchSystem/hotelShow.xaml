@@ -5,25 +5,10 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:LodgingSearchSystem"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      Height="600" Width="1000"
       Title="hotelShow" Loaded="Page_Loaded">
 
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="3*"/>
-            <ColumnDefinition Width="77*"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition Height="224*"/>
-        </Grid.RowDefinitions>
-        <Label x:Name="lbAreaName" Content="Label" HorizontalAlignment="Left" Height="33" Margin="10,8,0,0" VerticalAlignment="Top" Width="190" Background="#FFE57F17" Grid.Row="1" Grid.ColumnSpan="2"/>
-        <Label Content="並び替え：" HorizontalAlignment="Left" Margin="10,46,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.494,-0.037" Width="61" Background="#FFFA1111" Grid.Row="1" Grid.ColumnSpan="2"/>
-        <Button Content="おすすめ順" HorizontalAlignment="Left" Margin="46,48,0,0" VerticalAlignment="Top" Width="99" Height="22" FontSize="12" Click="Button_Click" Grid.Row="1" Grid.Column="1"/>
-        <Button Content="料金の安い順" HorizontalAlignment="Left" Margin="150,48,0,0" VerticalAlignment="Top" Width="106" Height="22" FontSize="12" Grid.Row="1" Grid.Column="1"/>
-        <Button Content="料金の高い順" HorizontalAlignment="Left" Margin="261,48,0,0" VerticalAlignment="Top" Width="106" Height="22" FontSize="12" Grid.Row="1" Grid.Column="1"/>
-        <Button Content="評価が高い順" HorizontalAlignment="Left" Margin="372,48,0,0" VerticalAlignment="Top" Width="106" Height="22" FontSize="12" Grid.Row="1" Grid.Column="1"/>
-        <ScrollBar HorizontalAlignment="Left" Margin="903,0,-150,0" VerticalAlignment="Top" Width="17" RenderTransformOrigin="1.183,0.545" Height="450" Grid.RowSpan="2" Grid.Column="1"/>
-        <Label Content="Label" HorizontalAlignment="Left" Height="25" Margin="10,94,0,0" VerticalAlignment="Top" Width="171" Grid.Row="1" Grid.ColumnSpan="2"/>
+        <Image Margin="0,0,693,569" Source="rakuten.gif" Stretch="None"/>
     </Grid>
 </Page>

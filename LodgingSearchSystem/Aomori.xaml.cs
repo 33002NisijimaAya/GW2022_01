@@ -21,46 +21,13 @@ namespace LodgingSearchSystem
     /// </summary>
     public partial class Aomori : Page
     {
-        private IEnumerable<Area> _areanames;
-
-        public Aomori(string filePath)
-        {
-            _areanames = ReadAreas(filePath);
-        }
-
-        //public IDictionary<string,int> GetPerAreas()
-        //{
-        //    var dict = new Dictionary<string, int>();
-        //    foreach (Area area in _areanames)
-        //    {
-        //        if (dict.ContainsKey(area.AreaName))
-        //        {
-                   
-        //        }
-        //    }
-        //}
-        public static IEnumerable<Area> ReadAreas(string filePath)
-        {
-            List<Area> areas = new List<Area>();
-            string[] lines = File.ReadAllLines(filePath);
-            foreach (string line in lines)
-            {
-                string[] items = line.Split(',');
-                Area area = new Area
-                {
-                    AreaName = items[0],
-                    AreaCode = items[1]
-                };
-                areas.Add(area);
-            }
-            return areas;
-        }
+        MainWindow parent = (MainWindow)Application.Current.MainWindow;
 
         public Aomori()
         {
             InitializeComponent();
-        }
 
+        }
         
         private void btAkita_Click(object sender, RoutedEventArgs e)
         {
@@ -88,22 +55,29 @@ namespace LodgingSearchSystem
 
         private void btAomori_Click(object sender, RoutedEventArgs e)
         {
-            var Hotelshow = new HotelShow();
-            NavigationService.Navigate(Hotelshow);
+            //var Hotelshow = new HotelShow();
+            //NavigationService.Navigate(Hotelshow);
         }
 
-        private void btOma_Click(object sender, RoutedEventArgs e)
-        {
-            var Hotelshow = new HotelShow();
-            Hotelshow.hotelname = btOma.ToolTip.ToString();
-            NavigationService.Navigate(Hotelshow);
+        //private void btOma_Click(object sender, RoutedEventArgs e)
+        //{
 
-            
-        }
+
+
+        //}
 
         private void btTugaru_Click(object sender, RoutedEventArgs e)
         {
 
         }
+
+        private void btArea_Click(object sender, RoutedEventArgs e)
+        {
+            Button bt = (Button)sender;
+            var Hotelshow = new HotelShow("aomori", parent.Areanames[(string)bt.ToolTip]);
+            NavigationService.Navigate(Hotelshow);
+        }
+
+        
     }
 }

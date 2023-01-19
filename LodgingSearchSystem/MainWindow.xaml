@@ -5,8 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LodgingSearchSystem"
         mc:Ignorable="d"
-        Title="ホテル・宿検索" Height="600" Width="1000">
-    <Grid Margin="0,0,0,5">
-        <Frame Name="frame" NavigationUIVisibility="Hidden" Navigated="frame_Navigated"/>
+        Title="ホテル・宿検索" Height="683.158" Width="1006.444">
+    <Grid Margin="0,0,2,18">
+        
+
+        <Frame Name="frame" NavigationUIVisibility="Hidden" Loaded="frame_Loaded" Width="1000" Height="600" Margin="0,41,5,34"/>
+        <Image Margin="0,10,629,571" Source="rakuten.gif" Stretch="Fill"/>
     </Grid>
 </Window>

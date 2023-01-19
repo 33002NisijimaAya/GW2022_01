@@ -9,59 +9,69 @@ namespace LodgingSearchSystem
 
     public class Rootobject
     {
-        public Areaclasses areaClasses { get; set; }
+        public Paginginfo pagingInfo { get; set; }
+        public Hotel[] hotels { get; set; }
     }
 
-    public class Areaclasses
+    public class Paginginfo
     {
-        public Largeclass[] largeClasses { get; set; }
+        public int recordCount { get; set; }
+        public int pageCount { get; set; }
+        public int page { get; set; }
+        public int first { get; set; }
+        public int last { get; set; }
     }
 
-    public class Largeclass
+    public class Hotel
     {
-        public Largeclass1[] largeClass { get; set; }
+        public Hotel1[] hotel { get; set; }
     }
 
-    public class Largeclass1
+    public class Hotel1
     {
-        public string largeClassCode { get; set; }
-        public string largeClassName { get; set; }
-        public Middleclass[] middleClasses { get; set; }
+        public Hotelbasicinfo hotelBasicInfo { get; set; }
+        public Hotelratinginfo hotelRatingInfo { get; set; }
     }
 
-    public class Middleclass
+    public class Hotelbasicinfo
     {
-        public Middleclass1[] middleClass { get; set; }
+        public int hotelNo { get; set; }
+        public string hotelName { get; set; }
+        public string hotelInformationUrl { get; set; }
+        public string planListUrl { get; set; }
+        public string dpPlanListUrl { get; set; }
+        public string reviewUrl { get; set; }
+        public string hotelKanaName { get; set; }
+        public string hotelSpecial { get; set; }
+        public int? hotelMinCharge { get; set; }
+        public float latitude { get; set; }
+        public float longitude { get; set; }
+        public string postalCode { get; set; }
+        public string address1 { get; set; }
+        public string address2 { get; set; }
+        public string telephoneNo { get; set; }
+        public string faxNo { get; set; }
+        public string access { get; set; }
+        public string parkingInformation { get; set; }
+        public string nearestStation { get; set; }
+        public string hotelImageUrl { get; set; }
+        public string hotelThumbnailUrl { get; set; }
+        public string roomImageUrl { get; set; }
+        public string roomThumbnailUrl { get; set; }
+        public string hotelMapImageUrl { get; set; }
+        public int? reviewCount { get; set; }
+        public float? reviewAverage { get; set; }
+        public string userReview { get; set; }
     }
 
-    public class Middleclass1
+    public class Hotelratinginfo
     {
-        public string middleClassCode { get; set; }
-        public string middleClassName { get; set; }
-        public Smallclass[] smallClasses { get; set; }
-    }
-
-    public class Smallclass
-    {
-        public Smallclass1[] smallClass { get; set; }
-    }
-
-    public class Smallclass1
-    {
-        public string smallClassCode { get; set; }
-        public string smallClassName { get; set; }
-        public Detailclass[] detailClasses { get; set; }
-    }
-
-    public class Detailclass
-    {
-        public Detailclass1 detailClass { get; set; }
-    }
-
-    public class Detailclass1
-    {
-        public string detailClassCode { get; set; }
-        public string detailClassName { get; set; }
+        public float? serviceAverage { get; set; }
+        public float? locationAverage { get; set; }
+        public float? roomAverage { get; set; }
+        public float? equipmentAverage { get; set; }
+        public float? bathAverage { get; set; }
+        public float? mealAverage { get; set; }
     }
 
 }

@@ -39,8 +39,8 @@ namespace LodgingSearchSystem {
 
         private void HotelSearch()
         {
-            var hotelShow = new HotelShow();
-            NavigationService.Navigate(hotelShow);
+            //var hotelShow = new HotelShow();
+            //NavigationService.Navigate(hotelShow);
         }
 
     }

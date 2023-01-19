@@ -22,13 +22,19 @@ namespace LodgingSearchSystem
     /// </summary>
     public partial class HotelShow : Page
     {
-        WebClient wc;
+
+        string pref = "";
+        string area = "";
+      //  WebClient wc;
         public string hotelname;
 
 
-        public HotelShow()
+        public HotelShow(string pref,string area)
         {
             InitializeComponent();
+            this.pref = pref;
+            this.area = area;
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -43,7 +49,8 @@ namespace LodgingSearchSystem
                 Encoding = Encoding.UTF8
             };
 
-            string regionnum = string.Format("https://app.rakuten.co.jp/services/api/Travel/GetAreaClass/20131024?format=json&applicationId=1023910507139864215");
+            string regionnum = string.Format(
+                "https://app.rakuten.co.jp/services/api/Travel/SimpleHotelSearch/20170426?format=json&largeClassCode=japan&middleClassCode={0}&smallClassCode={1}&applicationId=1023910507139864215",pref,area);
             var dString1 = wc.DownloadString(regionnum);
             var json1 = JsonConvert.DeserializeObject<Rootobject>(dString1);
         }

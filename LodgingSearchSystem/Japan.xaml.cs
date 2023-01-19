@@ -15,35 +15,21 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Collections;
+using System.IO;
 
 namespace LodgingSearchSystem {
     /// <summary>
     /// Japan.xaml の相互作用ロジック
     /// </summary>
     public partial class Japan : Page {
+
         public Japan() {
-            InitializeComponent();
+            InitializeComponent();   
         }
-       
+
         private void btHokkaido_Click(object sender, RoutedEventArgs e) {
-            
             var hokkaido = new Hokkaido();
             NavigationService.Navigate(hokkaido);
-
-            var wc = new WebClient() {
-                Encoding = Encoding.UTF8
-            };
-
-
-
-            string json = string.Format("https://app.rakuten.co.jp/services/api/Travel/GetAreaClass/20131024?format=json&applicationId=1089830036510088330");
-           
-
-            var dString1 = wc.DownloadString(json);
-
-            var json1 = JsonConvert.DeserializeObject<Rootobject>(dString1);
-            var name = json1.areaClasses.largeClasses[0].largeClass[0].largeClassName;
-            
         }
 
        
@@ -58,24 +44,6 @@ namespace LodgingSearchSystem {
             NavigationService.Navigate(Iwate);
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            var Akita = new Akita();
-            NavigationService.Navigate(Akita);
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            var Yamagata = new Yamagata();
-            NavigationService.Navigate(Yamagata);
-        }
-
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-            var Miyagi = new Miyagi();
-            NavigationService.Navigate(Miyagi);
-        }
-
         private void btFukusima_Click(object sender, RoutedEventArgs e)
         {
             var Fukusima = new Fukusima();
@@ -86,6 +54,24 @@ namespace LodgingSearchSystem {
         {
             var Gunma = new Gunma();
             NavigationService.Navigate(Gunma);
+        }
+
+        private void btMiyagi_Click(object sender, RoutedEventArgs e)
+        {
+            var Miyagi = new Miyagi();
+            NavigationService.Navigate(Miyagi);
+        }
+
+        private void btAkita_Click(object sender, RoutedEventArgs e)
+        {
+            var Akita = new Akita();
+            NavigationService.Navigate(Akita);
+        }
+
+        private void btYamagata_Click(object sender, RoutedEventArgs e)
+        {
+            var Yamagata = new Yamagata();
+            NavigationService.Navigate(Yamagata);
         }
     }
 }

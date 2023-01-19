@@ -256,7 +256,9 @@
     <Resource Include="fukusima.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="areaname.csv" />
+    <None Include="areaname.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Hokkaido_x %281%29.gif" />

@@ -10,7 +10,7 @@
 
     <Grid>
         <Image Margin="414,30,24,34" Source="aomori.png" Stretch="Fill"/>
-        <Button x:Name="btAsamusi" Content="青森" ToolTip="青森・浅虫温泉" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontSize="12" FontWeight="Bold" Margin="660,318,297,260">
+        <Button x:Name="btAsamusi" Content="青森" ToolTip="青森・浅虫温泉" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontSize="12" FontWeight="Bold" Margin="660,318,297,260" Click="btArea_Click">
             <Button.Style>
                 <Style TargetType="Button">
                     <Style.Triggers>
@@ -20,7 +20,7 @@
                 </Style>
             </Button.Style>
         </Button>
-        <Button x:Name="btTugaru" Content="津軽半島" ToolTip="津軽半島・五所川原" Background="Transparent" BorderBrush="Transparent" Foreground="Black"  FontSize="12" FontWeight="Bold" Margin="542,198,382,372" Click="btTugaru_Click">
+        <Button x:Name="btTugaru" Content="津軽半島" ToolTip="津軽半島・五所川原" Background="Transparent" BorderBrush="Transparent" Foreground="Black"  FontSize="12" FontWeight="Bold" Margin="542,198,382,372" Click="btArea_Click">
             <Button.Style>
                 <Style TargetType="Button">
                     <Style.Triggers>
@@ -30,7 +30,7 @@
                 </Style>
             </Button.Style>
         </Button>
-        <Button x:Name="btgozyogawahara" Content="五所川原" ToolTip="津軽半島・五所川原" Background="Transparent" BorderBrush="Transparent" Foreground="Black"  FontSize="12" FontWeight="Bold" Margin="559,267,365,303">
+        <Button x:Name="btgozyogawahara" Content="五所川原" ToolTip="津軽半島・五所川原" Background="Transparent" BorderBrush="Transparent" Foreground="Black"  FontSize="12" FontWeight="Bold" Margin="559,267,365,303" Click="btArea_Click">
             <Button.Style>
                 <Style TargetType="Button">
                     <Style.Triggers>
@@ -40,7 +40,7 @@
                 </Style>
             </Button.Style>
         </Button>
-        <Button x:Name="btNisitugaru" Content="西津軽" ToolTip="白神山地・西津軽" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontSize="12" FontWeight="Bold" Margin="450,351,486,222">
+        <Button x:Name="btNisitugaru" Content="西津軽" ToolTip="白神山地・西津軽" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontSize="12" FontWeight="Bold" Margin="450,351,486,222" Click="btArea_Click">
             <Button.Style>
                 <Style TargetType="Button">
                     <Style.Triggers>
@@ -50,7 +50,7 @@
                 </Style>
             </Button.Style>
         </Button>
-        <Button x:Name="btKouzen" Content="弘前"  ToolTip="弘前・黒石" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontSize="12"  FontWeight="Bold" Margin="622,382,324,197" RenderTransformOrigin="0.519,-0.1">
+        <Button x:Name="btKouzen" Content="弘前"  ToolTip="弘前・黒石" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontSize="12"  FontWeight="Bold" Margin="622,382,324,197" RenderTransformOrigin="0.519,-0.1" Click="btArea_Click">
             <Button.Style>
                 <Style TargetType="Button">
                     <Style.Triggers>
@@ -60,7 +60,7 @@
                 </Style>
             </Button.Style>
         </Button>
-        <Button x:Name="btHakkouda" Content="八甲田" ToolTip="八甲田・十和田湖・奥入瀬" Background="Transparent" BorderBrush="Transparent" Foreground="Black"  FontWeight="Bold" FontSize="12" Margin="694,340,256,239">
+        <Button x:Name="btHakkouda" Content="八甲田" ToolTip="八甲田・十和田湖・奥入瀬" Background="Transparent" BorderBrush="Transparent" Foreground="Black"  FontWeight="Bold" FontSize="12" Margin="694,340,256,239" Click="btArea_Click">
             <Button.Style>
                 <Style TargetType="Button">
                     <Style.Triggers>
@@ -70,7 +70,7 @@
                 </Style>
             </Button.Style>
         </Button>
-        <Button x:Name="btHato" Content="八戸" ToolTip="八戸・三沢・七戸十和田" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontWeight="Bold" FontSize="12" Margin="870,384,72,189">
+        <Button x:Name="btHato" Content="八戸" ToolTip="八戸・三沢・七戸十和田" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontWeight="Bold" FontSize="12" Margin="870,384,72,189" Click="btArea_Click">
             <Button.Style>
                 <Style TargetType="Button">
                     <Style.Triggers>
@@ -80,7 +80,7 @@
                 </Style>
             </Button.Style>
         </Button>
-        <Button x:Name="btMisawa" Content="三沢" ToolTip="八戸・三沢・七戸十和田" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontWeight="Bold" FontSize="12" Margin="826,313,126,260">
+        <Button x:Name="btMisawa" Content="三沢" ToolTip="八戸・三沢・七戸十和田" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontWeight="Bold" FontSize="12" Margin="826,313,126,260" Click="btArea_Click">
             <Button.Style>
                 <Style TargetType="Button">
                     <Style.Triggers>
@@ -90,7 +90,7 @@
                 </Style>
             </Button.Style>
         </Button>
-        <Button x:Name="btMutu" Content="むつ" ToolTip="下北・大間・むつ" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontWeight="Bold" FontSize="12" Margin="763,123,168,442">
+        <Button x:Name="btMutu" Content="むつ" ToolTip="下北・大間・むつ" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontWeight="Bold" FontSize="12" Margin="763,123,168,442" Click="btArea_Click">
             <Button.Style>
                 <Style TargetType="Button">
                     <Style.Triggers>
@@ -100,7 +100,7 @@
                 </Style>
             </Button.Style>
         </Button>
-        <Button x:Name="btShimokita" Content="下北半島" ToolTip="下北・大間・むつ" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontWeight="Bold" FontSize="12" Margin="677,137,217,434">
+        <Button x:Name="btShimokita" Content="下北半島" ToolTip="下北・大間・むつ" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontWeight="Bold" FontSize="12" Margin="677,137,217,434" Click="btArea_Click">
             <Button.Style>
                 <Style TargetType="Button">
                     <Style.Triggers>
@@ -110,7 +110,7 @@
                 </Style>
             </Button.Style>
         </Button>
-        <Button x:Name="btOma" Content="大間" ToolTip="下北・大間・むつ" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontWeight="Bold" FontSize="12" Margin="694,97,217,477" Click="btOma_Click">
+        <Button x:Name="btOma" Content="大間" ToolTip="下北・大間・むつ" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontWeight="Bold" FontSize="12" Margin="694,97,217,477" Click="btArea_Click">
             <Button.Style>
                 <Style TargetType="Button">
                     <Style.Triggers>
@@ -141,7 +141,6 @@
             <Button Content="▶八甲田・十和田湖・奥入瀬" HorizontalAlignment="Left" VerticalAlignment="Top" Width="341" Height="67" Grid.Row="6" Background="Transparent" BorderBrush="Transparent" Foreground="Black"/>
             <Button Content="▶八戸・三沢・七戸十和田" HorizontalAlignment="Left" VerticalAlignment="Top" Width="341" Height="66" Grid.Row="7" Background="Transparent" BorderBrush="Transparent" Foreground="Black"/>
             <Button Content="▶下北・大間・むつ" HorizontalAlignment="Left" VerticalAlignment="Top" Width="341" Height="66" Grid.Row="8" Background="Transparent" BorderBrush="Transparent" Foreground="Black"/>
-            <Image Margin="0,10,29,20" Source="rakuten.gif" Stretch="Fill"/>
             <Button x:Name="btHome" Content="日本地図" HorizontalAlignment="Left" Height="22" Margin="0,6,0,0" Grid.Row="9" VerticalAlignment="Top" Width="134" Click="btHome_Click"/>
         </Grid>
         <Button x:Name="btAkita" Content="秋田県" HorizontalAlignment="Left" Height="29" Margin="526,451,0,0" VerticalAlignment="Top" Width="109" FontSize="12" Background="White" Foreground="Black" BorderBrush="Transparent" Click="btAkita_Click"/>
