@@ -8,7 +8,5 @@
       Height="600" Width="1000"
       Title="hotelShow" Loaded="Page_Loaded">
 
-    <Grid>
-        <Image Margin="0,0,693,569" Source="rakuten.gif" Stretch="None"/>
-    </Grid>
+    <Grid/>
 </Page>

@@ -53,24 +53,6 @@ namespace LodgingSearchSystem
             NavigationService.Navigate(japan);
         }
 
-        private void btAomori_Click(object sender, RoutedEventArgs e)
-        {
-            //var Hotelshow = new HotelShow();
-            //NavigationService.Navigate(Hotelshow);
-        }
-
-        //private void btOma_Click(object sender, RoutedEventArgs e)
-        //{
-
-
-
-        //}
-
-        private void btTugaru_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void btArea_Click(object sender, RoutedEventArgs e)
         {
             Button bt = (Button)sender;
@@ -78,6 +60,11 @@ namespace LodgingSearchSystem
             NavigationService.Navigate(Hotelshow);
         }
 
-        
+        private void AreaName_Click(object sender, RoutedEventArgs s)
+        {
+            Button bt = (Button)sender;
+            var HotelShow = new HotelShow("aomori", parent.Areanames[(string)bt.Content]);
+            NavigationService.Navigate(HotelShow);
+        }
     }
 }

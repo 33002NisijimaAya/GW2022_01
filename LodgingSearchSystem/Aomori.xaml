@@ -122,26 +122,23 @@
         </Button>
         <Grid HorizontalAlignment="Left" Width="340" Margin="0,-10,0,10">
             <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="67*"/>
+                <RowDefinition Height="67*"/>
+                <RowDefinition Height="66*"/>
+                <RowDefinition Height="67.2"/>
+                <RowDefinition Height="66*"/>
+                <RowDefinition Height="66*"/>
+                <RowDefinition Height="66*"/>
+                <RowDefinition Height="66*"/>
+                <RowDefinition Height="66*"/>
             </Grid.RowDefinitions>
-            <Button x:Name="btAomori" Content="▶青森　全域" HorizontalAlignment="Left" VerticalAlignment="Top" Width="341" Height="67" Grid.Row="1" Background="Transparent" BorderBrush="Transparent" Foreground="Black" Click="btAomori_Click" />
-            <Button Content="▶青森・浅虫温泉" HorizontalAlignment="Left" VerticalAlignment="Top" Width="341" Height="67" Grid.Row="2" Background="Transparent" BorderBrush="Transparent" Foreground="Black"/>
-            <Button Content="▶津軽半島・五所川原" HorizontalAlignment="Left" VerticalAlignment="Top" Width="341" Height="67" Grid.Row="3" Background="Transparent" BorderBrush="Transparent" Foreground="Black"/>
-            <Button Content="▶白神山地・西津軽" HorizontalAlignment="Left" VerticalAlignment="Top" Width="341" Height="67" Grid.Row="4" Background="Transparent" BorderBrush="Transparent" Foreground="Black"/>
-            <Button Content="▶弘前・黒石" HorizontalAlignment="Left" VerticalAlignment="Top" Width="341" Height="67" Grid.Row="5" Background="Transparent" BorderBrush="Transparent" Foreground="Black"/>
-            <Button Content="▶八甲田・十和田湖・奥入瀬" HorizontalAlignment="Left" VerticalAlignment="Top" Width="341" Height="67" Grid.Row="6" Background="Transparent" BorderBrush="Transparent" Foreground="Black"/>
-            <Button Content="▶八戸・三沢・七戸十和田" HorizontalAlignment="Left" VerticalAlignment="Top" Width="341" Height="66" Grid.Row="7" Background="Transparent" BorderBrush="Transparent" Foreground="Black"/>
-            <Button Content="▶下北・大間・むつ" HorizontalAlignment="Left" VerticalAlignment="Top" Width="341" Height="66" Grid.Row="8" Background="Transparent" BorderBrush="Transparent" Foreground="Black"/>
-            <Button x:Name="btHome" Content="日本地図" HorizontalAlignment="Left" Height="22" Margin="0,6,0,0" Grid.Row="9" VerticalAlignment="Top" Width="134" Click="btHome_Click"/>
+            <Button Content="青森・浅虫温泉" HorizontalAlignment="Left" VerticalAlignment="Top" Width="302" Height="47" Background="Transparent" BorderBrush="Black" Foreground="Black" Click="AreaName_Click" Margin="18,10,0,0" Grid.Row="1"/>
+            <Button Content="津軽半島・五所川原" HorizontalAlignment="Left" VerticalAlignment="Top" Width="302" Height="47" Grid.Row="2" Background="Transparent" BorderBrush="Black" Foreground="Black" Click="AreaName_Click" Margin="18,10,0,0"/>
+            <Button Content="白神山地・西津軽" HorizontalAlignment="Left" VerticalAlignment="Top" Width="302" Height="47" Grid.Row="3" Background="Transparent" BorderBrush="Black" Foreground="Black" Click="AreaName_Click" Margin="18,10,0,0"/>
+            <Button Content="弘前・黒石" HorizontalAlignment="Left" VerticalAlignment="Top" Width="302" Height="46" Grid.Row="4" Background="Transparent" BorderBrush="Black" Foreground="Black" Click="AreaName_Click" Margin="18,10,0,0"/>
+            <Button Content="八甲田・十和田湖・奥入瀬" HorizontalAlignment="Left" VerticalAlignment="Top" Width="302" Height="47" Grid.Row="5" Background="Transparent" BorderBrush="Black" Foreground="Black" Click="AreaName_Click" Margin="18,10,0,0"/>
+            <Button Content="八戸・三沢・七戸十和田" HorizontalAlignment="Left" VerticalAlignment="Top" Width="302" Height="46" Grid.Row="6" Background="Transparent" BorderBrush="Black" Foreground="Black" Click="AreaName_Click" Margin="18,10,0,0"/>
+            <Button Content="下北・大間・むつ" HorizontalAlignment="Left" VerticalAlignment="Top" Width="302" Height="47" Grid.Row="7" Background="Transparent" BorderBrush="Black" Foreground="Black" Click="AreaName_Click" Margin="18,10,0,0"/>
         </Grid>
         <Button x:Name="btAkita" Content="秋田県" HorizontalAlignment="Left" Height="29" Margin="526,451,0,0" VerticalAlignment="Top" Width="109" FontSize="12" Background="White" Foreground="Black" BorderBrush="Transparent" Click="btAkita_Click"/>
         <Button x:Name="btIwate" Content="岩手県" HorizontalAlignment="Left" Height="29" Margin="842,506,0,0" VerticalAlignment="Top" Width="109" FontSize="12" Background="White" Foreground="Black" BorderBrush="Transparent" Click="btIwate_Click" />

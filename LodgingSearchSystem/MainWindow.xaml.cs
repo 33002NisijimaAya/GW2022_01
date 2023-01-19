@@ -47,5 +47,11 @@ namespace LodgingSearchSystem {
             Uri uri = new Uri("Japan.xaml", UriKind.Relative);
             frame.Source = uri;
         }
+
+        private void btmenu_Click(object sender, RoutedEventArgs e)
+        {
+            Uri uri = new Uri("Japan.xaml", UriKind.Relative);
+            frame.Source = uri;
+        }
     }
 }
