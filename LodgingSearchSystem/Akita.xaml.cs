@@ -20,6 +20,8 @@ namespace LodgingSearchSystem
     /// </summary>
     public partial class Akita : Page
     {
+        MainWindow parent = (MainWindow)Application.Current.MainWindow;
+
         public Akita()
         {
             InitializeComponent();
@@ -29,12 +31,6 @@ namespace LodgingSearchSystem
         {
             var japan = new Japan();
             NavigationService.Navigate(japan);
-        }
-
-        private void btMiyagi_Click(object sender, RoutedEventArgs e)
-        {
-            var Miyagi = new Miyagi();
-            NavigationService.Navigate(Miyagi);
         }
 
         private void btIwate_Click(object sender, RoutedEventArgs e)
@@ -49,10 +45,18 @@ namespace LodgingSearchSystem
             NavigationService.Navigate(Aomori);
         }
 
-        private void btYamagata_Click(object sender, RoutedEventArgs e)
+        private void btArea_Click(object sender, RoutedEventArgs e)
         {
-            var Yamagata = new Yamagata();
-            NavigationService.Navigate(Yamagata);
+            Button bt = (Button)sender;
+            var Hotelshow = new HotelShow("akita", parent.Areanames[(string)bt.ToolTip], (string)bt.ToolTip);
+            NavigationService.Navigate(Hotelshow);
+        }
+
+        private void AreaName_Click(object sender, RoutedEventArgs s)
+        {
+            Button bt = (Button)sender;
+            var HotelShow = new HotelShow("akita", parent.Areanames[(string)bt.Content], (string)bt.Content);
+            NavigationService.Navigate(HotelShow);
         }
     }
 }

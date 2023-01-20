@@ -31,7 +31,6 @@ namespace LodgingSearchSystem {
         public static IDictionary<string, string> ReadAreas(string filePath)
         {
             var dict = new Dictionary<string, string>();
-            //List<Area> areas = new List<Area>();
             string[] lines = File.ReadAllLines(filePath);
 
             foreach (string line in lines)
