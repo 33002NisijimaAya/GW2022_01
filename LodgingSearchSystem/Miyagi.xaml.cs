@@ -20,6 +20,9 @@ namespace LodgingSearchSystem
     /// </summary>
     public partial class Miyagi : Page
     {
+
+        MainWindow parent = (MainWindow)Application.Current.MainWindow;
+
         public Miyagi()
         {
             InitializeComponent();
@@ -48,6 +51,20 @@ namespace LodgingSearchSystem
         {
             var Iwate = new Iwate();
             NavigationService.Navigate(Iwate);
+        }
+
+        private void btArea_Click(object sender, RoutedEventArgs e)
+        {
+            Button bt = (Button)sender;
+            var Hotelshow = new HotelShow("miyagi", parent.Areanames[(string)bt.ToolTip], (string)bt.ToolTip);
+            NavigationService.Navigate(Hotelshow);
+        }
+
+        private void AreaName_Click(object sender, RoutedEventArgs s)
+        {
+            Button bt = (Button)sender;
+            var HotelShow = new HotelShow("miyagi", parent.Areanames[(string)bt.Content], (string)bt.Content);
+            NavigationService.Navigate(HotelShow);
         }
     }
 }

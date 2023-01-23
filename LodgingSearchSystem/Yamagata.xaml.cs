@@ -20,6 +20,9 @@ namespace LodgingSearchSystem
     /// </summary>
     public partial class Yamagata : Page
     {
+
+        MainWindow parent = (MainWindow)Application.Current.MainWindow;
+
         public Yamagata()
         {
             InitializeComponent();
@@ -53,6 +56,20 @@ namespace LodgingSearchSystem
         {
             var Fukusima = new Fukusima();
             NavigationService.Navigate(Fukusima);
+        }
+
+        private void btArea_Click(object sender, RoutedEventArgs e)
+        {
+            Button bt = (Button)sender;
+            var Hotelshow = new HotelShow("yamagata", parent.Areanames[(string)bt.ToolTip], (string)bt.ToolTip);
+            NavigationService.Navigate(Hotelshow);
+        }
+
+        private void AreaName_Click(object sender, RoutedEventArgs s)
+        {
+            Button bt = (Button)sender;
+            var HotelShow = new HotelShow("yamagata", parent.Areanames[(string)bt.Content], (string)bt.Content);
+            NavigationService.Navigate(HotelShow);
         }
     }
 }

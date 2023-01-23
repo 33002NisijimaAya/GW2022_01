@@ -96,14 +96,26 @@
     <Compile Include="HotelShow.xaml.cs">
       <DependentUpon>HotelShow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Ibaraki.xaml.cs">
+      <DependentUpon>Ibaraki.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Map.xaml.cs">
       <DependentUpon>Map.xaml</DependentUpon>
     </Compile>
     <Compile Include="Miyagi.xaml.cs">
       <DependentUpon>Miyagi.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Nigata.xaml.cs">
+      <DependentUpon>Nigata.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Saitama.xaml.cs">
+      <DependentUpon>Saitama.xaml</DependentUpon>
+    </Compile>
     <Compile Include="sapporo.xaml.cs">
       <DependentUpon>sapporo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Totigi.xaml.cs">
+      <DependentUpon>Totigi.xaml</DependentUpon>
     </Compile>
     <Compile Include="Yamagata.xaml.cs">
       <DependentUpon>Yamagata.xaml</DependentUpon>
@@ -129,6 +141,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="HotelShow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ibaraki.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -173,7 +189,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Nigata.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Saitama.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="sapporo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Totigi.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -217,19 +245,10 @@
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="unnamed.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="b77b7aea.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="sapporo_h.gif" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="aomori.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="akita.gif" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="akita.png" />
@@ -268,6 +287,18 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="hosi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="nigata.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="totigi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ibaraki.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="saitama.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.6.1\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.6.1\build\MaterialDesignThemes.targets')" />

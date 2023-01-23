@@ -15,12 +15,12 @@
         <Button x:Name="btYamagata" Content="山形" HorizontalAlignment="Left" Height="42" Margin="759,256,0,0" VerticalAlignment="Top" Width="60" Background="CornflowerBlue" Foreground="White" Click="btYamagata_Click" />
         <Button x:Name="btIwate" Content="岩手" HorizontalAlignment="Left" Height="42" Margin="819,212,0,0" VerticalAlignment="Top" Width="60" Background="CornflowerBlue" Foreground="White" Click="btIwate_Click"/>
         <Button x:Name="btMiyagi" Content="宮城" HorizontalAlignment="Left" Height="42" Margin="819,256,0,0" VerticalAlignment="Top" Width="60" Background="CornflowerBlue" Foreground="White" Click="btMiyagi_Click"/>
-        <Button Content="新潟" HorizontalAlignment="Left" Height="42" Margin="759,300,0,0" VerticalAlignment="Top" Width="60" Background="#FF5AD64E" Foreground="White"/>
+        <Button x:Name="btNigata" Content="新潟" HorizontalAlignment="Left" Height="42" Margin="759,300,0,0" VerticalAlignment="Top" Width="60" Background="#FF5AD64E" Foreground="White" Click="btNigata_Click"/>
         <Button x:Name="btFukusima" Content="福島" HorizontalAlignment="Left" Height="42" Margin="819,300,0,0" VerticalAlignment="Top" Width="60" Background="CornflowerBlue" Foreground="White" Click="btFukusima_Click"/>
-        <Button x:Name="btIbaraki" Content="茨城" HorizontalAlignment="Left" Height="42" Margin="819,344,0,0" VerticalAlignment="Top" Width="60" Background="#FF21831C" Foreground="White"/>
+        <Button x:Name="btIbaraki" Content="茨城" HorizontalAlignment="Left" Height="42" Margin="819,344,0,0" VerticalAlignment="Top" Width="60" Background="#FF21831C" Foreground="White" Click="btIbaraki_Click"/>
         <Button Content="千葉" HorizontalAlignment="Left" Height="42" Margin="819,387,0,0" VerticalAlignment="Top" Width="60" Background="#FF21831C" Foreground="White"/>
-        <Button Content="栃木" HorizontalAlignment="Left" Height="42" Margin="759,344,0,0" VerticalAlignment="Top" Width="60" Background="#FF21831C" Foreground="White"/>
-        <Button Content="埼玉" HorizontalAlignment="Left" Height="42" Margin="759,387,0,0" VerticalAlignment="Top" Width="60" Background="#FF21831C" Foreground="White"/>
+        <Button x:Name="btTotigi" Content="栃木" HorizontalAlignment="Left" Height="42" Margin="759,344,0,0" VerticalAlignment="Top" Width="60" Background="#FF21831C" Foreground="White" Click="btTotigi_Click"/>
+        <Button x:Name="btSaitama" Content="埼玉" HorizontalAlignment="Left" Height="42" Margin="759,387,0,0" VerticalAlignment="Top" Width="60" Background="#FF21831C" Foreground="White" Click="btSaitama_Click"/>
         <Button Content="東京" HorizontalAlignment="Left" Height="42" Margin="759,431,0,0" VerticalAlignment="Top" Width="60" Background="#FF21831C" Foreground="White"/>
         <Button Content="石川" HorizontalAlignment="Left" Height="42" Margin="637,300,0,0" VerticalAlignment="Top" Width="60" Background="#FF5AD64E" Foreground="White"/>
         <Button Content="富山" HorizontalAlignment="Left" Height="42" Margin="699,300,0,0" VerticalAlignment="Top" Width="60" Background="#FF5AD64E" Foreground="White"/>

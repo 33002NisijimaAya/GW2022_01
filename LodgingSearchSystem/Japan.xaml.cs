@@ -73,5 +73,29 @@ namespace LodgingSearchSystem {
             var Yamagata = new Yamagata();
             NavigationService.Navigate(Yamagata);
         }
+
+        private void btNigata_Click(object sender, RoutedEventArgs e)
+        {
+            var nigata = new Nigata();
+            NavigationService.Navigate(nigata);
+        }
+
+        private void btTotigi_Click(object sender, RoutedEventArgs e)
+        {
+            var totigi = new Totigi();
+            NavigationService.Navigate(totigi);
+        }
+
+        private void btIbaraki_Click(object sender, RoutedEventArgs e)
+        {
+            var ibaraki = new Ibaraki();
+            NavigationService.Navigate(ibaraki);
+        }
+
+        private void btSaitama_Click(object sender, RoutedEventArgs e)
+        {
+            var saitama = new Saitama();
+            NavigationService.Navigate(saitama);
+        }
     }
 }

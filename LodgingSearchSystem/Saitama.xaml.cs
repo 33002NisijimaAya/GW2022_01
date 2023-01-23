@@ -16,33 +16,21 @@ using System.Windows.Shapes;
 namespace LodgingSearchSystem
 {
     /// <summary>
-    /// Gunma.xaml の相互作用ロジック
+    /// Saitama.xaml の相互作用ロジック
     /// </summary>
-    public partial class Gunma : Page
+    public partial class Saitama : Page
     {
 
         MainWindow parent = (MainWindow)Application.Current.MainWindow;
 
-        public Gunma()
+        public Saitama()
         {
             InitializeComponent();
         }
 
-        private void btNagano_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void btNigata_Click(object sender, RoutedEventArgs e)
         {
-            var niigata = new Nigata();
-            NavigationService.Navigate(niigata);
-        }
 
-        private void btFukusima_Click(object sender, RoutedEventArgs e)
-        {
-            var fukushima = new Fukusima();
-            NavigationService.Navigate(fukushima);
         }
 
         private void btTotigi_Click(object sender, RoutedEventArgs e)
@@ -50,7 +38,27 @@ namespace LodgingSearchSystem
 
         }
 
-        private void btSaimata_Click(object sender, RoutedEventArgs e)
+        private void btGunma_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btYamanasi_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btTokyo_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btTiba_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btIbaraki_Click(object sender, RoutedEventArgs e)
         {
 
         }
@@ -58,14 +66,14 @@ namespace LodgingSearchSystem
         private void btArea_Click(object sender, RoutedEventArgs e)
         {
             Button bt = (Button)sender;
-            var Hotelshow = new HotelShow("gunma", parent.Areanames[(string)bt.ToolTip], (string)bt.ToolTip);
+            var Hotelshow = new HotelShow("saitama", parent.Areanames[(string)bt.ToolTip], (string)bt.ToolTip);
             NavigationService.Navigate(Hotelshow);
         }
 
         private void AreaName_Click(object sender, RoutedEventArgs s)
         {
             Button bt = (Button)sender;
-            var HotelShow = new HotelShow("gunma", parent.Areanames[(string)bt.Content], (string)bt.Content);
+            var HotelShow = new HotelShow("saitama", parent.Areanames[(string)bt.Content], (string)bt.Content);
             NavigationService.Navigate(HotelShow);
         }
     }

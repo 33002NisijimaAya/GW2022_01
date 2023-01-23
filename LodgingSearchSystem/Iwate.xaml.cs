@@ -18,6 +18,9 @@ namespace LodgingSearchSystem {
     /// Iwate.xaml の相互作用ロジック
     /// </summary>
     public partial class Iwate : Page {
+
+        MainWindow parent = (MainWindow)Application.Current.MainWindow;
+
         public Iwate() {
             InitializeComponent();
         }
@@ -48,6 +51,20 @@ namespace LodgingSearchSystem {
         {
             var Aomori = new Aomori();
             NavigationService.Navigate(Aomori);
+        }
+
+        private void btArea_Click(object sender, RoutedEventArgs e)
+        {
+            Button bt = (Button)sender;
+            var Hotelshow = new HotelShow("iwate", parent.Areanames[(string)bt.ToolTip], (string)bt.ToolTip);
+            NavigationService.Navigate(Hotelshow);
+        }
+
+        private void AreaName_Click(object sender, RoutedEventArgs s)
+        {
+            Button bt = (Button)sender;
+            var HotelShow = new HotelShow("iwate", parent.Areanames[(string)bt.Content], (string)bt.Content);
+            NavigationService.Navigate(HotelShow);
         }
     }
 }

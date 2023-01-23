@@ -16,21 +16,16 @@ using System.Windows.Shapes;
 namespace LodgingSearchSystem
 {
     /// <summary>
-    /// Gunma.xaml の相互作用ロジック
+    /// Totigi.xaml の相互作用ロジック
     /// </summary>
-    public partial class Gunma : Page
+    public partial class Totigi : Page
     {
 
         MainWindow parent = (MainWindow)Application.Current.MainWindow;
 
-        public Gunma()
+        public Totigi()
         {
             InitializeComponent();
-        }
-
-        private void btNagano_Click(object sender, RoutedEventArgs e)
-        {
-
         }
 
         private void btNigata_Click(object sender, RoutedEventArgs e)
@@ -41,13 +36,14 @@ namespace LodgingSearchSystem
 
         private void btFukusima_Click(object sender, RoutedEventArgs e)
         {
-            var fukushima = new Fukusima();
-            NavigationService.Navigate(fukushima);
+            var fukusima = new Fukusima();
+            NavigationService.Navigate(fukusima);
         }
 
-        private void btTotigi_Click(object sender, RoutedEventArgs e)
+        private void btGunma_Click(object sender, RoutedEventArgs e)
         {
-
+            var gunma = new Gunma();
+            NavigationService.Navigate(gunma);
         }
 
         private void btSaimata_Click(object sender, RoutedEventArgs e)
@@ -55,17 +51,22 @@ namespace LodgingSearchSystem
 
         }
 
+        private void btIbaraki_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         private void btArea_Click(object sender, RoutedEventArgs e)
         {
             Button bt = (Button)sender;
-            var Hotelshow = new HotelShow("gunma", parent.Areanames[(string)bt.ToolTip], (string)bt.ToolTip);
+            var Hotelshow = new HotelShow("tochigi", parent.Areanames[(string)bt.ToolTip], (string)bt.ToolTip);
             NavigationService.Navigate(Hotelshow);
         }
 
         private void AreaName_Click(object sender, RoutedEventArgs s)
         {
             Button bt = (Button)sender;
-            var HotelShow = new HotelShow("gunma", parent.Areanames[(string)bt.Content], (string)bt.Content);
+            var HotelShow = new HotelShow("tochigi", parent.Areanames[(string)bt.Content], (string)bt.Content);
             NavigationService.Navigate(HotelShow);
         }
     }
