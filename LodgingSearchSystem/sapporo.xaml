@@ -5,12 +5,13 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:LodgingSearchSystem"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      Height="600" Width="1000"
       Title="sapporo">
 
     <Grid>
-        <Image Margin="175,0,174,0" Source="sapporo_h.gif" Stretch="Fill"/>
-        <Button x:Name="btsupporo" Content="▶札幌・新札幌・琴似" Background="Transparent" BorderBrush="Transparent" Foreground="Blue" Margin="21,83,647,343" >
+        <Image Margin="414,30,24,34" Source="sapporo.png" Stretch="Fill"/>
+        
+        <Button Content="新札幌" ToolTip="札幌・新札幌・琴似" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontSize="12" FontWeight="Bold" Margin="869,266,89,312" Click="btArea_Click">
             <Button.Style>
                 <Style TargetType="Button">
                     <Style.Triggers>
@@ -20,5 +21,61 @@
                 </Style>
             </Button.Style>
         </Button>
+        <Button Content="琴似" ToolTip="札幌・新札幌・琴似" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontSize="12" FontWeight="Bold" Margin="641,189,317,389" Click="btArea_Click" RenderTransformOrigin="0.529,2.055">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+
+        <Button Content="大通公園" ToolTip="大通公園・時計台・狸小路" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontSize="12" FontWeight="Bold" Margin="651,246,293,330" Click="btArea_Click">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="すすきの" ToolTip="すすきの・中島公園" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontSize="12" FontWeight="Bold" Margin="641,275,303,303" Click="btArea_Click">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="中島公園" ToolTip="すすきの・中島公園" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontSize="12" FontWeight="Bold" Margin="666,297,278,281" Click="btArea_Click">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Grid HorizontalAlignment="Left" Width="340" Margin="0,-10,0,10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Button Content="札幌・新札幌・琴似" HorizontalAlignment="Left" VerticalAlignment="Top" Width="305" Height="100" Grid.Row="1" Background="Transparent" BorderBrush="Black" Foreground="Black" Margin="16,10,0,0" Click="AreaName_Click"/>
+            <Button Content="大通公園・時計台・狸小路" HorizontalAlignment="Left" VerticalAlignment="Top" Width="305" Height="100" Grid.Row="2" Background="Transparent" BorderBrush="Black" Foreground="Black" Margin="16,10,0,0" Click="AreaName_Click"/>
+            <Button Content="すすきの・中島公園" HorizontalAlignment="Left" VerticalAlignment="Top" Width="305" Height="100" Grid.Row="3" Background="Transparent" BorderBrush="Black" Foreground="Black" Margin="16,10,0,0" Click="AreaName_Click"/>
+
+
+        </Grid>
     </Grid>
 </Page>

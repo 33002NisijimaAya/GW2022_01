@@ -20,9 +20,26 @@ namespace LodgingSearchSystem
     /// </summary>
     public partial class sapporo : Page
     {
+
+        MainWindow parent = (MainWindow)Application.Current.MainWindow;
+
         public sapporo()
         {
             InitializeComponent();
+        }
+
+        private void btArea_Click(object sender, RoutedEventArgs e)
+        {
+            Button bt = (Button)sender;
+            var Hotelshow = new HotelShow2("hokkaido", parent.Areanames[(string)bt.ToolTip], (string)bt.ToolTip);
+            NavigationService.Navigate(Hotelshow);
+        }
+
+        private void AreaName_Click(object sender, RoutedEventArgs s)
+        {
+            Button bt = (Button)sender;
+            var HotelShow = new HotelShow2("hokkaido", parent.Areanames[(string)bt.Content], (string)bt.Content);
+            NavigationService.Navigate(HotelShow);
         }
     }
 }

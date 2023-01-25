@@ -48,7 +48,8 @@ namespace LodgingSearchSystem
 
         private void btNigata_Click(object sender, RoutedEventArgs e)
         {
-            
+            var niigata = new Nigata();
+            NavigationService.Navigate(niigata);
         }
 
         private void btArea_Click(object sender, RoutedEventArgs e)
@@ -63,6 +64,24 @@ namespace LodgingSearchSystem
             Button bt = (Button)sender;
             var HotelShow = new HotelShow("fukushima", parent.Areanames[(string)bt.Content], (string)bt.Content);
             NavigationService.Navigate(HotelShow);
+        }
+
+        private void btGunma_Click(object sender, RoutedEventArgs e)
+        {
+            var gunma = new Gunma();
+            NavigationService.Navigate(gunma);
+        }
+
+        private void btTotigi_Click(object sender, RoutedEventArgs e)
+        {
+            var totigi = new Totigi();
+            NavigationService.Navigate(totigi);
+        }
+
+        private void btIbaraki_Click(object sender, RoutedEventArgs e)
+        {
+            var ibaraki = new Ibaraki();
+            NavigationService.Navigate(ibaraki);
         }
     }
 }

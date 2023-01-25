@@ -48,17 +48,20 @@ namespace LodgingSearchSystem
 
         private void btSaitama_Click(object sender, RoutedEventArgs e)
         {
-
+            var saitama = new Saitama();
+            NavigationService.Navigate(saitama);
         }
 
         private void btTokyo_Click(object sender, RoutedEventArgs e)
         {
-
+            var tokyo = new Tokyo();
+            NavigationService.Navigate(tokyo);
         }
 
         private void btTiba_Click(object sender, RoutedEventArgs e)
         {
-
+            var tiba = new Tiba();
+            NavigationService.Navigate(tiba);
         }
 
         private void btArea_Click(object sender, RoutedEventArgs e)

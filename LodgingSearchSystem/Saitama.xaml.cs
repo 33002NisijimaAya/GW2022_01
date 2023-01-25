@@ -30,37 +30,44 @@ namespace LodgingSearchSystem
 
         private void btNigata_Click(object sender, RoutedEventArgs e)
         {
-
+            var niigata = new Nigata();
+            NavigationService.Navigate(niigata);
         }
 
         private void btTotigi_Click(object sender, RoutedEventArgs e)
         {
-
+            var totigi = new Totigi();
+            NavigationService.Navigate(totigi);
         }
 
         private void btGunma_Click(object sender, RoutedEventArgs e)
         {
-
+            var gunma = new Gunma();
+            NavigationService.Navigate(gunma);
         }
 
         private void btYamanasi_Click(object sender, RoutedEventArgs e)
         {
-
+            var yamanasi = new Yamanasi();
+            NavigationService.Navigate(yamanasi);
         }
 
         private void btTokyo_Click(object sender, RoutedEventArgs e)
         {
-
+            var tokyo = new Tokyo();
+            NavigationService.Navigate(tokyo);
         }
 
         private void btTiba_Click(object sender, RoutedEventArgs e)
         {
-
+            var tiba = new Tiba();
+            NavigationService.Navigate(tiba);
         }
 
         private void btIbaraki_Click(object sender, RoutedEventArgs e)
         {
-
+            var ibaraki = new Ibaraki();
+            NavigationService.Navigate(ibaraki);
         }
 
         private void btArea_Click(object sender, RoutedEventArgs e)

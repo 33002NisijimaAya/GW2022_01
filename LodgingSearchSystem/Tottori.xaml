@@ -1,0 +1,75 @@
+﻿<Page x:Class="LodgingSearchSystem.Tottori"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:LodgingSearchSystem"
+      mc:Ignorable="d" 
+      Height="600" Width="1000"
+      Title="Tottori">
+
+    <Grid>
+        <Image Margin="414,30,24,34" Source="tottori.png" Stretch="Fill"/>
+        <Button Content="岩美" ToolTip="鳥取・岩美・浜村" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontSize="12" FontWeight="Bold" Margin="871,164,86,414" Click="btArea_Click" RenderTransformOrigin="5.516,-0.455">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="浜村" ToolTip="鳥取・岩美・浜村" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontSize="12" FontWeight="Bold" Margin="754,218,203,360" Click="btArea_Click">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="倉吉" ToolTip="倉吉・三朝温泉" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontSize="12" FontWeight="Bold" Margin="633,268,324,310" Click="btArea_Click">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="米子" ToolTip="米子・皆生温泉・大山" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontSize="12" FontWeight="Bold" Margin="485,246,472,332" Click="btArea_Click">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Grid HorizontalAlignment="Left" Width="340" Margin="0,-10,0,10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+
+
+            </Grid.RowDefinitions>
+            <Button Content="鳥取・岩美・浜村" HorizontalAlignment="Left" VerticalAlignment="Top" Width="302" Height="100" Background="Transparent" BorderBrush="Black" Foreground="Black" Click="AreaName_Click" Margin="16,10,0,0" Grid.Row="1"/>
+            <Button Content="倉吉・三朝温泉" HorizontalAlignment="Left" VerticalAlignment="Top" Width="302" Height="100" Grid.Row="2" Background="Transparent" BorderBrush="Black" Foreground="Black" Click="AreaName_Click" Margin="16,10,0,0"/>
+            <Button Content="米子・皆生温泉・大山" HorizontalAlignment="Left" VerticalAlignment="Top" Width="302" Height="100" Grid.Row="3" Background="Transparent" BorderBrush="Black" Foreground="Black" Click="AreaName_Click" Margin="16,10,0,0"/>
+
+        </Grid>
+
+        <Button x:Name="btSimane" Content="島&#10;根&#10;県" HorizontalAlignment="Left" Height="90" Margin="423,268,0,0" VerticalAlignment="Top" Width="45" FontSize="12" Background="White" Foreground="Black" BorderBrush="Transparent" Click="btSimane_Click"/>
+        <Button x:Name="btHirosima" Content="広島県" HorizontalAlignment="Left" Height="27" Margin="414,502,0,0" VerticalAlignment="Top" Width="89" FontSize="12" Background="White" Foreground="Black" BorderBrush="Transparent" Click="btHirosima_Click"/>
+        <Button x:Name="btOkayama" Content="岡山県" HorizontalAlignment="Left" Height="26" Margin="674,400,0,0" VerticalAlignment="Top" Width="92" FontSize="12" Background="White" Foreground="Black" BorderBrush="Transparent" Click="btOkayama_Click"/>
+        <Button x:Name="btHyougo" Content="兵庫県" HorizontalAlignment="Left" Height="27" Margin="885,464,0,0" VerticalAlignment="Top" Width="91" FontSize="12" Background="White" Foreground="Black" BorderBrush="Transparent" Click="btHyougo_Click" />
+
+    </Grid>
+</Page>

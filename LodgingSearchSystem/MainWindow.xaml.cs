@@ -20,14 +20,12 @@ namespace LodgingSearchSystem {
     /// </summary>
     public partial class MainWindow : Window {
         public IDictionary<string, string> Areanames;
-
-        private NavigationService _navi;    //ナビゲーションサービス
         public MainWindow() {
             InitializeComponent();
-            _navi = this.frame.NavigationService;
 
             Areanames = ReadAreas("areaname.csv");
         }
+
         public static IDictionary<string, string> ReadAreas(string filePath)
         {
             var dict = new Dictionary<string, string>();

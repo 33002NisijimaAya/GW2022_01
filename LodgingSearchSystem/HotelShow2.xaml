@@ -1,0 +1,40 @@
+﻿<Page x:Class="LodgingSearchSystem.HotelShow2"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:LodgingSearchSystem"
+      mc:Ignorable="d" 
+      Height="600" Width="1000"
+      Title="HotelShow2">
+
+    <Grid Loaded="Grid_Loaded">
+        <Label x:Name="lbPrefName" Content="青森県・浅虫温泉" Foreground="Black" HorizontalAlignment="Left" Height="53" Margin="10,10,0,0" VerticalAlignment="Top" Width="601" FontSize="36"/>
+        <Label Content="並びかえ：" Foreground="Black" HorizontalAlignment="Left" Height="29" Margin="10,84,0,0" VerticalAlignment="Top" Width="71" FontSize="14"/>
+        <Button x:Name="btRecommend" Content="おすすめ順" HorizontalAlignment="Left" Height="29" Margin="86,84,0,0" VerticalAlignment="Top" Width="115"/>
+        <Button x:Name="btMin" Content="料金の安い順" HorizontalAlignment="Left" Height="29" Margin="206,84,0,0" VerticalAlignment="Top" Width="115"/>
+        <Button x:Name="btMax" Content="料金の高い順" HorizontalAlignment="Left" Height="29" Margin="326,84,0,0" VerticalAlignment="Top" Width="115"/>
+        <Label x:Name="lbRecordCount" Content="４３件中" Foreground="Black" HorizontalAlignment="Left" Height="36" Margin="10,118,0,0" VerticalAlignment="Top" Width="71" FontSize="16"/>
+        <Label x:Name="lbDisplay" Content="１～30表示" Foreground="Black" HorizontalAlignment="Left" Height="23" Margin="81,122,0,0" VerticalAlignment="Top" Width="70"/>
+        <Button Content="次の３０件" HorizontalAlignment="Left" Height="25" Margin="248,122,0,0" VerticalAlignment="Top" Width="86" FontSize="11"/>
+        <Image x:Name="imHotel" HorizontalAlignment="Left" Height="201" Margin="0,154,0,0" VerticalAlignment="Top" Width="284" Source="C:\Users\infosys\OneDrive - 学校法人太田アカデミー\デスクトップ\167605.jpg" Stretch="Fill"/>
+        <Label x:Name="lbHotelName" Content="ホテルサンルート青森" Foreground="Black" HorizontalAlignment="Left" Height="30" Margin="284,155,0,0" VerticalAlignment="Top" Width="692" FontSize="16"/>
+        <Image x:Name="im1" Margin="291,185,686,392" Source="hosi.png" Stretch="Fill"/>
+        <Image x:Name="im2" Margin="314,185,663,392" Source="hosi.png" Stretch="Fill"/>
+        <Image x:Name="im3" Margin="337,185,640,392" Source="hosi.png" Stretch="Fill"/>
+        <Image x:Name="im4" Margin="360,185,617,392" Source="hosi.png" Stretch="Fill"/>
+        <Image x:Name="im5" Margin="383,185,594,392" Source="hosi.png" Stretch="Fill"/>
+        <Label Content="[最安料金]" Foreground="Red" HorizontalAlignment="Left" Height="26" Margin="797,178,0,0" VerticalAlignment="Top" Width="70"/>
+        <Label x:Name="lbMinCharge" Content="5,300円～" Foreground="Red" HorizontalAlignment="Left" Height="31" Margin="861,173,0,0" VerticalAlignment="Top" Width="100" FontSize="20"/>
+        <Label Content="(消費税込)" Foreground="Black" HorizontalAlignment="Left" Height="25" Margin="894,200,0,0" VerticalAlignment="Top" Width="72"/>
+        <Label x:Name="lbServiceAverage" Content="4.61" Foreground="Red" HorizontalAlignment="Left" Height="23" Margin="411,185,0,0" VerticalAlignment="Top" Width="36" FontSize="14"/>
+        <Label x:Name="lbHotelSpecial" Content="◆全室バス・トイレ別々のセミセパレート◆JR青森駅から徒歩5分◆" Foreground="Black" HorizontalAlignment="Left" Height="24" Margin="289,217,0,0" VerticalAlignment="Top" Width="677" FontSize="14"/>
+        <Label x:Name="lbPostalCode" Content="〒030-0801" Foreground="Black" HorizontalAlignment="Left" Height="21" Margin="289,241,0,0" VerticalAlignment="Top" Width="69"/>
+        <Label x:Name="lbaddress" Content="青森県青森市新町1-11-16" Foreground="Black" HorizontalAlignment="Left" Height="28" Margin="291,267,0,0" VerticalAlignment="Top" Width="285" FontSize="14"/>
+        <Button x:Name="btMap" Content="地図を見る" HorizontalAlignment="Left" Height="21" Margin="291,295,0,0" VerticalAlignment="Top" Width="80" FontSize="10" Click="btMap_Click"/>
+        <Label Content="アクセス：" Foreground="Black" HorizontalAlignment="Left" Height="23" Margin="289,321,0,0" VerticalAlignment="Top" Width="58"/>
+        <Label x:Name="lbaccess" Content="ＪＲ青森駅より徒歩にて約５分。青森空港からバスにて約35分、新町一丁目バス停下車。東北新幹線、新青森駅から車で15分" Foreground="Black" HorizontalAlignment="Left" Height="23" Margin="347,321,0,0" VerticalAlignment="Top" Width="634"/>
+        <Button Content="前の３０件" HorizontalAlignment="Left" Height="25" Margin="156,122,0,0" VerticalAlignment="Top" Width="86" FontSize="11"/>
+        <ScrollBar HorizontalAlignment="Left" Height="600" Margin="964,0,0,0" VerticalAlignment="Top" Width="7"/>
+    </Grid>
+</Page>

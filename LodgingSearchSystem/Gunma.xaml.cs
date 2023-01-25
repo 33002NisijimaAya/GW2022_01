@@ -30,7 +30,8 @@ namespace LodgingSearchSystem
 
         private void btNagano_Click(object sender, RoutedEventArgs e)
         {
-
+            var nagano = new Nagano();
+            NavigationService.Navigate(nagano);
         }
 
         private void btNigata_Click(object sender, RoutedEventArgs e)
@@ -47,12 +48,14 @@ namespace LodgingSearchSystem
 
         private void btTotigi_Click(object sender, RoutedEventArgs e)
         {
-
+            var totigi = new Totigi();
+            NavigationService.Navigate(totigi);
         }
 
         private void btSaimata_Click(object sender, RoutedEventArgs e)
         {
-
+            var saitama = new Saitama();
+            NavigationService.Navigate(saitama);
         }
 
         private void btArea_Click(object sender, RoutedEventArgs e)

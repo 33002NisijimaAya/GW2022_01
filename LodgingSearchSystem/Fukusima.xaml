@@ -192,10 +192,10 @@
             <Button Content="白河・須賀川いわき・南相馬・相馬" HorizontalAlignment="Left" VerticalAlignment="Top" Width="314" Height="46" Grid.Row="7" Background="Transparent" BorderBrush="Black" Foreground="Black" Margin="16,10,0,0" Click="AreaName_Click"/>
         </Grid>
         <Button x:Name="btYamagata" Content="山形県" HorizontalAlignment="Left" Height="31" Margin="582,66,0,0" VerticalAlignment="Top" Width="114" FontSize="12" Background="White" Foreground="Black" BorderBrush="Transparent" Click="btYamagata_Click"/>
-        <Button x:Name="btIbaraki" Content="茨城県" HorizontalAlignment="Left" Height="26" Margin="758,528,0,0" VerticalAlignment="Top" Width="101" FontSize="12" Background="White" Foreground="Black" BorderBrush="Transparent"/>
+        <Button x:Name="btIbaraki" Content="茨城県" HorizontalAlignment="Left" Height="26" Margin="758,528,0,0" VerticalAlignment="Top" Width="101" FontSize="12" Background="White" Foreground="Black" BorderBrush="Transparent" Click="btIbaraki_Click"/>
         <Button x:Name="btNigata" Content="新潟県" HorizontalAlignment="Left" Height="26" Margin="402,208,0,0" VerticalAlignment="Top" Width="101" FontSize="12" Background="White" Foreground="Black" BorderBrush="Transparent" Click="btNigata_Click"/>
-        <Button x:Name="btGunma" Content="群馬県" HorizontalAlignment="Left" Height="24" Margin="402,503,0,0" VerticalAlignment="Top" Width="77" FontSize="12" Background="White" Foreground="Black" BorderBrush="Transparent"/>
-        <Button x:Name="btTotigi" Content="栃木県" HorizontalAlignment="Left" Height="26" Margin="528,463,0,0" VerticalAlignment="Top" Width="102" FontSize="12" Background="White" Foreground="Black" BorderBrush="Transparent"/>
+        <Button x:Name="btGunma" Content="群馬県" HorizontalAlignment="Left" Height="24" Margin="402,503,0,0" VerticalAlignment="Top" Width="77" FontSize="12" Background="White" Foreground="Black" BorderBrush="Transparent" Click="btGunma_Click"/>
+        <Button x:Name="btTotigi" Content="栃木県" HorizontalAlignment="Left" Height="26" Margin="528,463,0,0" VerticalAlignment="Top" Width="102" FontSize="12" Background="White" Foreground="Black" BorderBrush="Transparent" Click="btTotigi_Click"/>
         <Button x:Name="btMiyagi" Content="宮城県" HorizontalAlignment="Left" Height="29" Margin="815,45,0,0" VerticalAlignment="Top" Width="101" FontSize="12" Background="White" Foreground="Black" BorderBrush="Transparent" Click="btMiyagi_Click"/>
     </Grid>
 

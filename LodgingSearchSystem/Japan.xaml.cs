@@ -97,5 +97,137 @@ namespace LodgingSearchSystem {
             var saitama = new Saitama();
             NavigationService.Navigate(saitama);
         }
+
+        private void btTiba_Click(object sender, RoutedEventArgs e)
+        {
+            var tiba = new Tiba();
+            NavigationService.Navigate(tiba);
+        }
+
+        private void btTokyo_Click(object sender, RoutedEventArgs e)
+        {
+            var tokyo = new Tokyo();
+            NavigationService.Navigate(tokyo);
+        }
+
+        private void btKanagawa_Click(object sender, RoutedEventArgs e)
+        {
+            var kanagawa = new Kanagawa();
+            NavigationService.Navigate(kanagawa);
+        }
+
+        private void btYamanasi_Click(object sender, RoutedEventArgs e)
+        {
+            var yamanasi = new Yamanasi();
+            NavigationService.Navigate(yamanasi);
+        }
+
+        private void btNagano_Click(object sender, RoutedEventArgs e)
+        {
+            var nagano = new Nagano();
+            NavigationService.Navigate(nagano);
+        }
+
+        private void btToyama_Click(object sender, RoutedEventArgs e)
+        {
+            var toyama = new Toyama();
+            NavigationService.Navigate(toyama);
+        }
+
+        private void btSizuoka_Click(object sender, RoutedEventArgs e)
+        {
+            var shizuoka = new Shizuoka();
+            NavigationService.Navigate(shizuoka);
+        }
+
+        private void btIshikawa_Click(object sender, RoutedEventArgs e)
+        {
+            var ishikawa = new Ishikawa();
+            NavigationService.Navigate(ishikawa);
+        }
+
+        private void btFukui_Click(object sender, RoutedEventArgs e)
+        {
+            var fukui = new Fukui();
+            NavigationService.Navigate(fukui);
+        }
+
+        private void btGifu_Click(object sender, RoutedEventArgs e)
+        {
+            var gifu = new Gifu();
+            NavigationService.Navigate(gifu);
+        }
+
+        private void btAiti_Click(object sender, RoutedEventArgs e)
+        {
+            var aiti = new Aiti();
+            NavigationService.Navigate(aiti);
+        }
+
+        private void btMie_Click(object sender, RoutedEventArgs e)
+        {
+            var mie = new Mie();
+            NavigationService.Navigate(mie);
+        }
+
+        private void btSiga_Click(object sender, RoutedEventArgs e)
+        {
+            var siga = new Siga();
+            NavigationService.Navigate(siga);
+        }
+
+        private void btKyoto_Click(object sender, RoutedEventArgs e)
+        {
+            var kyoto = new Kyoto();
+            NavigationService.Navigate(kyoto);
+        }
+
+        private void btOsaka_Click(object sender, RoutedEventArgs e)
+        {
+            var osaka = new Osaka();
+            NavigationService.Navigate(osaka);
+        }
+
+        private void btWakayama_Click(object sender, RoutedEventArgs e)
+        {
+            var wakayama = new Wakayama();
+            NavigationService.Navigate(wakayama);
+        }
+
+        private void btHyogo_Click(object sender, RoutedEventArgs e)
+        {
+            var hyogo = new Hyogo();
+            NavigationService.Navigate(hyogo);
+        }
+
+        private void btTottori_Click(object sender, RoutedEventArgs e)
+        {
+            var tottori = new Tottori();
+            NavigationService.Navigate(tottori);
+        }
+
+        private void btOkayama_Click(object sender, RoutedEventArgs e)
+        {
+            var okayama = new Okayama();
+            NavigationService.Navigate(okayama);
+        }
+
+        private void btSimane_Click(object sender, RoutedEventArgs e)
+        {
+            var shimane = new Simane();
+            NavigationService.Navigate(shimane);
+        }
+
+        private void btHirosima_Click(object sender, RoutedEventArgs e)
+        {
+            var hirosima = new Hirosima();
+            NavigationService.Navigate(hirosima);
+        }
+
+        private void btYamaguti_Click(object sender, RoutedEventArgs e)
+        {
+            var yamaguti = new Yamaguti();
+            NavigationService.Navigate(yamaguti);
+        }
     }
 }

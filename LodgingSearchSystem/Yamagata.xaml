@@ -139,7 +139,7 @@
             
             <Button x:Name="btAkita" Content="秋田県" HorizontalAlignment="Left" Height="26" Margin="741,58,-493,0" VerticalAlignment="Top" Width="92" FontSize="12" Background="White" Foreground="Black" BorderBrush="Transparent" Click="btAkita_Click"/>
             <Button x:Name="btIwate" Content="岩手県" HorizontalAlignment="Left" Height="24" Margin="888,2,-630,0" VerticalAlignment="Top" Width="82" FontSize="12" Background="White" Foreground="Black" BorderBrush="Transparent" Click="btIwate_Click" Grid.Row="1" />
-            <Button x:Name="btNiigata" Content="新潟県" HorizontalAlignment="Left" Height="23" Margin="515,3,-261,0" VerticalAlignment="Top" Width="86" FontSize="12" Background="White" Foreground="Black" BorderBrush="Transparent" Grid.Row="4" />
+            <Button x:Name="btNiigata" Content="新潟県" HorizontalAlignment="Left" Height="23" Margin="515,3,-261,0" VerticalAlignment="Top" Width="86" FontSize="12" Background="White" Foreground="Black" BorderBrush="Transparent" Grid.Row="4" Click="btNiigata_Click" />
             <Button x:Name="btMiyagi" Content="宮城県" HorizontalAlignment="Left" Height="22" Margin="824,62,-566,0" VerticalAlignment="Top" Width="82" FontSize="12" Background="White" Foreground="Black" BorderBrush="Transparent" Grid.Row="2" Click="btMiyagi_Click"  />
             <Button x:Name="btFukusima" Content="福島県" HorizontalAlignment="Left" Height="22" Margin="606,31,-364,0" VerticalAlignment="Top" Width="98" FontSize="12" Background="White" Foreground="Black" BorderBrush="Transparent" Grid.Row="6" Click="btFukusima_Click"  />
         </Grid>

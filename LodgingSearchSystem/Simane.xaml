@@ -1,0 +1,134 @@
+﻿<Page x:Class="LodgingSearchSystem.Simane"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:LodgingSearchSystem"
+      mc:Ignorable="d" 
+      Height="600" Width="1000"
+      Title="Shinema">
+
+    <Grid>
+        <Image Margin="414,30,24,34" Source="simane.png" Stretch="Fill"/>
+        <Button Content="松江" ToolTip="松江・玉造・安来・奥出雲" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontSize="12" FontWeight="Bold" Margin="802,120,155,458" Click="btArea_Click" RenderTransformOrigin="4.005,-2.991">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="安来" ToolTip="松江・玉造・安来・奥出雲" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontSize="12" FontWeight="Bold" Margin="847,162,110,416" Click="btArea_Click">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="奥出雲" ToolTip="松江・玉造・安来・奥出雲" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontSize="12" FontWeight="Bold" Margin="802,252,155,326" Click="btArea_Click">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="出雲" ToolTip="出雲・大田・石見銀山" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontSize="12" FontWeight="Bold" Margin="723,178,234,400" Click="btArea_Click">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="大田" ToolTip="出雲・大田・石見銀山" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontSize="12" FontWeight="Bold" Margin="669,224,288,354" Click="btArea_Click">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="津和野" ToolTip="津和野・益田・浜田・江津" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontSize="12" FontWeight="Bold" Margin="474,480,483,98" Click="btArea_Click">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="益田" ToolTip="津和野・益田・浜田・江津" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontSize="12" FontWeight="Bold" Margin="463,427,494,151" Click="btArea_Click">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="浜田" ToolTip="津和野・益田・浜田・江津" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontSize="12" FontWeight="Bold" Margin="527,349,430,229" Click="btArea_Click">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="江津" ToolTip="津和野・益田・浜田・江津" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontSize="12" FontWeight="Bold" Margin="590,303,367,275" Click="btArea_Click">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="隠岐諸島" ToolTip="隠岐諸島" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontSize="12" FontWeight="Bold" Margin="445,75,494,503" Click="btArea_Click">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Grid HorizontalAlignment="Left" Width="340" Margin="0,-10,0,10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Button Content="松江・玉造・安来・奥出雲" HorizontalAlignment="Left" VerticalAlignment="Top" Width="302" Height="80" Background="Transparent" BorderBrush="Black" Foreground="Black" Click="AreaName_Click" Margin="16,10,0,0" Grid.Row="1"/>
+            <Button Content="出雲・大田・石見銀山" HorizontalAlignment="Left" VerticalAlignment="Top" Width="302" Height="80" Grid.Row="2" Background="Transparent" BorderBrush="Black" Foreground="Black" Click="AreaName_Click" Margin="16,10,0,0"/>
+            <Button Content="津和野・益田・浜田・江津" HorizontalAlignment="Left" VerticalAlignment="Top" Width="302" Height="80" Grid.Row="3" Background="Transparent" BorderBrush="Black" Foreground="Black" Click="AreaName_Click" Margin="16,10,0,0"/>
+            <Button Content="隠岐諸島" HorizontalAlignment="Left" VerticalAlignment="Top" Width="302" Height="80" Grid.Row="4" Background="Transparent" BorderBrush="Black" Foreground="Black" Click="AreaName_Click" Margin="16,10,0,0"/>
+        </Grid>
+
+        <Button x:Name="btTottori" Content="鳥取県" HorizontalAlignment="Left" Height="22" Margin="888,119,0,0" VerticalAlignment="Top" Width="86" FontSize="12" Background="White" Foreground="Black" BorderBrush="Transparent" Click="btTottori_Click"/>
+        <Button x:Name="btOkayama" Content="岡山県" HorizontalAlignment="Left" Height="22" Margin="894,272,0,0" VerticalAlignment="Top" Width="82" FontSize="12" Background="White" Foreground="Black" BorderBrush="Transparent" Click="btOkayama_Click"/>
+        <Button x:Name="btHirosima" Content="広島県" HorizontalAlignment="Left" Height="25" Margin="723,409,0,0" VerticalAlignment="Top" Width="95" FontSize="12" Background="White" Foreground="Black" BorderBrush="Transparent" Click="btHirosima_Click"/>
+        <Button x:Name="btYamaguti" Content="山口県" HorizontalAlignment="Left" Height="23" Margin="419,534,0,0" VerticalAlignment="Top" Width="94" FontSize="12" Background="White" Foreground="Black" BorderBrush="Transparent" Click="btYamaguti_Click"/>
+
+    </Grid>
+</Page>
