@@ -128,5 +128,12 @@ namespace LodgingSearchSystem
         {
 
         }
+
+        private void btAreaSelect_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        
     }
 }
