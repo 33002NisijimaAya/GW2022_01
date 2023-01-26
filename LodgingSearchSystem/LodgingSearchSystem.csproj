@@ -90,8 +90,14 @@
       <DependentUpon>Akita.xaml</DependentUpon>
     </Compile>
     <Compile Include="AreaCalculator.cs" />
+    <Compile Include="Ehime.xaml.cs">
+      <DependentUpon>Ehime.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Fukui.xaml.cs">
       <DependentUpon>Fukui.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fukuoka.xaml.cs">
+      <DependentUpon>Fukuoka.xaml</DependentUpon>
     </Compile>
     <Compile Include="Fukusima.xaml.cs">
       <DependentUpon>Fukusima.xaml</DependentUpon>
@@ -120,8 +126,20 @@
     <Compile Include="Ishikawa.xaml.cs">
       <DependentUpon>Ishikawa.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Kagawa.xaml.cs">
+      <DependentUpon>Kagawa.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Kagosima.xaml.cs">
+      <DependentUpon>Kagosima.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Kanagawa.xaml.cs">
       <DependentUpon>Kanagawa.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Kouti.xaml.cs">
+      <DependentUpon>Kouti.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Kumamoto.xaml.cs">
+      <DependentUpon>Kumamoto.xaml</DependentUpon>
     </Compile>
     <Compile Include="Kyoto.xaml.cs">
       <DependentUpon>Kyoto.xaml</DependentUpon>
@@ -138,8 +156,14 @@
     <Compile Include="Miyagi.xaml.cs">
       <DependentUpon>Miyagi.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Miyazaki.xaml.cs">
+      <DependentUpon>Miyazaki.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Nagano.xaml.cs">
       <DependentUpon>Nagano.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Nagasaki.xaml.cs">
+      <DependentUpon>Nagasaki.xaml</DependentUpon>
     </Compile>
     <Compile Include="Nagoya.xaml.cs">
       <DependentUpon>Nagoya.xaml</DependentUpon>
@@ -150,14 +174,23 @@
     <Compile Include="Nigata.xaml.cs">
       <DependentUpon>Nigata.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Oita.xaml.cs">
+      <DependentUpon>Oita.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Okayama.xaml.cs">
       <DependentUpon>Okayama.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Okinawa.xaml.cs">
+      <DependentUpon>Okinawa.xaml</DependentUpon>
     </Compile>
     <Compile Include="Osaka.xaml.cs">
       <DependentUpon>Osaka.xaml</DependentUpon>
     </Compile>
     <Compile Include="Osakashi.xaml.cs">
       <DependentUpon>Osakashi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Saga.xaml.cs">
+      <DependentUpon>Saga.xaml</DependentUpon>
     </Compile>
     <Compile Include="Saitama.xaml.cs">
       <DependentUpon>Saitama.xaml</DependentUpon>
@@ -176,6 +209,9 @@
     </Compile>
     <Compile Include="Tiba.xaml.cs">
       <DependentUpon>Tiba.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tokusima.xaml.cs">
+      <DependentUpon>Tokusima.xaml</DependentUpon>
     </Compile>
     <Compile Include="Tokyo.xaml.cs">
       <DependentUpon>Tokyo.xaml</DependentUpon>
@@ -216,7 +252,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Ehime.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Fukui.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Fukuoka.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -268,7 +312,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Kagawa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Kagosima.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Kanagawa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Kouti.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Kumamoto.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -317,7 +377,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Miyazaki.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Nagano.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Nagasaki.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -333,7 +401,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Oita.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Okayama.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Okinawa.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -342,6 +418,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Osakashi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Saga.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -366,6 +446,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Tiba.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Tokusima.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -573,6 +657,42 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="yamaguti.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="kagawa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="tokusima.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="kouti.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ehime.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="fukuoka.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="oita.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="kumamoto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="miyazaki.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="saga.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="kagaosima.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="nagasaki.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="okinawa.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.6.1\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.6.1\build\MaterialDesignThemes.targets')" />

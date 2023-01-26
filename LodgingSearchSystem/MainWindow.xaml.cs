@@ -41,11 +41,15 @@ namespace LodgingSearchSystem {
 
         private void frame_Loaded(object sender, RoutedEventArgs e)
         {
-            Uri uri = new Uri("Japan.xaml", UriKind.Relative);
-            frame.Source = uri;
+            JpaneseMap();
         }
 
         private void btmenu_Click(object sender, RoutedEventArgs e)
+        {
+            JpaneseMap();
+        }
+
+        private void JpaneseMap()
         {
             Uri uri = new Uri("Japan.xaml", UriKind.Relative);
             frame.Source = uri;

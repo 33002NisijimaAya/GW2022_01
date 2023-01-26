@@ -229,5 +229,77 @@ namespace LodgingSearchSystem {
             var yamaguti = new Yamaguti();
             NavigationService.Navigate(yamaguti);
         }
+
+        private void btKagawa_Click(object sender, RoutedEventArgs e)
+        {
+            var kagawa = new Kagawa();
+            NavigationService.Navigate(kagawa);
+        }
+
+        private void btTokushima_Click(object sender, RoutedEventArgs e)
+        {
+            var tokushima = new Tokusima();
+            NavigationService.Navigate(tokushima);
+        }
+
+        private void btKouti_Click(object sender, RoutedEventArgs e)
+        {
+            var kouti = new Kouti();
+            NavigationService.Navigate(kouti);
+        }
+
+        private void btEhime_Click(object sender, RoutedEventArgs e)
+        {
+            var ehime = new Ehime();
+            NavigationService.Navigate(ehime);
+        }
+
+        private void btFukuoka_Click(object sender, RoutedEventArgs e)
+        {
+            var fukuoka = new Fukuoka();
+            NavigationService.Navigate(fukuoka);
+        }
+
+        private void btOita_Click(object sender, RoutedEventArgs e)
+        {
+            var oita = new Oita();
+            NavigationService.Navigate(oita);
+        }
+
+        private void btKumamoto_Click(object sender, RoutedEventArgs e)
+        {
+            var kumamoto = new Kumamoto();
+            NavigationService.Navigate(kumamoto);
+        }
+
+        private void btMiyazaki_Click(object sender, RoutedEventArgs e)
+        {
+            var miyazaki = new Miyazaki();
+            NavigationService.Navigate(miyazaki);
+        }
+
+        private void btSaga_Click(object sender, RoutedEventArgs e)
+        {
+            var saga = new Saga();
+            NavigationService.Navigate(saga);
+        }
+
+        private void btKagosima_Click(object sender, RoutedEventArgs e)
+        {
+            var kagosima = new Kagosima();
+            NavigationService.Navigate(kagosima);
+        }
+
+        private void btNagasaki_Click(object sender, RoutedEventArgs e)
+        {
+            var nagasaki = new Nagasaki();
+            NavigationService.Navigate(nagasaki);
+        }
+
+        private void btOkinawa_Click(object sender, RoutedEventArgs e)
+        {
+            var okinawa = new Okinawa();
+            NavigationService.Navigate(okinawa);
+        }
     }
 }
