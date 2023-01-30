@@ -31,8 +31,8 @@
             <Button x:Name="btMax" Content="料金の高い順" HorizontalAlignment="Center" Height="29" Margin="5,5,0,0" VerticalAlignment="Center" Width="120" Grid.Column="2" Grid.Row="1"/>
             <Label x:Name="lbRecordCount" Content="４３件中" Foreground="Black" HorizontalAlignment="Left" Height="26" Margin="5,10,0,0" VerticalAlignment="Top" Width="73" FontSize="16" Grid.ColumnSpan="2" Grid.Row="2"/>
             <Label x:Name="lbDisplay" Content="１～30表示" Foreground="Black" HorizontalAlignment="Left" Height="23" Margin="0,13,0,0" VerticalAlignment="Top" Width="70" Grid.Column="1" Grid.Row="2"/>
-            <Button Content="次の３０件" HorizontalAlignment="Left" Height="25" Margin="39,10,0,0" VerticalAlignment="Top" Width="86" FontSize="11" Grid.Column="2" Grid.Row="2"/>
-            <Button Content="前の３０件" HorizontalAlignment="Left" Height="25" Margin="75,10,0,0" VerticalAlignment="Top" Width="86" FontSize="11" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="2"/>
+            <Button x:Name="btNext" Content="次の１０件" HorizontalAlignment="Left" Height="25" Margin="39,10,0,0" VerticalAlignment="Top" Width="86" FontSize="11" Grid.Column="2" Grid.Row="2" Click="btNext_Click"/>
+            <Button x:Name="btBack" Content="前の１０件" HorizontalAlignment="Left" Height="25" Margin="75,10,0,0" VerticalAlignment="Top" Width="86" FontSize="11" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="2" Click="btBack_Click"/>
         </Grid>
         <ScrollViewer HorizontalAlignment="Left" Height="463" Margin="0,7,0,0" VerticalAlignment="Top" Width="982">
 
@@ -240,16 +240,16 @@
                 <Label Content="アクセス：" Foreground="Black" HorizontalAlignment="Left" Height="23" Margin="3,157,0,0" VerticalAlignment="Top" Width="58" Grid.Row="8" Grid.Column="1" RenderTransformOrigin="0.698,0.5"/>
                 <Label Content="アクセス：" Foreground="Black" HorizontalAlignment="Left" Height="23" Margin="3,157,0,0" VerticalAlignment="Top" Width="58" Grid.Row="9" Grid.Column="1" RenderTransformOrigin="0.698,0.5"/>
 
-                <Label x:Name="lbaccess1" Content="ＪＲ青森駅より徒歩にて約５分。青森空港からバスにて約35分、新町一丁目バス停下車。東北新幹線、新青森駅から車で15分" Foreground="Black" HorizontalAlignment="Left" Height="26" Margin="3,180,0,0" VerticalAlignment="Top" Width="643" Grid.Row="0" Grid.Column="1"/>
-                <Label x:Name="lbaccess2" Content="ＪＲ青森駅より徒歩にて約５分。青森空港からバスにて約35分、新町一丁目バス停下車。東北新幹線、新青森駅から車で15分" Foreground="Black" HorizontalAlignment="Left" Height="26" Margin="3,180,0,0" VerticalAlignment="Top" Width="643" Grid.Row="1" Grid.Column="1"/>
-                <Label x:Name="lbaccess3" Content="ＪＲ青森駅より徒歩にて約５分。青森空港からバスにて約35分、新町一丁目バス停下車。東北新幹線、新青森駅から車で15分" Foreground="Black" HorizontalAlignment="Left" Height="26" Margin="3,180,0,0" VerticalAlignment="Top" Width="643" Grid.Row="2" Grid.Column="1"/>
-                <Label x:Name="lbaccess4" Content="ＪＲ青森駅より徒歩にて約５分。青森空港からバスにて約35分、新町一丁目バス停下車。東北新幹線、新青森駅から車で15分" Foreground="Black" HorizontalAlignment="Left" Height="26" Margin="3,180,0,0" VerticalAlignment="Top" Width="643" Grid.Row="3" Grid.Column="1"/>
-                <Label x:Name="lbaccess5" Content="ＪＲ青森駅より徒歩にて約５分。青森空港からバスにて約35分、新町一丁目バス停下車。東北新幹線、新青森駅から車で15分" Foreground="Black" HorizontalAlignment="Left" Height="26" Margin="3,180,0,0" VerticalAlignment="Top" Width="643" Grid.Row="4" Grid.Column="1"/>
-                <Label x:Name="lbaccess6" Content="ＪＲ青森駅より徒歩にて約５分。青森空港からバスにて約35分、新町一丁目バス停下車。東北新幹線、新青森駅から車で15分" Foreground="Black" HorizontalAlignment="Left" Height="26" Margin="3,180,0,0" VerticalAlignment="Top" Width="643" Grid.Row="5" Grid.Column="1"/>
-                <Label x:Name="lbaccess7" Content="ＪＲ青森駅より徒歩にて約５分。青森空港からバスにて約35分、新町一丁目バス停下車。東北新幹線、新青森駅から車で15分" Foreground="Black" HorizontalAlignment="Left" Height="26" Margin="3,180,0,0" VerticalAlignment="Top" Width="643" Grid.Row="6" Grid.Column="1"/>
-                <Label x:Name="lbaccess8" Content="ＪＲ青森駅より徒歩にて約５分。青森空港からバスにて約35分、新町一丁目バス停下車。東北新幹線、新青森駅から車で15分" Foreground="Black" HorizontalAlignment="Left" Height="26" Margin="3,180,0,0" VerticalAlignment="Top" Width="643" Grid.Row="7" Grid.Column="1"/>
-                <Label x:Name="lbaccess9" Content="ＪＲ青森駅より徒歩にて約５分。青森空港からバスにて約35分、新町一丁目バス停下車。東北新幹線、新青森駅から車で15分" Foreground="Black" HorizontalAlignment="Left" Height="26" Margin="3,180,0,0" VerticalAlignment="Top" Width="643" Grid.Row="8" Grid.Column="1"/>
-                <Label x:Name="lbaccess10" Content="ＪＲ青森駅より徒歩にて約５分。青森空港からバスにて約35分、新町一丁目バス停下車。東北新幹線、新青森駅から車で15分" Foreground="Black" HorizontalAlignment="Left" Height="26" Margin="3,180,0,0" VerticalAlignment="Top" Width="643" Grid.Row="9" Grid.Column="1"/>
+                <TextBlock x:Name="textblock1" Foreground="Black" HorizontalAlignment="Left" Height="36" Margin="3,180,0,0" VerticalAlignment="Top" Width="643" Grid.Row="0" Grid.Column="1"/>
+                <TextBlock x:Name="textblock2" Foreground="Black" HorizontalAlignment="Left" Height="36" Margin="3,180,0,0" VerticalAlignment="Top" Width="643" Grid.Row="1" Grid.Column="1"/>
+                <TextBlock x:Name="textblock3" Foreground="Black" HorizontalAlignment="Left" Height="26" Margin="3,180,0,0" VerticalAlignment="Top" Width="643" Grid.Row="2" Grid.Column="1"/>
+                <TextBlock x:Name="textblock4" Foreground="Black" HorizontalAlignment="Left" Height="26" Margin="3,180,0,0" VerticalAlignment="Top" Width="643" Grid.Row="3" Grid.Column="1"/>
+                <TextBlock x:Name="textblock5" Foreground="Black" HorizontalAlignment="Left" Height="26" Margin="3,180,0,0" VerticalAlignment="Top" Width="643" Grid.Row="4" Grid.Column="1"/>
+                <TextBlock x:Name="textblock6" Foreground="Black" HorizontalAlignment="Left" Height="26" Margin="3,180,0,0" VerticalAlignment="Top" Width="643" Grid.Row="5" Grid.Column="1"/>
+                <TextBlock x:Name="textblock7" Foreground="Black" HorizontalAlignment="Left" Height="26" Margin="3,180,0,0" VerticalAlignment="Top" Width="643" Grid.Row="6" Grid.Column="1"/>
+                <TextBlock x:Name="textblock8" Foreground="Black" HorizontalAlignment="Left" Height="26" Margin="3,180,0,0" VerticalAlignment="Top" Width="643" Grid.Row="7" Grid.Column="1"/>
+                <TextBlock x:Name="textblock9" Foreground="Black" HorizontalAlignment="Left" Height="26" Margin="3,180,0,0" VerticalAlignment="Top" Width="643" Grid.Row="8" Grid.Column="1"/>
+                <TextBlock x:Name="textblock10" Foreground="Black" HorizontalAlignment="Left" Height="26" Margin="3,180,0,0" VerticalAlignment="Top" Width="643" Grid.Row="9" Grid.Column="1"/>
 
             </Grid>
         </ScrollViewer>

@@ -12,7 +12,5 @@
         <Frame Name="frame" NavigationUIVisibility="Hidden" Loaded="frame_Loaded" Height="600" Margin="0,41,0,-5"/>
         <Image Margin="0,10,0,0" Source="rakuten.gif" Stretch="Fill" Height="38" VerticalAlignment="Top" HorizontalAlignment="Left" Width="361"/>
         <Button x:Name="btmenu" Content="メインメニュー" HorizontalAlignment="Left" Height="31" Margin="830,10,0,0" VerticalAlignment="Top" Width="142" Click="btmenu_Click"/>
-        <ComboBox HorizontalAlignment="Left" Height="31" Margin="500,10,0,0" VerticalAlignment="Top" Width="210"/>
-        <Button x:Name="btAreaSelect" Content="地域選択" HorizontalAlignment="Left" Height="18" Margin="727,23,0,0" VerticalAlignment="Top" Width="69" FontSize="8"/>
     </Grid>
 </Window>

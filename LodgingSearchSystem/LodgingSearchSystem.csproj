@@ -150,6 +150,9 @@
     <Compile Include="Map.xaml.cs">
       <DependentUpon>Map.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Map2.xaml.cs">
+      <DependentUpon>Map2.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Mie.xaml.cs">
       <DependentUpon>Mie.xaml</DependentUpon>
     </Compile>
@@ -366,6 +369,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Map.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Map2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
