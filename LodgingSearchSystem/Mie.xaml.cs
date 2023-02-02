@@ -30,17 +30,20 @@ namespace LodgingSearchSystem
 
         private void btWakayama_Click(object sender, RoutedEventArgs e)
         {
-
+            var wakayama = new Wakayama();
+            NavigationService.Navigate(wakayama);
         }
 
         private void btNara_Click(object sender, RoutedEventArgs e)
         {
-
+            var nara = new Nara();
+            NavigationService.Navigate(nara);
         }
 
         private void btOsaka_Click(object sender, RoutedEventArgs e)
         {
-
+            var osaka = new Osaka();
+            NavigationService.Navigate(osaka);
         }
 
         private void btAiti_Click(object sender, RoutedEventArgs e)
@@ -51,12 +54,14 @@ namespace LodgingSearchSystem
 
         private void btSiga_Click(object sender, RoutedEventArgs e)
         {
-
+            var siga = new Siga();
+            NavigationService.Navigate(siga);
         }
 
         private void btKyoto_Click(object sender, RoutedEventArgs e)
         {
-
+            var kyoto = new Kyoto();
+            NavigationService.Navigate(kyoto);
         }
 
         private void btArea_Click(object sender, RoutedEventArgs e)

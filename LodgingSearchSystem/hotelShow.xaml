@@ -217,16 +217,16 @@
                 <Label x:Name="lbaddress9" Content="青森県青森市新町1-11-16" Foreground="Black" HorizontalAlignment="Left" Height="28" Margin="10,129,0,0" VerticalAlignment="Top" Width="480" FontSize="14" Grid.Row="8" Grid.Column="1"/>
                 <Label x:Name="lbaddress10" Content="青森県青森市新町1-11-16" Foreground="Black" HorizontalAlignment="Left" Height="28" Margin="10,129,0,0" VerticalAlignment="Top" Width="480" FontSize="14" Grid.Row="9" Grid.Column="1"/>
 
-                <Button x:Name="btMap1" Content="地図を見る" HorizontalAlignment="Left" Height="23" Margin="59,157,0,0" VerticalAlignment="Top" Width="80" FontSize="10" Click="btMap_Click" Grid.Column="1" Grid.Row="0"/>
-                <Button x:Name="btMap2" Content="地図を見る" HorizontalAlignment="Left" Height="23" Margin="59,157,0,0" VerticalAlignment="Top" Width="80" FontSize="10" Click="btMap_Click" Grid.Column="1" Grid.Row="1"/>
-                <Button x:Name="btMap3" Content="地図を見る" HorizontalAlignment="Left" Height="23" Margin="59,157,0,0" VerticalAlignment="Top" Width="80" FontSize="10" Click="btMap_Click" Grid.Column="1" Grid.Row="2"/>
-                <Button x:Name="btMap4" Content="地図を見る" HorizontalAlignment="Left" Height="23" Margin="59,157,0,0" VerticalAlignment="Top" Width="80" FontSize="10" Click="btMap_Click" Grid.Column="1" Grid.Row="3"/>
-                <Button x:Name="btMap5" Content="地図を見る" HorizontalAlignment="Left" Height="23" Margin="59,157,0,0" VerticalAlignment="Top" Width="80" FontSize="10" Click="btMap_Click" Grid.Column="1" Grid.Row="4"/>
-                <Button x:Name="btMap6" Content="地図を見る" HorizontalAlignment="Left" Height="23" Margin="59,157,0,0" VerticalAlignment="Top" Width="80" FontSize="10" Click="btMap_Click" Grid.Column="1" Grid.Row="5"/>
-                <Button x:Name="btMap7" Content="地図を見る" HorizontalAlignment="Left" Height="23" Margin="59,157,0,0" VerticalAlignment="Top" Width="80" FontSize="10" Click="btMap_Click" Grid.Column="1" Grid.Row="6"/>
-                <Button x:Name="btMap8" Content="地図を見る" HorizontalAlignment="Left" Height="23" Margin="59,157,0,0" VerticalAlignment="Top" Width="80" FontSize="10" Click="btMap_Click" Grid.Column="1" Grid.Row="7"/>
-                <Button x:Name="btMap9" Content="地図を見る" HorizontalAlignment="Left" Height="23" Margin="59,157,0,0" VerticalAlignment="Top" Width="80" FontSize="10" Click="btMap_Click" Grid.Column="1" Grid.Row="8"/>
-                <Button x:Name="btMap10" Content="地図を見る" HorizontalAlignment="Left" Height="23" Margin="59,157,0,0" VerticalAlignment="Top" Width="80" FontSize="10" Click="btMap_Click" Grid.Column="1" Grid.Row="9"/>
+                <Button x:Name="btMap1" Content="地図を見る" HorizontalAlignment="Left" Height="23" Margin="59,157,0,0" VerticalAlignment="Top" Width="80" FontSize="10"  Grid.Column="1" Grid.Row="0" Click="btMap1_Click"/>
+                <Button x:Name="btMap2" Content="地図を見る" HorizontalAlignment="Left" Height="23" Margin="59,157,0,0" VerticalAlignment="Top" Width="80" FontSize="10" Grid.Column="1" Grid.Row="1" Click="btMap2_Click"/>
+                <Button x:Name="btMap3" Content="地図を見る" HorizontalAlignment="Left" Height="23" Margin="59,157,0,0" VerticalAlignment="Top" Width="80" FontSize="10"  Grid.Column="1" Grid.Row="2" Click="btMap3_Click"/>
+                <Button x:Name="btMap4" Content="地図を見る" HorizontalAlignment="Left" Height="23" Margin="59,157,0,0" VerticalAlignment="Top" Width="80" FontSize="10"  Grid.Column="1" Grid.Row="3" Click="btMap4_Click"/>
+                <Button x:Name="btMap5" Content="地図を見る" HorizontalAlignment="Left" Height="23" Margin="59,157,0,0" VerticalAlignment="Top" Width="80" FontSize="10"  Grid.Column="1" Grid.Row="4" Click="btMap5_Click"/>
+                <Button x:Name="btMap6" Content="地図を見る" HorizontalAlignment="Left" Height="23" Margin="59,157,0,0" VerticalAlignment="Top" Width="80" FontSize="10" Grid.Column="1" Grid.Row="5" Click="btMap6_Click"/>
+                <Button x:Name="btMap7" Content="地図を見る" HorizontalAlignment="Left" Height="23" Margin="59,157,0,0" VerticalAlignment="Top" Width="80" FontSize="10" Grid.Column="1" Grid.Row="6" Click="btMap7_Click"/>
+                <Button x:Name="btMap8" Content="地図を見る" HorizontalAlignment="Left" Height="23" Margin="59,157,0,0" VerticalAlignment="Top" Width="80" FontSize="10"  Grid.Column="1" Grid.Row="7" Click="btMap8_Click"/>
+                <Button x:Name="btMap9" Content="地図を見る" HorizontalAlignment="Left" Height="23" Margin="59,157,0,0" VerticalAlignment="Top" Width="80" FontSize="10"  Grid.Column="1" Grid.Row="8" Click="btMap9_Click"/>
+                <Button x:Name="btMap10" Content="地図を見る" HorizontalAlignment="Left" Height="23" Margin="59,157,0,0" VerticalAlignment="Top" Width="80" FontSize="10"  Grid.Column="1" Grid.Row="9" Click="btMap10_Click"/>
 
 
                 <Label Content="アクセス：" Foreground="Black" HorizontalAlignment="Left" Height="23" Margin="3,157,0,0" VerticalAlignment="Top" Width="58" Grid.Row="0" Grid.Column="1" RenderTransformOrigin="0.698,0.5"/>

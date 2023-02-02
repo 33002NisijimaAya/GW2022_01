@@ -32,12 +32,13 @@ namespace LodgingSearchSystem
         string code = "";
         string area = "";
 
-        int min = 1;
-        int max = 10;
-
+        int min = 0;
+        int max = 9;
+        int j = 0;
         int next = 1;
         int back = 0;
         WebClient wc;
+        int recordcount;
         public string hotelname;
 
 
@@ -53,6 +54,8 @@ namespace LodgingSearchSystem
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
+            btBack.IsEnabled = false;
+
             var wc = new WebClient()
             {
                 Encoding = Encoding.UTF8
@@ -64,10 +67,10 @@ namespace LodgingSearchSystem
             var json1 = JsonConvert.DeserializeObject<Rootobject>(dString1);
 
             //レコードの数
-            var recordcount = json1.pagingInfo.recordCount;
+            recordcount = json1.pagingInfo.recordCount;
             //表示しているレコードの番号
-            var displayfirst = min;
-            var displaylast = max;
+            var displayfirst = min+1;
+            var displaylast = max+1;
             //ホテルの写真
             Image[] images = { imHotel1, imHotel2, imHotel3, imHotel4, imHotel5, imHotel6, imHotel7, imHotel8, imHotel9, imHotel10 };
             //アクセス
@@ -93,24 +96,23 @@ namespace LodgingSearchSystem
             //最低代金
             Label[] mincharge = { lbMinCharge1, lbMinCharge2, lbMinCharge3, lbMinCharge4, lbMinCharge5, lbMinCharge6, lbMinCharge7, lbMinCharge8, lbMinCharge9, lbMinCharge10 };
 
-            //ホテルの写真
-            for (int i = min-1*next; i < max; i++)
+            for (int i = min; i <= max; i++)
             {
+
                 var imageurl = json1.hotels[i].hotel[0].hotelBasicInfo.hotelImageUrl;
                 BitmapImage imagesourse = new BitmapImage(new Uri(imageurl));
-                images[i].Source = imagesourse;
-                labelAccessArray[i].Text = json1.hotels[i].hotel[0].hotelBasicInfo.access;
-                hotelName[i].Content = json1.hotels[i].hotel[0].hotelBasicInfo.hotelName;
-                serviseaverage[i].Content = json1.hotels[i].hotel[1].hotelRatingInfo.serviceAverage;
-                hotelspecial[i].Content = json1.hotels[i].hotel[0].hotelBasicInfo.hotelSpecial;
-                postalcode[i].Content = "〒" + json1.hotels[i].hotel[0].hotelBasicInfo.postalCode;
-                mincharge[i].Content = String.Format("{0:N0}円～", json1.hotels[i].hotel[0].hotelBasicInfo.hotelMinCharge);
-
+                images[j].Source = imagesourse;
+                labelAccessArray[j].Text = json1.hotels[i].hotel[0].hotelBasicInfo.access;
+                hotelName[j].Content = json1.hotels[i].hotel[0].hotelBasicInfo.hotelName;
+                serviseaverage[j].Content = json1.hotels[i].hotel[1].hotelRatingInfo.serviceAverage;
+                hotelspecial[j].Content = json1.hotels[i].hotel[0].hotelBasicInfo.hotelSpecial;
+                postalcode[j].Content = "〒" + json1.hotels[i].hotel[0].hotelBasicInfo.postalCode;
+                mincharge[j].Content = String.Format("{0:N0}円～", json1.hotels[i].hotel[0].hotelBasicInfo.hotelMinCharge);
                 string address1 = json1.hotels[i].hotel[0].hotelBasicInfo.address1;
                 string address2 = json1.hotels[i].hotel[0].hotelBasicInfo.address2;
-                address[i].Content = String.Format("{0}{1}", address1, address2);
+                address[j].Content = String.Format("{0}{1}", address1, address2);
 
-                int ser = Convert.ToInt32(serviseaverage[i].Content);
+                int ser = Convert.ToInt32(serviseaverage[j].Content);
 
                 if (ser >= 5)
                 {
@@ -118,63 +120,146 @@ namespace LodgingSearchSystem
                 }
                 else if (ser >= 3.8)
                 {
-                    image5[i].Source = null;
+                    image5[j].Source = null;
                 }
                 else if (ser >= 2.8)
                 {
-                    image5[i].Source = null;
-                    image4[i].Source = null;
+                    image5[j].Source = null;
+                    image4[j].Source = null;
                 }
                 else if (ser >= 1.8)
                 {
-                    image5[i].Source = null;
-                    image4[i].Source = null;
-                    image3[i].Source = null;
+                    image5[j].Source = null;
+                    image4[j].Source = null;
+                    image3[j].Source = null;
                 }
                 else if (ser >= 1)
                 {
-                    image5[i].Source = null;
-                    image4[i].Source = null;
-                    image3[i].Source = null;
-                    image2[i].Source = null;
+                    image5[j].Source = null;
+                    image4[j].Source = null;
+                    image3[j].Source = null;
+                    image2[j].Source = null;
                 }
                 else
                 {
-                    image5[i].Source = null;
-                    image4[i].Source = null;
-                    image3[i].Source = null;
-                    image2[i].Source = null;
-                    image1[i].Source = null;
-
+                    image5[j].Source = null;
+                    image4[j].Source = null;
+                    image3[j].Source = null;
+                    image2[j].Source = null;
+                    image1[j].Source = null;
                 }
+                j++;
             }
             lbPrefName.Content = area + "　ホテル・旅館";
             lbRecordCount.Content = String.Format("{0}件中", recordcount);
             lbDisplay.Content = String.Format("{0}～{1}表示", displayfirst, displaylast);
         }
 
-        private void btMap_Click(object sender, RoutedEventArgs e)
-        {
-            Map map = new Map(pref, code);
-            map.Show();
-        }
-
-       
         private void btNext_Click(object sender, RoutedEventArgs e)
         {
             next++;
+
+
+            imHotel1.Source = null;
+            imHotel2.Source = null;
+            imHotel3.Source = null;
+            imHotel4.Source = null;
+            imHotel5.Source = null;
+            imHotel6.Source = null;
+            imHotel7.Source = null;
+            imHotel8.Source = null;
+            imHotel9.Source = null;
+            imHotel10.Source = null;
+
+
             min += 10; max += 10;
+            if (max > recordcount)
+            {
+                max = recordcount-1;
+            }
+            j = 0;
+            Page_Loaded(sender, e);
+
+            btBack.IsEnabled = true;
 
         }
 
         private void btBack_Click(object sender, RoutedEventArgs e)
         {
 
+
+            back++;
+            if (back * 10 > max)
+            {
+                max = back * 10;
+            }
+            min -= 10; max -= 10;
+            
+            j = 0;
+            Page_Loaded(sender, e);
+
+            
         }
 
         private void btRecommend_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void btMap1_Click(object sender, RoutedEventArgs e)
+        {
+            Mapshow(0);
+        }
+
+        private void Mapshow(int i)
+        {
+            Map map = new Map(pref, code, i);
+            map.Show();
+        }
+
+        private void btMap2_Click(object sender, RoutedEventArgs e)
+        {
+            Mapshow(1);
+        }
+
+        private void btMap3_Click(object sender, RoutedEventArgs e)
+        {
+            Mapshow(2);
+        }
+
+        private void btMap4_Click(object sender, RoutedEventArgs e)
+        {
+            Mapshow(3);
+        }
+
+        private void btMap5_Click(object sender, RoutedEventArgs e)
+        {
+            Mapshow(4);
+        }
+
+        private void btMap6_Click(object sender, RoutedEventArgs e)
+        {
+            Mapshow(5);
+        }
+
+        private void btMap7_Click(object sender, RoutedEventArgs e)
+        {
+            Mapshow(6);
+        }
+
+        private void btMap8_Click(object sender, RoutedEventArgs e)
+        {
+            Mapshow(7);
+        }
+
+        private void btMap9_Click(object sender, RoutedEventArgs e)
+        {
+            Mapshow(8);
+        }
+
+        private void btMap10_Click(object sender, RoutedEventArgs e)
+        {
+            Mapshow(9);
         }
     }
 }

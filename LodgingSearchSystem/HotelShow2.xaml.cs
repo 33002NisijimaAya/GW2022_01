@@ -290,5 +290,10 @@ namespace LodgingSearchSystem
             lbRecordCount.Content = String.Format("{0}件中", recordcount);
             lbDisplay.Content = String.Format("{0}～{1}表示", displayfirst, displaylast);
         }
+
+        private void btMap1_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
