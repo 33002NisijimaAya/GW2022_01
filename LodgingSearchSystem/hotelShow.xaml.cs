@@ -223,7 +223,6 @@ namespace LodgingSearchSystem
                 recordmin -= 10; recordmax -= 10;
             }
 
-
             if (next % 3 == 0 && next != 0)
             {
                 page--;
