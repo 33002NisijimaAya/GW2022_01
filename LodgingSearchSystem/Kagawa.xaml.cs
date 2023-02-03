@@ -36,12 +36,14 @@ namespace LodgingSearchSystem
 
         private void btEhime_Click(object sender, RoutedEventArgs e)
         {
-            
+            var ehime = new Ehime();
+            NavigationService.Navigate(ehime);
         }
 
         private void btTokusima_Click(object sender, RoutedEventArgs e)
         {
-
+            var tokusima = new Tokusima();
+            NavigationService.Navigate(tokusima);
         }
 
         private void btArea_Click(object sender, RoutedEventArgs e)

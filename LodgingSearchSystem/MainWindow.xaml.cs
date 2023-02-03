@@ -55,5 +55,9 @@ namespace LodgingSearchSystem {
             frame.Source = uri;
         }
 
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            
+        }
     }
 }

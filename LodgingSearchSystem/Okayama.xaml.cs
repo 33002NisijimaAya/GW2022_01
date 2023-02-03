@@ -42,12 +42,14 @@ namespace LodgingSearchSystem
 
         private void btHirosima_Click(object sender, RoutedEventArgs e)
         {
-
+            var hirosima = new Hirosima();
+            NavigationService.Navigate(hirosima);
         }
 
         private void btKagawa_Click(object sender, RoutedEventArgs e)
         {
-
+            var kagawa = new Kagawa();
+            NavigationService.Navigate(kagawa);
         }
 
         private void btArea_Click(object sender, RoutedEventArgs e)

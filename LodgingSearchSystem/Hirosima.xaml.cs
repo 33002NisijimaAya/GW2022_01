@@ -48,12 +48,14 @@ namespace LodgingSearchSystem
 
         private void btYamaguti_Click(object sender, RoutedEventArgs e)
         {
-            
+            var yamaguti = new Yamaguti();
+            NavigationService.Navigate(yamaguti);
         }
 
         private void btEhime_Click(object sender, RoutedEventArgs e)
         {
-
+            var ehime = new Ehime();
+            NavigationService.Navigate(ehime);
         }
 
         private void btArea_Click(object sender, RoutedEventArgs e)

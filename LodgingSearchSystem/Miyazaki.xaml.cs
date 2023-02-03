@@ -42,7 +42,8 @@ namespace LodgingSearchSystem
 
         private void btKagosima_Click(object sender, RoutedEventArgs e)
         {
-
+            var kagosima = new Kagosima();
+            NavigationService.Navigate(kagosima);
         }
 
         private void btArea_Click(object sender, RoutedEventArgs e)

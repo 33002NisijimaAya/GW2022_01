@@ -30,7 +30,8 @@ namespace LodgingSearchSystem
 
         private void btHyogo_Click(object sender, RoutedEventArgs e)
         {
-
+            var hyogo = new Hyogo();
+            NavigationService.Navigate(hyogo);
         }
 
         private void btNara_Click(object sender, RoutedEventArgs e)

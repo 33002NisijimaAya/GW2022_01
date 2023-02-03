@@ -30,7 +30,8 @@ namespace LodgingSearchSystem
 
         private void btNagasaki_Click(object sender, RoutedEventArgs e)
         {
-           
+            var nagasaki = new Nagasaki();
+            NavigationService.Navigate(nagasaki);
         }
 
         private void btFukuoka_Click(object sender, RoutedEventArgs e)

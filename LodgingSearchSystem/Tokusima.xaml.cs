@@ -30,7 +30,8 @@ namespace LodgingSearchSystem
 
         private void btEhime_Click(object sender, RoutedEventArgs e)
         {
-
+            var ehime = new Ehime();
+            NavigationService.Navigate(ehime);
         }
 
         private void btHyogo_Click(object sender, RoutedEventArgs e)
@@ -47,7 +48,8 @@ namespace LodgingSearchSystem
 
         private void btKouti_Click(object sender, RoutedEventArgs e)
         {
-            
+            var kouti = new Kouti();
+            NavigationService.Navigate(kouti);
         }
 
         private void btArea_Click(object sender, RoutedEventArgs e)

@@ -9,8 +9,8 @@
       Title="Akita2" Foreground="#FF225D00">
 
     <Grid>
-        <Image Margin="396,0,0,0" Source="akita.png" Stretch="Fill"/>
-        <Button Content="能代" HorizontalAlignment="Left" Height="29" Margin="544,97,0,0" VerticalAlignment="Top" Width="79" Background="Transparent" BorderBrush="Transparent" Foreground="Black" ToolTip="能代・男鹿・白神" FontWeight="Bold" FontSize="14" RenderTransformOrigin="1.448,0.586" Click="btArea_Click">
+        <Image Margin="414,30,24,34" Source="akita.png" Stretch="Fill"/>
+        <Button Content="能代" HorizontalAlignment="Left" Height="29" Margin="544,118,0,0" VerticalAlignment="Top" Width="79" Background="Transparent" BorderBrush="Transparent" Foreground="Black" ToolTip="能代・男鹿・白神" FontWeight="Bold" FontSize="14" RenderTransformOrigin="1.448,0.586" Click="btArea_Click">
             <Button.Style>
                 <Style TargetType="Button">
                     <Style.Triggers>
@@ -20,7 +20,7 @@
                 </Style>
             </Button.Style>
         </Button>
-        <Button Content="大館" HorizontalAlignment="Left" Height="29" Margin="678,76,0,0" VerticalAlignment="Top" Width="86" Background="Transparent" BorderBrush="Transparent" Foreground="Black" ToolTip="大館・鹿角・十和田大湯・八幡平" FontWeight="Bold" FontSize="14" Click="btArea_Click">
+        <Button Content="大館" HorizontalAlignment="Left" Height="29" Margin="668,87,0,0" VerticalAlignment="Top" Width="86" Background="Transparent" BorderBrush="Transparent" Foreground="Black" ToolTip="大館・鹿角・十和田大湯・八幡平" FontWeight="Bold" FontSize="14" Click="btArea_Click">
             <Button.Style>
                 <Style TargetType="Button">
                     <Style.Triggers>
@@ -30,7 +30,7 @@
                 </Style>
             </Button.Style>
         </Button>
-        <Button Content="八幡平" HorizontalAlignment="Left" Height="30" Margin="711,158,0,0" VerticalAlignment="Top" Width="85" Background="Transparent" BorderBrush="Transparent" Foreground="Black" ToolTip="大館・鹿角・十和田大湯・八幡平" FontWeight="Bold" FontSize="14" Click="btArea_Click">
+        <Button Content="八幡平" HorizontalAlignment="Left" Height="30" Margin="669,176,0,0" VerticalAlignment="Top" Width="85" Background="Transparent" BorderBrush="Transparent" Foreground="Black" ToolTip="大館・鹿角・十和田大湯・八幡平" FontWeight="Bold" FontSize="14" Click="btArea_Click">
             <Button.Style>
                 <Style TargetType="Button">
                     <Style.Triggers>
@@ -40,7 +40,7 @@
                 </Style>
             </Button.Style>
         </Button>
-        <Button Content="秋田" HorizontalAlignment="Left" Height="28" Margin="594,252,0,0" VerticalAlignment="Top" Width="64" Background="Transparent" BorderBrush="Transparent" Foreground="Black" ToolTip="秋田" FontWeight="Bold" FontSize="14" Click="btArea_Click">
+        <Button Content="秋田" HorizontalAlignment="Left" Height="28" Margin="606,269,0,0" VerticalAlignment="Top" Width="64" Background="Transparent" BorderBrush="Transparent" Foreground="Black" ToolTip="秋田" FontWeight="Bold" FontSize="14" Click="btArea_Click">
             <Button.Style>
                 <Style TargetType="Button">
                     <Style.Triggers>
@@ -50,7 +50,7 @@
                 </Style>
             </Button.Style>
         </Button>
-        <Button Content="角館" HorizontalAlignment="Left" Height="24" Margin="711,277,0,0" VerticalAlignment="Top" Width="53" Background="Transparent" BorderBrush="Transparent" Foreground="Black" ToolTip="角館・大曲・田沢湖" FontWeight="Bold" FontSize="14" RenderTransformOrigin="1.448,0.586" Click="btArea_Click">
+        <Button Content="角館" HorizontalAlignment="Left" Height="24" Margin="711,306,0,0" VerticalAlignment="Top" Width="53" Background="Transparent" BorderBrush="Transparent" Foreground="Black" ToolTip="角館・大曲・田沢湖" FontWeight="Bold" FontSize="14" RenderTransformOrigin="1.448,0.586" Click="btArea_Click">
             <Button.Style>
                 <Style TargetType="Button">
                     <Style.Triggers>
@@ -81,7 +81,7 @@
             <Button Content="由利本荘・鳥海山" HorizontalAlignment="Left" VerticalAlignment="Top" Width="309" Height="55" Grid.Row="6" Background="Transparent" BorderBrush="Black" Foreground="Black" Click="AreaName_Click" Margin="16,10,0,0"/>
 
         </Grid>
-        <Button Content="大曲" HorizontalAlignment="Left" Height="23" Margin="668,315,0,0" VerticalAlignment="Top" Width="59" Background="Transparent" BorderBrush="Transparent" Foreground="Black" ToolTip="角館・大曲・田沢湖" FontSize="14" FontWeight="Bold" RenderTransformOrigin="0.61,0.043" Click="btArea_Click">
+        <Button Content="大曲" HorizontalAlignment="Left" Height="23" Margin="669,335,0,0" VerticalAlignment="Top" Width="59" Background="Transparent" BorderBrush="Transparent" Foreground="Black" ToolTip="角館・大曲・田沢湖" FontSize="14" FontWeight="Bold" RenderTransformOrigin="0.61,0.043" Click="btArea_Click">
             <Button.Style>
                 <Style TargetType="Button">
                     <Style.Triggers>
@@ -91,7 +91,7 @@
                 </Style>
             </Button.Style>
         </Button>
-        <Button Content="由利本荘" HorizontalAlignment="Left" Height="22" Margin="564,395,0,0" VerticalAlignment="Top" Width="59" Background="Transparent" BorderBrush="Transparent" Foreground="Black" ToolTip="由利本荘・鳥海山" FontSize="14" FontWeight="Bold" RenderTransformOrigin="0.61,0.043" Click="btArea_Click">
+        <Button Content="由利本荘" HorizontalAlignment="Left" Height="22" Margin="564,415,0,0" VerticalAlignment="Top" Width="59" Background="Transparent" BorderBrush="Transparent" Foreground="Black" ToolTip="由利本荘・鳥海山" FontSize="14" FontWeight="Bold" RenderTransformOrigin="0.61,0.043" Click="btArea_Click">
             <Button.Style>
                 <Style TargetType="Button">
                     <Style.Triggers>
@@ -111,7 +111,7 @@
                 </Style>
             </Button.Style>
         </Button>
-        <Button Content="横手" HorizontalAlignment="Left" Height="24" Margin="705,393,0,0" VerticalAlignment="Top" Width="59" Background="Transparent" BorderBrush="Transparent" Foreground="Black" ToolTip="湯沢・横手" FontSize="14" FontWeight="Bold" RenderTransformOrigin="0.61,0.043" Click="btArea_Click">
+        <Button Content="横手" HorizontalAlignment="Left" Height="24" Margin="711,398,0,0" VerticalAlignment="Top" Width="59" Background="Transparent" BorderBrush="Transparent" Foreground="Black" ToolTip="湯沢・横手" FontSize="14" FontWeight="Bold" RenderTransformOrigin="0.61,0.043" Click="btArea_Click">
             <Button.Style>
                 <Style TargetType="Button">
                     <Style.Triggers>
@@ -121,7 +121,10 @@
                 </Style>
             </Button.Style>
         </Button>
-        <Button x:Name="btIwate" Content="岩手県" HorizontalAlignment="Left" Height="33" Margin="843,333,0,0" VerticalAlignment="Top" Width="96" Background="#FFFCFBFF" Foreground="Black" BorderBrush="Transparent" Click="btIwate_Click"/>
-        <Button x:Name="btAomori" Content="青森県" HorizontalAlignment="Left" Height="27" Margin="577,0,0,0" VerticalAlignment="Top" Width="95" Background="#FFFCFBFF" Foreground="Black" BorderBrush="Transparent" Click="btAomori_Click"/>
+        <Button x:Name="btIwate" Content="岩手県" HorizontalAlignment="Left" Height="33" Margin="824,319,0,0" VerticalAlignment="Top" Width="96" Background="#FFFCFBFF" Foreground="Black" BorderBrush="Transparent" Click="btIwate_Click"/>
+        <Button x:Name="btAomori" Content="青森県" HorizontalAlignment="Left" Height="27" Margin="579,30,0,0" VerticalAlignment="Top" Width="102" Background="#FFFCFBFF" Foreground="Black" BorderBrush="Transparent" Click="btAomori_Click"/>
+        <Button x:Name="btYamagata" Content="山形県" HorizontalAlignment="Left" Height="27" Margin="531,524,0,0" VerticalAlignment="Top" Width="102" Background="#FFFCFBFF" Foreground="Black" BorderBrush="Transparent" Click="btYamagata_Click" />
+        <Button x:Name="btMiyagi" Content="宮城県" HorizontalAlignment="Left" Height="24" Margin="763,542,0,0" VerticalAlignment="Top" Width="94" Background="#FFFCFBFF" Foreground="Black" BorderBrush="Transparent" Click="btMiyagi_Click" />
+
     </Grid>
 </Page>

@@ -30,7 +30,8 @@ namespace LodgingSearchSystem
 
         private void btTottori_Click(object sender, RoutedEventArgs e)
         {
-
+            var tottori = new Tottori();
+            NavigationService.Navigate(tottori);
         }
 
         private void btKyoto_Click(object sender, RoutedEventArgs e)
@@ -53,12 +54,14 @@ namespace LodgingSearchSystem
 
         private void btOkayama_Click(object sender, RoutedEventArgs e)
         {
-
+            var okayama = new Okayama();
+            NavigationService.Navigate(okayama);
         }
 
         private void btKagawa_Click(object sender, RoutedEventArgs e)
         {
-
+            var kagawa = new Kagawa();
+            NavigationService.Navigate(kagawa);
         }
 
         private void btArea_Click(object sender, RoutedEventArgs e)

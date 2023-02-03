@@ -33,7 +33,7 @@
         <Button x:Name="btGifu" Content="岐阜" HorizontalAlignment="Left" Height="42" Margin="577,387,0,0" VerticalAlignment="Top" Width="60" Background="#FF5AD64E" Foreground="White" Click="btGifu_Click"/>
         <Button x:Name="btAiti" Content="愛知" HorizontalAlignment="Left" Height="42" Margin="577,429,0,0" VerticalAlignment="Top" Width="60" Background="#FF5AD64E" Foreground="White" Click="btAiti_Click"/>
         <Button x:Name="btSiga" Content="滋賀" HorizontalAlignment="Left" Height="42" Margin="517,345,0,0" VerticalAlignment="Top" Width="60" Background="#FFF7770B" Foreground="White" RenderTransformOrigin="0.325,0.44" Click="btSiga_Click"/>
-        <Button x:Name="btNara" Content="奈良" HorizontalAlignment="Left" Height="42" Margin="517,386,0,0" VerticalAlignment="Top" Width="60" Background="#FFF7770B" Foreground="White"/>
+        <Button x:Name="btNara" Content="奈良" HorizontalAlignment="Left" Height="42" Margin="517,386,0,0" VerticalAlignment="Top" Width="60" Background="#FFF7770B" Foreground="White" Click="btNara_Click"/>
         <Button x:Name="btMie" Content="三&#10;重" HorizontalAlignment="Left" Height="87" Margin="517,428,0,0" VerticalAlignment="Top" Width="60" Background="#FFF7770B" Foreground="White" Click="btMie_Click"/>
         <Button x:Name="btKyoto" Content="京都" HorizontalAlignment="Left" Height="42" Margin="457,344,0,0" VerticalAlignment="Top" Width="60" Background="#FFF7770B" Foreground="White" Click="btKyoto_Click"/>
         <Button x:Name="btOsaka" Content="大阪" HorizontalAlignment="Left" Height="42" Margin="457,385,0,0" VerticalAlignment="Top" Width="60" Background="#FFF7770B" Foreground="White" Click="btOsaka_Click"/>

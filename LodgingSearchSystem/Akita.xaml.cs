@@ -58,5 +58,17 @@ namespace LodgingSearchSystem
             var HotelShow = new HotelShow("akita", parent.Areanames[(string)bt.Content], (string)bt.Content);
             NavigationService.Navigate(HotelShow);
         }
+
+        private void btYamagata_Click(object sender, RoutedEventArgs e)
+        {
+            var yamagata = new Yamagata();
+            NavigationService.Navigate(yamagata);
+        }
+
+        private void btMiyagi_Click(object sender, RoutedEventArgs e)
+        {
+            var miyagi = new Miyagi();
+            NavigationService.Navigate(miyagi);
+        }
     }
 }

@@ -54,7 +54,8 @@ namespace LodgingSearchSystem
 
         private void btOita_Click(object sender, RoutedEventArgs e)
         {
-
+            var oita = new Oita();
+            NavigationService.Navigate(oita);
         }
 
         private void btArea_Click(object sender, RoutedEventArgs e)

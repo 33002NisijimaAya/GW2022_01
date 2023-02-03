@@ -54,12 +54,14 @@ namespace LodgingSearchSystem
 
         private void btSiga_Click(object sender, RoutedEventArgs e)
         {
-
+            var siga = new Siga();
+            NavigationService.Navigate(siga);
         }
 
         private void btMie_Click(object sender, RoutedEventArgs e)
         {
-
+            var mie = new Mie();
+            NavigationService.Navigate(mie);
         }
 
         private void btAiti_Click(object sender, RoutedEventArgs e)

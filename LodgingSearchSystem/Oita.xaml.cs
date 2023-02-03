@@ -42,12 +42,14 @@ namespace LodgingSearchSystem
 
         private void btKumamoto_Click(object sender, RoutedEventArgs e)
         {
-            
+            var kumamoto = new Kumamoto();
+            NavigationService.Navigate(kumamoto);
         }
 
         private void btMiyazaki_Click(object sender, RoutedEventArgs e)
         {
-
+            var miyazaki = new Miyazaki();
+            NavigationService.Navigate(miyazaki);
         }
 
         private void btArea_Click(object sender, RoutedEventArgs e)

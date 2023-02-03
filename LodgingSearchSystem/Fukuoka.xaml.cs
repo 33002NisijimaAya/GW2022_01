@@ -36,17 +36,20 @@ namespace LodgingSearchSystem
 
         private void btOita_Click(object sender, RoutedEventArgs e)
         {
-
+            var oita = new Oita();
+            NavigationService.Navigate(oita);
         }
 
         private void btKumamoto_Click(object sender, RoutedEventArgs e)
         {
-
+            var kumamoto = new Kumamoto();
+            NavigationService.Navigate(kumamoto);
         }
 
         private void btSaga_Click(object sender, RoutedEventArgs e)
         {
-            
+            var saga = new Saga();
+            NavigationService.Navigate(saga);
         }
 
         private void btArea_Click(object sender, RoutedEventArgs e)

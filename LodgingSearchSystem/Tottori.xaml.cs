@@ -51,17 +51,20 @@ namespace LodgingSearchSystem
 
         private void btOkayama_Click(object sender, RoutedEventArgs e)
         {
-
+            var okayama = new Okayama();
+            NavigationService.Navigate(okayama);
         }
 
         private void btHirosima_Click(object sender, RoutedEventArgs e)
         {
-
+            var hirosima = new Hirosima();
+            NavigationService.Navigate(hirosima);
         }
 
         private void btSimane_Click(object sender, RoutedEventArgs e)
         {
-
+            var simane = new Simane();
+            NavigationService.Navigate(simane);
         }
     }
 }

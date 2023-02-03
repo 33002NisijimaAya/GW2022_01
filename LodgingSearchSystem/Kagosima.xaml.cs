@@ -36,12 +36,14 @@ namespace LodgingSearchSystem
 
         private void btMiyazaki_Click(object sender, RoutedEventArgs e)
         {
-
+            var miyazaki = new Miyazaki();
+            NavigationService.Navigate(miyazaki);
         }
 
         private void btOkinawa_Click(object sender, RoutedEventArgs e)
         {
-
+            var okinawa = new Okinawa();
+            NavigationService.Navigate(okinawa);
         }
 
         private void btArea_Click(object sender, RoutedEventArgs e)

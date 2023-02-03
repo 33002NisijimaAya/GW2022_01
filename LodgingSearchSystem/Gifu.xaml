@@ -200,7 +200,7 @@
         <Button x:Name="btIshikawa" Content="石川県" HorizontalAlignment="Left" Height="26" Margin="538,122,0,0" VerticalAlignment="Top" Width="96" FontSize="12" Background="White" Foreground="Black" BorderBrush="Transparent" Click="btIshikawa_Click"/>
         <Button x:Name="btFukui" Content="福井県" HorizontalAlignment="Left" Height="27" Margin="486,228,0,0" VerticalAlignment="Top" Width="100" FontSize="12" Background="White" Foreground="Black" BorderBrush="Transparent" Click="btFukui_Click"/>
         <Button x:Name="btSiga" Content="滋賀県" HorizontalAlignment="Left" Height="24" Margin="438,401,0,0" VerticalAlignment="Top" Width="78" FontSize="12" Background="White" Foreground="Black" BorderBrush="Transparent" Click="btSiga_Click"/>
-        <Button x:Name="btMie" Content="三重県" HorizontalAlignment="Left" Height="21" Margin="538,545,0,0" VerticalAlignment="Top" Width="84" FontSize="12" Background="White" Foreground="Black" BorderBrush="Transparent" Click="btMie_Click"/>
+        <Button x:Name="btMie" Content="三重県" HorizontalAlignment="Left" Height="30" Margin="538,536,0,0" VerticalAlignment="Top" Width="96" FontSize="12" Background="White" Foreground="Black" BorderBrush="Transparent" Click="btMie_Click"/>
         <Button x:Name="btAiti" Content="愛知県" HorizontalAlignment="Left" Height="23" Margin="737,509,0,0" VerticalAlignment="Top" Width="89" FontSize="12" Background="White" Foreground="Black" BorderBrush="Transparent" Click="btAiti_Click"/>
 
     </Grid>

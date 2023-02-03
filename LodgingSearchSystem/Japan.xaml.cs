@@ -301,5 +301,11 @@ namespace LodgingSearchSystem {
             var okinawa = new Okinawa();
             NavigationService.Navigate(okinawa);
         }
+
+        private void btNara_Click(object sender, RoutedEventArgs e)
+        {
+            var nara = new Nara();
+            NavigationService.Navigate(nara);
+        }
     }
 }

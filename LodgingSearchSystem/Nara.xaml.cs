@@ -36,12 +36,14 @@ namespace LodgingSearchSystem
 
         private void btHyogo_Click(object sender, RoutedEventArgs e)
         {
-
+            var hyogo = new Hyogo();
+            NavigationService.Navigate(hyogo);
         }
 
         private void btOsaka_Click(object sender, RoutedEventArgs e)
         {
-
+            var osaka = new Osaka();
+            NavigationService.Navigate(osaka);
         }
 
         private void btMie_Click(object sender, RoutedEventArgs e)
@@ -52,7 +54,8 @@ namespace LodgingSearchSystem
 
         private void btWakayama_Click(object sender, RoutedEventArgs e)
         {
-
+            var wakayama = new Wakayama();
+            NavigationService.Navigate(wakayama);
         }
 
         private void btArea_Click(object sender, RoutedEventArgs e)

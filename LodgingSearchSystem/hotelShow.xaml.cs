@@ -34,13 +34,19 @@ namespace LodgingSearchSystem
 
         int min = 0;
         int max = 9;
+        int recordmin = 0;
+        int recordmax = 9;
         int j = 0;
-        int next = 1;
-        int back = 0;
-        WebClient wc;
+        int next = 0;
         int recordcount;
-        public string hotelname;
+        int page = 1;
+        string sort = null;
+        Rootobject json;
 
+        WebClient wc = new WebClient()
+        {
+            Encoding = Encoding.UTF8
+        };
 
         public HotelShow(string pref, string code, string area)
         {
@@ -48,29 +54,20 @@ namespace LodgingSearchSystem
             this.pref = pref;
             this.code = code;
             this.area = area;
+            btBack.IsEnabled = false;
         }
 
 
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            btBack.IsEnabled = false;
 
-            var wc = new WebClient()
-            {
-                Encoding = Encoding.UTF8
-            };
-
-            string regionnum = string.Format(
-                "https://app.rakuten.co.jp/services/api/Travel/SimpleHotelSearch/20170426?format=json&largeClassCode=japan&middleClassCode={0}&smallClassCode={1}&applicationId=1023910507139864215", pref, code);
-            var dString1 = wc.DownloadString(regionnum);
-            var json1 = JsonConvert.DeserializeObject<Rootobject>(dString1);
-
+            CallJson(wc);
             //レコードの数
-            recordcount = json1.pagingInfo.recordCount;
+            recordcount = json.pagingInfo.recordCount;
             //表示しているレコードの番号
-            var displayfirst = min+1;
-            var displaylast = max+1;
+            var displayfirst = recordmin + 1;
+            var displaylast = recordmax + 1;
             //ホテルの写真
             Image[] images = { imHotel1, imHotel2, imHotel3, imHotel4, imHotel5, imHotel6, imHotel7, imHotel8, imHotel9, imHotel10 };
             //アクセス
@@ -96,20 +93,21 @@ namespace LodgingSearchSystem
             //最低代金
             Label[] mincharge = { lbMinCharge1, lbMinCharge2, lbMinCharge3, lbMinCharge4, lbMinCharge5, lbMinCharge6, lbMinCharge7, lbMinCharge8, lbMinCharge9, lbMinCharge10 };
 
+            Button[] map = { btMap1, btMap2, btMap3, btMap4, btMap5, btMap6, btMap7, btMap8, btMap9, btMap10 };
+
             for (int i = min; i <= max; i++)
             {
-
-                var imageurl = json1.hotels[i].hotel[0].hotelBasicInfo.hotelImageUrl;
+                var imageurl = json.hotels[i].hotel[0].hotelBasicInfo.hotelImageUrl;
                 BitmapImage imagesourse = new BitmapImage(new Uri(imageurl));
                 images[j].Source = imagesourse;
-                labelAccessArray[j].Text = json1.hotels[i].hotel[0].hotelBasicInfo.access;
-                hotelName[j].Content = json1.hotels[i].hotel[0].hotelBasicInfo.hotelName;
-                serviseaverage[j].Content = json1.hotels[i].hotel[1].hotelRatingInfo.serviceAverage;
-                hotelspecial[j].Content = json1.hotels[i].hotel[0].hotelBasicInfo.hotelSpecial;
-                postalcode[j].Content = "〒" + json1.hotels[i].hotel[0].hotelBasicInfo.postalCode;
-                mincharge[j].Content = String.Format("{0:N0}円～", json1.hotels[i].hotel[0].hotelBasicInfo.hotelMinCharge);
-                string address1 = json1.hotels[i].hotel[0].hotelBasicInfo.address1;
-                string address2 = json1.hotels[i].hotel[0].hotelBasicInfo.address2;
+                labelAccessArray[j].Text = json.hotels[i].hotel[0].hotelBasicInfo.access;
+                hotelName[j].Content = json.hotels[i].hotel[0].hotelBasicInfo.hotelName;
+                serviseaverage[j].Content = json.hotels[i].hotel[1].hotelRatingInfo.serviceAverage;
+                hotelspecial[j].Content = json.hotels[i].hotel[0].hotelBasicInfo.hotelSpecial;
+                postalcode[j].Content = "〒" + json.hotels[i].hotel[0].hotelBasicInfo.postalCode;
+                mincharge[j].Content = String.Format("{0:N0}円～", json.hotels[i].hotel[0].hotelBasicInfo.hotelMinCharge);
+                string address1 = json.hotels[i].hotel[0].hotelBasicInfo.address1;
+                string address2 = json.hotels[i].hotel[0].hotelBasicInfo.address2;
                 address[j].Content = String.Format("{0}{1}", address1, address2);
 
                 int ser = Convert.ToInt32(serviseaverage[j].Content);
@@ -147,6 +145,7 @@ namespace LodgingSearchSystem
                     image3[j].Source = null;
                     image2[j].Source = null;
                     image1[j].Source = null;
+                    serviseaverage[j].Content = "口コミ０件";
                 }
                 j++;
             }
@@ -155,60 +154,110 @@ namespace LodgingSearchSystem
             lbDisplay.Content = String.Format("{0}～{1}表示", displayfirst, displaylast);
         }
 
+        private void CallJson(WebClient wc)
+        {
+            if (sort != null)
+            {
+                string regionnum2 = string.Format(
+                        "https://app.rakuten.co.jp/services/api/Travel/SimpleHotelSearch/20170426?format=json&largeClassCode=japan&middleClassCode={0}&smallClassCode={1}&page={2}&sort={3}&applicationId=1023910507139864215", pref, code, page, sort);
+                var dString2 = wc.DownloadString(regionnum2);
+                var json2 = JsonConvert.DeserializeObject<Rootobject>(dString2);
+                json = json2;
+            }
+            else
+            {
+                string regionnum1 = string.Format(
+                        "https://app.rakuten.co.jp/services/api/Travel/SimpleHotelSearch/20170426?format=json&largeClassCode=japan&middleClassCode={0}&smallClassCode={1}&page={2}&applicationId=1023910507139864215", pref, code, page);
+                var dString1 = wc.DownloadString(regionnum1);
+                var json1 = JsonConvert.DeserializeObject<Rootobject>(dString1);
+                json = json1;
+            }
+        }
+
         private void btNext_Click(object sender, RoutedEventArgs e)
         {
             next++;
-
-
-            imHotel1.Source = null;
-            imHotel2.Source = null;
-            imHotel3.Source = null;
-            imHotel4.Source = null;
-            imHotel5.Source = null;
-            imHotel6.Source = null;
-            imHotel7.Source = null;
-            imHotel8.Source = null;
-            imHotel9.Source = null;
-            imHotel10.Source = null;
-
-
             min += 10; max += 10;
-            if (max > recordcount)
+            recordmin += 10; recordmax += 10;
+
+            if (next % 3 == 0)
             {
-                max = recordcount-1;
+                page++;
+                min = 0;
+                max = 9;
             }
+
+            if (recordmax >= recordcount)
+            {
+                if (page >= 2)
+                {
+                    max = min + (recordcount - (next * 10) - 1);
+                }
+                else
+                {
+                    max = recordcount - 1;
+                }
+                recordmax = recordcount - 1;
+                btNext.IsEnabled = false;
+            }
+
             j = 0;
+
             Page_Loaded(sender, e);
 
             btBack.IsEnabled = true;
-
         }
 
         private void btBack_Click(object sender, RoutedEventArgs e)
         {
-
-
-            back++;
-            if (back * 10 > max)
+            btNext.IsEnabled = true;
+            if (recordmax + 1 == recordcount)
             {
-                max = back * 10;
+                max = (next * 10 + (recordcount - (next * 10))) - (recordcount - (next * 10));
+                recordmax = max;
+                min -= 10;
+                recordmin -= 10;
             }
-            min -= 10; max -= 10;
-            
+            else
+            {
+                recordmin -= 10; recordmax -= 10;
+            }
+
+
+            if (next % 3 == 0 && next != 0)
+            {
+                page--;
+                min = 20;
+                max = 29;
+               
+            }
+            else if (recordmax + 1 != recordcount)
+            {
+                min -= 10; max -= 10;
+              
+            }
+
+            next--;
+
             j = 0;
             Page_Loaded(sender, e);
 
-            
+            if (next == 0)
+            {
+                btBack.IsEnabled = false;
+            }
         }
 
-        private void btRecommend_Click(object sender, RoutedEventArgs e)
+        private void Sort(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        private void btMap1_Click(object sender, RoutedEventArgs e)
-        {
-            Mapshow(0);
+            sort = null;
+            recordmin = 0;
+            recordmax = 9;
+            min = 0;
+            max = 9;
+            j = 0;
+            next = 1;
+            btBack.IsEnabled = false;
         }
 
         private void Mapshow(int i)
@@ -216,6 +265,34 @@ namespace LodgingSearchSystem
             Map map = new Map(pref, code, i);
             map.Show();
         }
+
+        private void btRecommend_Click(object sender, RoutedEventArgs e)
+        {
+            Sort(sender, e);
+            sort = "standard";
+            Page_Loaded(sender, e);
+        }
+
+
+        private void btMax_Click(object sender, RoutedEventArgs e)
+        {
+            Sort(sender, e);
+            sort = "-roomCharge";
+            Page_Loaded(sender, e);
+        }
+
+        private void btMin_Click(object sender, RoutedEventArgs e)
+        {
+            Sort(sender, e);
+            sort = "+roomCharge";
+            Page_Loaded(sender, e);
+        }
+
+        private void btMap1_Click(object sender, RoutedEventArgs e)
+        {
+            Mapshow(0);
+        }
+
 
         private void btMap2_Click(object sender, RoutedEventArgs e)
         {
@@ -261,5 +338,6 @@ namespace LodgingSearchSystem
         {
             Mapshow(9);
         }
+
     }
 }

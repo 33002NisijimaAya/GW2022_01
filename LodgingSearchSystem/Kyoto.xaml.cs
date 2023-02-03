@@ -42,22 +42,26 @@ namespace LodgingSearchSystem
 
         private void btMie_Click(object sender, RoutedEventArgs e)
         {
-
+            var mie = new Mie();
+            NavigationService.Navigate(mie);
         }
 
         private void btNara_Click(object sender, RoutedEventArgs e)
         {
-
+            var nara = new Nara();
+            NavigationService.Navigate(nara);
         }
 
         private void btOsaka_Click(object sender, RoutedEventArgs e)
         {
-
+            var osaka = new Osaka();
+            NavigationService.Navigate(osaka);
         }
 
         private void btHyogo_Click(object sender, RoutedEventArgs e)
         {
-
+            var hyogo = new Hyogo();
+            NavigationService.Navigate(hyogo);
         }
 
         private void btKyoto_Click(object sender, RoutedEventArgs e)

@@ -42,7 +42,8 @@ namespace LodgingSearchSystem
 
         private void btKyoto_Click(object sender, RoutedEventArgs e)
         {
-
+            var kyoto = new Kyoto();
+            NavigationService.Navigate(kyoto);
         }
 
         private void btMie_Click(object sender, RoutedEventArgs e)

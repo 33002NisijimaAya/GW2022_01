@@ -42,12 +42,14 @@ namespace LodgingSearchSystem
 
         private void btFukuoka_Click(object sender, RoutedEventArgs e)
         {
-
+            var fukuoka = new Fukuoka();
+            NavigationService.Navigate(fukuoka);
         }
 
         private void btOita_Click(object sender, RoutedEventArgs e)
         {
-
+            var oita = new Oita();
+            NavigationService.Navigate(oita);
         }
 
         private void btArea_Click(object sender, RoutedEventArgs e)

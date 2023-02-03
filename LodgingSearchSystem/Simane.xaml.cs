@@ -30,12 +30,14 @@ namespace LodgingSearchSystem
 
         private void btYamaguti_Click(object sender, RoutedEventArgs e)
         {
-
+            var yamaguti = new Yamaguti();
+            NavigationService.Navigate(yamaguti);
         }
 
         private void btHirosima_Click(object sender, RoutedEventArgs e)
         {
-
+            var hirosima = new Hirosima();
+            NavigationService.Navigate(hirosima);
         }
 
         private void btOkayama_Click(object sender, RoutedEventArgs e)
