@@ -211,40 +211,37 @@ namespace LodgingSearchSystem
         private void btBack_Click(object sender, RoutedEventArgs e)
         {
             btNext.IsEnabled = true;
-            if (recordmax + 1 == recordcount)
+
+            int i = max;
+            if(next % 3 == 0 && next > 0){
+                page--;
+                min = 20;
+                max = 29;
+            }
+
+            if(recordmax +1 == recordcount)
             {
-                max = (next * 10 + (recordcount - (next * 10))) - (recordcount - (next * 10));
-                recordmax = max;
+                max = max - (recordcount - (next * 10)-1)-1;
+                recordmax = recordcount - (recordcount - (next * 10));
                 min -= 10;
                 recordmin -= 10;
             }
             else
             {
-                recordmin -= 10; recordmax -= 10;
-            }
-
-            if (next % 3 == 0 && next != 0)
-            {
-                page--;
-                min = 20;
-                max = 29;
-               
-            }
-            else if (recordmax + 1 != recordcount)
-            {
                 min -= 10; max -= 10;
-              
+                recordmax -= 10; recordmin -= 10;
             }
 
-            next--;
 
             j = 0;
             Page_Loaded(sender, e);
-
+            
             if (next == 0)
             {
                 btBack.IsEnabled = false;
             }
+
+            next--;
         }
 
         private void Sort(object sender, RoutedEventArgs e)
