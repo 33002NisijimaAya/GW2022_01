@@ -105,7 +105,7 @@ namespace LodgingSearchSystem
                 serviseaverage[j].Content = json.hotels[i].hotel[1].hotelRatingInfo.serviceAverage;
                 hotelspecial[j].Content = json.hotels[i].hotel[0].hotelBasicInfo.hotelSpecial;
                 postalcode[j].Content = "〒" + json.hotels[i].hotel[0].hotelBasicInfo.postalCode;
-                mincharge[j].Content = String.Format("{0:N0}円～", json.hotels[i].hotel[0].hotelBasicInfo.hotelMinCharge);
+                mincharge[j].Content = String.Format("{0:N0}円", json.hotels[i].hotel[0].hotelBasicInfo.hotelMinCharge);
                 string address1 = json.hotels[i].hotel[0].hotelBasicInfo.address1;
                 string address2 = json.hotels[i].hotel[0].hotelBasicInfo.address2;
                 address[j].Content = String.Format("{0}{1}", address1, address2);
@@ -151,7 +151,7 @@ namespace LodgingSearchSystem
             }
             lbPrefName.Content = area + "　ホテル・旅館";
             lbRecordCount.Content = String.Format("{0}件中", recordcount);
-            lbDisplay.Content = String.Format("{0}～{1}表示", displayfirst, displaylast);
+            lbDisplay.Content = String.Format("{0} ～{1} 表示", displayfirst, displaylast);
         }
 
         private void CallJson(WebClient wc)
@@ -217,12 +217,11 @@ namespace LodgingSearchSystem
                 page--;
                 min = 20;
                 max = 29;
-            }
-
-            if(recordmax +1 == recordcount)
-            {
-                max = max - (recordcount - (next * 10)-1)-1;
-                recordmax = recordcount - (recordcount - (next * 10));
+                recordmax -= 10;
+                recordmin -= 10;
+            }else if(recordmax + 1 == recordcount){
+                max = max - (recordcount - (next * 10) - 1) - 1;
+                recordmax = recordcount - (recordcount - (next * 10)) - 1;
                 min -= 10;
                 recordmin -= 10;
             }
@@ -232,11 +231,10 @@ namespace LodgingSearchSystem
                 recordmax -= 10; recordmin -= 10;
             }
 
-
             j = 0;
             Page_Loaded(sender, e);
             
-            if (next == 0)
+            if (page == 1 && min == 0)
             {
                 btBack.IsEnabled = false;
             }
