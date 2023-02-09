@@ -41,6 +41,10 @@ namespace LodgingSearchSystem
         int recordcount;
         int page = 1;
         string sort = null;
+        int checknum = 0;
+        string strch1; string strch2; string strch3;
+
+
         Rootobject json;
 
         WebClient wc = new WebClient()
@@ -65,7 +69,7 @@ namespace LodgingSearchSystem
             CallJson(wc);
             //レコードの数
             recordcount = json.pagingInfo.recordCount;
-            if(recordcount < 10)
+            if (recordcount < 10)
             {
                 max = recordcount - 1;
                 recordmax = recordmax - 1;
@@ -102,7 +106,7 @@ namespace LodgingSearchSystem
 
             Button[] map = { btMap1, btMap2, btMap3, btMap4, btMap5, btMap6, btMap7, btMap8, btMap9, btMap10 };
 
-            
+
 
             for (int i = min; i <= max; i++)
             {
@@ -165,6 +169,24 @@ namespace LodgingSearchSystem
 
         private void CallJson(WebClient wc)
         {
+            string optionStr = "";
+            if (chdaiyoku.IsChecked == true)
+            {
+                optionStr = "daiyoku";
+            }
+            if(chinternet.IsChecked == true)
+            {
+                optionStr += "internet";
+            }
+            if (chkinen.IsChecked == true)
+            {
+                optionStr += ",kinen";
+            }
+            if (chonsen.IsChecked == true)
+            {
+                optionStr += ",onsen";
+            }
+
             if (sort != null)
             {
                 string regionnum2 = string.Format(
@@ -176,10 +198,11 @@ namespace LodgingSearchSystem
             else
             {
                 string regionnum1 = string.Format(
-                        "https://app.rakuten.co.jp/services/api/Travel/SimpleHotelSearch/20170426?format=json&largeClassCode=japan&middleClassCode={0}&smallClassCode={1}&page={2}&applicationId=1023910507139864215", pref, code, page);
+                                  "https://app.rakuten.co.jp/services/api/Travel/SimpleHotelSearch/20170426?format=json&largeClassCode=japan&middleClassCode={0}&smallClassCode={1}&page={2}&applicationId=1023910507139864215", pref, code, page);
                 var dString1 = wc.DownloadString(regionnum1);
                 var json1 = JsonConvert.DeserializeObject<Rootobject>(dString1);
                 json = json1;
+
             }
         }
 
@@ -222,13 +245,16 @@ namespace LodgingSearchSystem
             btNext.IsEnabled = true;
 
             int i = max;
-            if(next % 3 == 0 && next > 0){
+            if (next % 3 == 0 && next > 0)
+            {
                 page--;
                 min = 20;
                 max = 29;
                 recordmax -= 10;
                 recordmin -= 10;
-            }else if(recordmax + 1 == recordcount){
+            }
+            else if (recordmax + 1 == recordcount)
+            {
                 max = max - (recordcount - (next * 10) - 1) - 1;
                 recordmax = recordcount - (recordcount - (next * 10)) - 1;
                 min -= 10;
@@ -242,7 +268,7 @@ namespace LodgingSearchSystem
 
             j = 0;
             Page_Loaded(sender, e);
-            
+
             if (page == 1 && min == 0)
             {
                 btBack.IsEnabled = false;
@@ -259,9 +285,10 @@ namespace LodgingSearchSystem
             min = 0;
             max = 9;
             j = 0;
-            next = 1;
+            next = 0;
             page = 1;
             btBack.IsEnabled = false;
+            btNext.IsEnabled = true;
         }
 
         private void Mapshow(int i)
@@ -342,6 +369,7 @@ namespace LodgingSearchSystem
         {
             Mapshow(9);
         }
+
 
     }
 }
