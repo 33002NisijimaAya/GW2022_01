@@ -25,13 +25,15 @@ namespace LodgingSearchSystem
         string pref = "";
         string code = "";
         string detailcode = "";
+        int su;
 
-        public Map2(string pref, string code,string detailcode)
+        public Map2(string pref, string code,string detailcode,int su)
         {
             InitializeComponent();
             this.pref = pref;
             this.code = code;
             this.detailcode = detailcode;
+            this.su = su;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -46,7 +48,7 @@ namespace LodgingSearchSystem
             var dString1 = wc.DownloadString(regionnum);
             var json1 = JsonConvert.DeserializeObject<Rootobject>(dString1);
 
-            var hotelmap = json1.hotels[0].hotel[0].hotelBasicInfo.hotelMapImageUrl;
+            var hotelmap = json1.hotels[su].hotel[0].hotelBasicInfo.hotelMapImageUrl;
             BitmapImage imagesourse = new BitmapImage(new Uri(hotelmap));
             imHotel.Source = imagesourse;
         }
