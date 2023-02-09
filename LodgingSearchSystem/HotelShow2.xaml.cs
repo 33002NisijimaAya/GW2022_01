@@ -274,7 +274,7 @@ namespace LodgingSearchSystem
             else
             {
                 string regionnum = string.Format(
-                "https://app.rakuten.co.jp/services/api/Travel/SimpleHotelSearch/20170426?format=json&largeClassCode=japan&middleClassCode={0}&smallClassCode={1}&detailClassCode={2}&applicationId=1023910507139864215", pref, code, detailcode);
+                "https://app.rakuten.co.jp/services/api/Travel/SimpleHotelSearch/20170426?format=json&largeClassCode=japan&middleClassCode={0}&smallClassCode={1}&detailClassCode={2}&page={3}&applicationId=1023910507139864215", pref, code, detailcode,page);
                 var dString1 = wc.DownloadString(regionnum);
                 var json1 = JsonConvert.DeserializeObject<Rootobject>(dString1);
                 json = json1;
@@ -290,6 +290,7 @@ namespace LodgingSearchSystem
             max = 9;
             j = 0;
             next = 1;
+            page = 1;
             btBack.IsEnabled = false;
         }
 
@@ -356,7 +357,7 @@ namespace LodgingSearchSystem
             j = 0;
             Page_Loaded(sender, e);
 
-            if (page == 1 && min == 0)
+            if (page == 1 && min == 0 && next == 0)
             {
                 btBack.IsEnabled = false;
             }

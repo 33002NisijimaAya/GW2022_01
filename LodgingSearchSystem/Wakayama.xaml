@@ -149,7 +149,6 @@
             <Button Content="南紀白浜・紀伊田辺・龍神" HorizontalAlignment="Left" VerticalAlignment="Top" Width="302" Height="46" Grid.Row="4" Background="Transparent" BorderBrush="Black" Foreground="Black" Click="AreaName_Click" Margin="16,10,0,0"/>
             <Button Content="勝浦・串本・すさみ" HorizontalAlignment="Left" VerticalAlignment="Top" Width="302" Height="47" Grid.Row="5" Background="Transparent" BorderBrush="Black" Foreground="Black" Click="AreaName_Click" Margin="16,9.6,0,0"/>
             <Button Content="熊野古道・新宮・本宮・中辺路" HorizontalAlignment="Left" VerticalAlignment="Top" Width="302" Height="46" Grid.Row="6" Background="Transparent" BorderBrush="Black" Foreground="Black" Click="AreaName_Click" Margin="16,10.2,0,0"/>
-            <Button Content="韮崎・南アルプス" HorizontalAlignment="Left" VerticalAlignment="Top" Width="302" Height="47" Grid.Row="7" Background="Transparent" BorderBrush="Black" Foreground="Black" Click="AreaName_Click" Margin="16,9.8,0,0"/>
 
         </Grid>
 

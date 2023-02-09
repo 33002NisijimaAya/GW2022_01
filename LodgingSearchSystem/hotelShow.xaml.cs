@@ -65,6 +65,13 @@ namespace LodgingSearchSystem
             CallJson(wc);
             //レコードの数
             recordcount = json.pagingInfo.recordCount;
+            if(recordcount < 10)
+            {
+                max = recordcount - 1;
+                recordmax = recordmax - 1;
+                btNext.IsEnabled = false;
+            }
+
             //表示しているレコードの番号
             var displayfirst = recordmin + 1;
             var displaylast = recordmax + 1;
@@ -94,6 +101,8 @@ namespace LodgingSearchSystem
             Label[] mincharge = { lbMinCharge1, lbMinCharge2, lbMinCharge3, lbMinCharge4, lbMinCharge5, lbMinCharge6, lbMinCharge7, lbMinCharge8, lbMinCharge9, lbMinCharge10 };
 
             Button[] map = { btMap1, btMap2, btMap3, btMap4, btMap5, btMap6, btMap7, btMap8, btMap9, btMap10 };
+
+            
 
             for (int i = min; i <= max; i++)
             {
@@ -251,6 +260,7 @@ namespace LodgingSearchSystem
             max = 9;
             j = 0;
             next = 1;
+            page = 1;
             btBack.IsEnabled = false;
         }
 

@@ -184,12 +184,13 @@
             </Grid.RowDefinitions>
 
             <Button Content="福島・二本松" HorizontalAlignment="Left" VerticalAlignment="Top" Width="314" Height="52" Grid.Row="1" Background="Transparent" BorderBrush="Black" Foreground="Black" Margin="16,10,0,0" Click="AreaName_Click"/>
-            <Button Content="会津若松・喜多方" HorizontalAlignment="Left" VerticalAlignment="Top" Width="320" Height="57" Grid.Row="2" Background="Transparent" BorderBrush="Black" Foreground="Black" Margin="10,10,0,0" Click="AreaName_Click"/>
+            <Button Content="会津若松・喜多方" HorizontalAlignment="Left" VerticalAlignment="Top" Width="314" Height="56" Grid.Row="2" Background="Transparent" BorderBrush="Black" Foreground="Black" Margin="16,10,0,0" Click="AreaName_Click"/>
             <Button Content="猪苗代・表磐梯" HorizontalAlignment="Left" VerticalAlignment="Top" Width="314" Height="52" Grid.Row="3" Background="Transparent" BorderBrush="Black" Foreground="Black" Margin="16,10,0,0" Click="AreaName_Click"/>
             <Button Content="磐梯高原・裏磐梯" HorizontalAlignment="Left" VerticalAlignment="Top" Width="314" Height="52" Grid.Row="4" Background="Transparent" BorderBrush="Black" Foreground="Black" Margin="16,10,0,0" Click="AreaName_Click"/>
             <Button Content="郡山・磐梯熱海" HorizontalAlignment="Left" VerticalAlignment="Top" Width="314" Height="47" Grid.Row="5" Background="Transparent" BorderBrush="Black" Foreground="Black" Margin="16,10,0,0" Click="AreaName_Click"/>
             <Button Content="南会津・下郷・只見・檜枝岐" HorizontalAlignment="Left" VerticalAlignment="Top" Width="314" Height="51" Grid.Row="6" Background="Transparent" BorderBrush="Black" Foreground="Black" Margin="16,10,0,0" Click="AreaName_Click"/>
-            <Button Content="白河・須賀川いわき・南相馬・相馬" HorizontalAlignment="Left" VerticalAlignment="Top" Width="314" Height="46" Grid.Row="7" Background="Transparent" BorderBrush="Black" Foreground="Black" Margin="16,10,0,0" Click="AreaName_Click"/>
+            <Button Content="白河・須賀川" HorizontalAlignment="Left" VerticalAlignment="Top" Width="314" Height="46" Grid.Row="7" Background="Transparent" BorderBrush="Black" Foreground="Black" Margin="16,10,0,0" Click="AreaName_Click"/>
+            <Button Content="いわき・南相馬・相馬" HorizontalAlignment="Left" VerticalAlignment="Top" Width="314" Height="46" Grid.Row="8" Background="Transparent" BorderBrush="Black" Foreground="Black" Margin="16,10,0,0" Click="AreaName_Click"/>
         </Grid>
         <Button x:Name="btYamagata" Content="山形県" HorizontalAlignment="Left" Height="31" Margin="582,66,0,0" VerticalAlignment="Top" Width="114" FontSize="12" Background="White" Foreground="Black" BorderBrush="Transparent" Click="btYamagata_Click"/>
         <Button x:Name="btIbaraki" Content="茨城県" HorizontalAlignment="Left" Height="26" Margin="758,528,0,0" VerticalAlignment="Top" Width="101" FontSize="12" Background="White" Foreground="Black" BorderBrush="Transparent" Click="btIbaraki_Click"/>

@@ -211,7 +211,7 @@
             </Button.Style>
         </Button>
         <Grid HorizontalAlignment="Left" Width="340" Margin="0,-10,0,10">
-            <ScrollViewer Grid.RowSpan="11" Margin="0,0,0,30">
+            <ScrollViewer Margin="0,10,0,0">
                 <StackPanel Height="652" Width="321">
                     <Button Content="静岡・清水" HorizontalAlignment="Left" VerticalAlignment="Top" Width="302" Height="38" Background="Transparent" BorderBrush="Black" Foreground="Black" Click="AreaName_Click" Margin="16,9.6,0,0" Grid.Row="1"/>
                     <Button Content="熱海" HorizontalAlignment="Left" VerticalAlignment="Top" Width="302" Height="40" Background="Transparent" BorderBrush="Black" Foreground="Black" Click="AreaName_Click" Margin="16,10,0,0"/>
