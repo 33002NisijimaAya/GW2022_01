@@ -6,9 +6,12 @@
       xmlns:local="clr-namespace:LodgingSearchSystem"
       mc:Ignorable="d" 
       d:DesignHeight="600" d:DesignWidth="1000"
+      
       Title="Japan">
 
     <Grid>
+        <Image Margin="0,0,0,10" Source="trabel.jpg" Stretch="Fill"/>
+
         <Button x:Name="btHokkaido" Content="北海道" HorizontalAlignment="Left" Height="117" Margin="829,34,0,0" VerticalAlignment="Top" Width="116" Background="#FF4545D6"  Foreground="White" Click="btHokkaido_Click"/>
         <Button x:Name="btAomori" Content="青森" HorizontalAlignment="Left" Height="42" Margin="819,169,0,0" VerticalAlignment="Top" Width="60" Background="CornflowerBlue" Foreground="White" Click="btAomori_Click"/>
         <Button x:Name="btAkita" Content="秋田" HorizontalAlignment="Left" Height="42" Margin="759,212,0,0" VerticalAlignment="Top" Width="60" Background="CornflowerBlue" Foreground="White" Click="btAkita_Click" />

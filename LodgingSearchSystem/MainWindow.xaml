@@ -10,7 +10,7 @@
 
 
         <Frame Name="frame" NavigationUIVisibility="Hidden" Loaded="frame_Loaded" Height="600" Margin="0,41,0,-5"/>
-        <Image Margin="0,10,0,0" Source="rakuten.gif" Stretch="Fill" Height="38" VerticalAlignment="Top" HorizontalAlignment="Left" Width="361"/>
-        <Button x:Name="btmenu" Content="メインメニュー" HorizontalAlignment="Left" Height="31" Margin="830,10,0,0" VerticalAlignment="Top" Width="142" Click="btmenu_Click"/>
+        <Image Margin="0,4,0,0" Source="rakuten.gif" Stretch="Fill" Height="34" VerticalAlignment="Top" HorizontalAlignment="Left" Width="361"/>
+        <Button x:Name="btmenu" Content="メインメニュー" HorizontalAlignment="Left" Height="28" Margin="830,10,0,0" VerticalAlignment="Top" Width="142" Click="btmenu_Click"/>
     </Grid>
 </Window>

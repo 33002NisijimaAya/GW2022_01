@@ -25,13 +25,15 @@ namespace LodgingSearchSystem
         string pref = "";
         string code = "";
         int su = 0;
+        int next = 0;
 
-        public Map(string pref,string code,int su)
+        public Map(string pref,string code,int su,int next)
         {
             InitializeComponent();
             this.pref = pref;
             this.code = code;
             this.su = su;
+            this.next = next;
         }
 
         private void Grid_Loaded(object sender, RoutedEventArgs e)
@@ -40,6 +42,21 @@ namespace LodgingSearchSystem
             {
                 Encoding = Encoding.UTF8
             };
+
+            //switch (next)
+            //{
+            //    case 1:
+            //        next += 10;
+            //        return;
+            //    case 2:
+            //        next += 20;
+            //        return;
+            //    case 3:
+            //        next += 30;
+            //        return;
+            //    default:
+            //        return;
+            //}
 
             string regionnum = string.Format(
                 "https://app.rakuten.co.jp/services/api/Travel/SimpleHotelSearch/20170426?format=json&largeClassCode=japan&middleClassCode={0}&smallClassCode={1}&applicationId=1023910507139864215", pref, code);

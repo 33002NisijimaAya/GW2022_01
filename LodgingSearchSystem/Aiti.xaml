@@ -10,7 +10,7 @@
 
     <Grid>
         <Image Margin="414,30,24,34" Source="aiti.png" Stretch="Fill"/>
-        <Button Content="名古屋" ToolTip="名古屋" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontSize="12" FontWeight="Bold" Margin="552,230,405,348" Click="btNagano_Click">
+        <Button Content="名古屋" ToolTip="名古屋" Background="Transparent" BorderBrush="Transparent" Foreground="Black" FontSize="12" FontWeight="Bold" Margin="552,230,405,348" Click="btNagoya_Click">
             <Button.Style>
                 <Style TargetType="Button">
                     <Style.Triggers>

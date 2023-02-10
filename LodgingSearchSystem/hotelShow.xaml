@@ -37,6 +37,7 @@
             <CheckBox x:Name="chinternet" Content="インターネットが出来る部屋" Grid.Column="6" HorizontalAlignment="Left" Height="38" Margin="0,1,0,0" Grid.Row="1" VerticalAlignment="Top" Width="248" Grid.ColumnSpan="2"/>
             <CheckBox x:Name="chdaiyoku" Content="大浴場あり" Grid.Column="5" HorizontalAlignment="Left" Height="38" Grid.Row="2" VerticalAlignment="Top" Width="124"/>
             <CheckBox x:Name="chonsen" Content="温泉" Grid.Column="6" HorizontalAlignment="Left" Height="38" Grid.Row="2" VerticalAlignment="Top" Width="124"/>
+            <Button x:Name="btsqueeze" Content="検索" Grid.Column="7" HorizontalAlignment="Left" Height="28" Margin="44,5,0,0" Grid.Row="2" VerticalAlignment="Top" Width="70" Click="btsqueeze_Click"/>
         </Grid>
         <ScrollViewer HorizontalAlignment="Left" Height="463" Margin="0,7,0,0" VerticalAlignment="Top" Width="982">
 
