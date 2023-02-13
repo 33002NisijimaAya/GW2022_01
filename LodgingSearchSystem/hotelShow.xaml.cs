@@ -429,7 +429,7 @@ namespace LodgingSearchSystem
 
         private void Mapshow(int i)
         {
-            Map map = new Map(pref, code,page,next);
+            Map map = new Map(pref, code, i, next);
             map.Show();
         }
 
@@ -467,19 +467,19 @@ namespace LodgingSearchSystem
         private void btMap2_Click(object sender, RoutedEventArgs e)
         {
             int i = next * 10 + 1;
-            Mapshow(1);
+            Mapshow(i);
         }
 
         private void btMap3_Click(object sender, RoutedEventArgs e)
         {
             int i = next * 10 + 2;
-            Mapshow(2);
+            Mapshow(i);
         }
 
         private void btMap4_Click(object sender, RoutedEventArgs e)
         {
             int i = next * 10 + 3;
-            Mapshow(3);
+            Mapshow(i);
         }
 
         private void btMap5_Click(object sender, RoutedEventArgs e)
