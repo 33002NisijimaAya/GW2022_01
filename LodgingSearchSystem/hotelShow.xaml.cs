@@ -42,6 +42,8 @@ namespace LodgingSearchSystem
         int page = 1;
         string sort = null;
         int array = 0;
+        public string optionStr = "";
+
 
         Rootobject json;
 
@@ -63,7 +65,7 @@ namespace LodgingSearchSystem
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            
+
             CallJson(wc);
             //レコードの数
             recordcount = json.pagingInfo.recordCount;
@@ -106,7 +108,6 @@ namespace LodgingSearchSystem
             //最低代金
             Label[] mincharge = { lbMinCharge1, lbMinCharge2, lbMinCharge3, lbMinCharge4, lbMinCharge5, lbMinCharge6, lbMinCharge7, lbMinCharge8, lbMinCharge9, lbMinCharge10 };
 
-            Button[] map = { btMap1, btMap2, btMap3, btMap4, btMap5, btMap6, btMap7, btMap8, btMap9, btMap10 };
 
 
 
@@ -174,7 +175,7 @@ namespace LodgingSearchSystem
 
                 for (int i = j; i < 10; i++)
                 {
-                    if(array >= 30)
+                    if (array >= 30)
                     {
                         page++;
                         array = 0;
@@ -184,7 +185,7 @@ namespace LodgingSearchSystem
                     BitmapImage imagesourse = new BitmapImage(new Uri(imageurl));
                     images[i].Source = imagesourse;
                     labelAccessArray[i].Text = json.hotels[array].hotel[0].hotelBasicInfo.access;
-                    hotelName[i].Content ="★おすすめ★" + json.hotels[array].hotel[0].hotelBasicInfo.hotelName;
+                    hotelName[i].Content = "★おすすめ★" + json.hotels[array].hotel[0].hotelBasicInfo.hotelName;
                     serviseaverage[i].Content = json.hotels[array].hotel[1].hotelRatingInfo.serviceAverage;
                     hotelspecial[i].Content = json.hotels[array].hotel[0].hotelBasicInfo.hotelSpecial;
                     postalcode[i].Content = "〒" + json.hotels[array].hotel[0].hotelBasicInfo.postalCode;
@@ -243,7 +244,7 @@ namespace LodgingSearchSystem
         {
             array = rand % 30;
             page = rand / 30;
-            if(page == 0)
+            if (page == 0)
             {
                 page = 1;
             }
@@ -253,7 +254,7 @@ namespace LodgingSearchSystem
 
         private void CallJson(WebClient wc)
         {
-            string optionStr = "";
+
             optionStr = CheckBoxSearch(optionStr);
 
 
@@ -344,6 +345,7 @@ namespace LodgingSearchSystem
 
         private void btNext_Click(object sender, RoutedEventArgs e)
         {
+
             next++;
             min += 10; max += 10;
             recordmin += 10; recordmax += 10;
@@ -374,27 +376,46 @@ namespace LodgingSearchSystem
             Page_Loaded(sender, e);
 
             btBack.IsEnabled = true;
+
+
         }
 
         private void btBack_Click(object sender, RoutedEventArgs e)
         {
+            
             btNext.IsEnabled = true;
 
+            if (recordmax + 1 == recordcount)
+            {
+                max = max - (recordcount - (next * 10) - 1) - 1;
+                recordmax = recordcount - (recordcount - (next * 10)) - 1;
+                if (recordmax % 30 != 0)
+                {
+                    page = recordmax / 30 + 1;
+                }
+                else
+                {
+                    page = recordmax / 30;
+                }
 
-            if (next % 3 == 0 && next > 0)
+                if (page == 0)
+                {
+                    page = 1;
+                }
+                min -= 10;
+                recordmin -= 10;
+                if (max < 0 || min < 0)
+                {
+                    min = 20;
+                    max = 29;
+                }
+            }
+            else if (next % 3 == 0 && next > 0)
             {
                 page--;
                 min = 20;
                 max = 29;
                 recordmax -= 10;
-                recordmin -= 10;
-            }
-            else if (recordmax + 1 == recordcount)
-            {
-                max = max - (recordcount - (next * 10) - 1) - 1;
-                recordmax = recordcount - (recordcount - (next * 10)) - 1;
-                //page = recordmax / 3
-                min -= 10;
                 recordmin -= 10;
             }
             else
@@ -429,7 +450,7 @@ namespace LodgingSearchSystem
 
         private void Mapshow(int i)
         {
-            Map map = new Map(pref, code, i, next);
+            Map map = new Map(pref, code, i, page, sort, optionStr);
             map.Show();
         }
 
@@ -456,66 +477,6 @@ namespace LodgingSearchSystem
             NewData(sender, e);
             sort = "+roomCharge";
             Page_Loaded(sender, e);
-        }
-
-        private void btMap1_Click(object sender, RoutedEventArgs e)
-        {
-            Mapshow(0);
-        }
-
-
-        private void btMap2_Click(object sender, RoutedEventArgs e)
-        {
-            int i = next * 10 + 1;
-            Mapshow(i);
-        }
-
-        private void btMap3_Click(object sender, RoutedEventArgs e)
-        {
-            int i = next * 10 + 2;
-            Mapshow(i);
-        }
-
-        private void btMap4_Click(object sender, RoutedEventArgs e)
-        {
-            int i = next * 10 + 3;
-            Mapshow(i);
-        }
-
-        private void btMap5_Click(object sender, RoutedEventArgs e)
-        {
-            int i = next * 10 + 4;
-            Mapshow(4);
-        }
-
-        private void btMap6_Click(object sender, RoutedEventArgs e)
-        {
-            int i = next * 10 + 5;
-            Mapshow(5);
-        }
-
-        private void btMap7_Click(object sender, RoutedEventArgs e)
-        {
-            int i = next * 10 + 6;
-            Mapshow(6);
-        }
-
-        private void btMap8_Click(object sender, RoutedEventArgs e)
-        {
-            int i = next * 10 + 7;
-            Mapshow(7);
-        }
-
-        private void btMap9_Click(object sender, RoutedEventArgs e)
-        {
-            int i = next * 10 + 8;
-            Mapshow(8);
-        }
-
-        private void btMap10_Click(object sender, RoutedEventArgs e)
-        {
-            int i = next * 10 + 9;
-            Mapshow(9);
         }
 
         private void btsqueeze_Click(object sender, RoutedEventArgs e)
