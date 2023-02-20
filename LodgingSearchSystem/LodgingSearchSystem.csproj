@@ -147,12 +147,6 @@
     <Compile Include="Kyotosi.xaml.cs">
       <DependentUpon>Kyotosi.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Map.xaml.cs">
-      <DependentUpon>Map.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Map2.xaml.cs">
-      <DependentUpon>Map2.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Mie.xaml.cs">
       <DependentUpon>Mie.xaml</DependentUpon>
     </Compile>
@@ -370,14 +364,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Map.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Map2.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Mie.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -708,6 +694,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="kankouti.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ryokou.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ryoko.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="kazoku.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.6.1\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.6.1\build\MaterialDesignThemes.targets')" />

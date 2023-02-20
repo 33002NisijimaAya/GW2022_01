@@ -26,13 +26,18 @@
             </Grid.ColumnDefinitions>
             <Label x:Name="lbPrefName" Content="青森県・浅虫温泉" Foreground="Black" HorizontalAlignment="Left" Height="39" VerticalAlignment="Top" Width="980" FontSize="24.2" Grid.RowSpan="1" Margin="0,1,0,0" Grid.ColumnSpan="8"/>
             <Label Content="並びかえ：" Foreground="Black" Margin="5,10,10,5" FontSize="14" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="60" Height="24"/>
-            <Button x:Name="btRecommend" Content="おすすめ順" HorizontalAlignment="Center" Height="28" Margin="16,0,6,3" VerticalAlignment="Bottom" Width="120" Click="btRecommend_Click" Grid.Column="1" Grid.Row="1"/>
-            <Button x:Name="btMin" Content="料金の安い順" HorizontalAlignment="Center" Height="29" VerticalAlignment="Center" Width="120" Margin="10,5,0,0" Grid.Column="3" Grid.Row="1" Click="btMin_Click"/>
-            <Button x:Name="btMax" Content="料金の高い順" HorizontalAlignment="Center" Height="29" Margin="5,5,0,0" VerticalAlignment="Center" Width="120" Grid.Column="2" Grid.Row="1" Click="btMax_Click"/>
+            <Button x:Name="btRecommend" Content="おすすめ順" HorizontalAlignment="Center" Height="29" Margin="10,5,0,0" VerticalAlignment="Center" Width="120" Click="btRecommend_Click" Grid.Column="1" Grid.Row="1" Background="#FFBF7FFF" BorderBrush="#FFBF7FFF"/>
+            <Button x:Name="btMin" Content="料金の安い順" HorizontalAlignment="Center" Height="28" VerticalAlignment="Bottom" Width="120" Margin="15,0,4,3" Grid.Column="3" Grid.Row="1" Click="btMin_Click" Background="#FF7FBFFF" BorderBrush="#FF7FBFFF"/>
+            <Button x:Name="btMax" Content="料金の高い順" HorizontalAlignment="Center" Height="29" Margin="5,5,0,0" VerticalAlignment="Center" Width="120" Grid.Column="2" Grid.Row="1" Click="btMax_Click" Background="#FFFF7F7F" BorderBrush="#FFFF7F7F"/>
             <Label x:Name="lbRecordCount" Content="４３件中" Foreground="Black" HorizontalAlignment="Left" Height="26" Margin="5,10,0,0" VerticalAlignment="Top" Width="73" FontSize="16" Grid.ColumnSpan="2" Grid.Row="2"/>
-            <Label x:Name="lbDisplay" Content="１～30表示" Foreground="Black" HorizontalAlignment="Left" Height="23" Margin="6.2,12.8,0,0" VerticalAlignment="Top" Width="99" Grid.Column="1" Grid.Row="2"/>
-            <Button x:Name="btNext" Content="次の1０件" HorizontalAlignment="Left" Height="25" Margin="86.6,10.8,0,0" VerticalAlignment="Top" Width="86" FontSize="11" Grid.Column="2" Grid.Row="2" Click="btNext_Click" Grid.ColumnSpan="2"/>
-            <Button x:Name="btBack" Content="前の1０件" HorizontalAlignment="Left" Height="25" Margin="130.2,9.8,0,0" VerticalAlignment="Top" Width="86" FontSize="11" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="2" Click="btBack_Click"/>
+            <Label x:Name="lbDisplay" Content="１～30表示" Foreground="Black" HorizontalAlignment="Left" Height="23" Margin="0.2,12.8,0,0" VerticalAlignment="Top" Width="98" Grid.Column="1" Grid.Row="2"/>
+            <Button x:Name="btNext" Content="次の１０件" HorizontalAlignment="Left" Height="25" Margin="93.6,10.8,0,0" VerticalAlignment="Top" Width="86" FontSize="11" Grid.Column="2" Grid.Row="2" Click="btNext_Click" Grid.ColumnSpan="2" Background="#FFFFBF7F" BorderBrush="#FFFFBF7F"/>
+            <Button x:Name="btBack" Content="前の１０件" HorizontalAlignment="Left" Height="25" Margin="137.2,9.8,0,0" VerticalAlignment="Top" Width="86" FontSize="11" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="2" Click="btBack_Click" Background="#FFFFBF7F" BorderBrush="#FFFFBF7F"/>
+            <CheckBox x:Name="chkinen" Content="禁煙ルーム" Grid.Column="5" HorizontalAlignment="Left" Height="38" Margin="0,1,0,0" Grid.Row="1" VerticalAlignment="Top" Width="124"/>
+            <CheckBox x:Name="chinternet" Content="インターネットが出来る部屋" Grid.Column="6" HorizontalAlignment="Left" Height="38" Margin="0,1,0,0" Grid.Row="1" VerticalAlignment="Top" Width="248" Grid.ColumnSpan="2"/>
+            <CheckBox x:Name="chdaiyoku" Content="大浴場あり" Grid.Column="5" HorizontalAlignment="Left" Height="38" Grid.Row="2" VerticalAlignment="Top" Width="124"/>
+            <CheckBox x:Name="chonsen" Content="温泉" Grid.Column="6" HorizontalAlignment="Left" Height="38" Grid.Row="2" VerticalAlignment="Top" Width="124"/>
+            <Button x:Name="btsqueeze" Content="検索" Grid.Column="7" HorizontalAlignment="Left" Height="28" Margin="20,5,0,0" Grid.Row="2" VerticalAlignment="Top" Width="70" Click="btsqueeze_Click" Background="#FFBFFF7F" BorderBrush="#FFBFFF7F"/>
         </Grid>
         <ScrollViewer HorizontalAlignment="Left" Height="463" Margin="0,7,0,0" VerticalAlignment="Top" Width="982">
 
@@ -135,51 +140,51 @@
                 <Image x:Name="im59" Margin="114,42,528,152" Source="hosi.png" Stretch="Fill" Grid.Row="9" Grid.Column="1" Width="28"/>
 
 
-                <Label Content="[最安料金]" Foreground="Red" HorizontalAlignment="Left" Height="26" Margin="419,38,0,0" VerticalAlignment="Top" Width="66" Grid.Row="0" Grid.Column="1"/>
-                <Label Content="[最安料金]" Foreground="Red" HorizontalAlignment="Left" Height="26" Margin="419,38,0,0" VerticalAlignment="Top" Width="66" Grid.Row="1" Grid.Column="1"/>
-                <Label Content="[最安料金]" Foreground="Red" HorizontalAlignment="Left" Height="26" Margin="419,38,0,0" VerticalAlignment="Top" Width="66" Grid.Row="2" Grid.Column="1"/>
-                <Label Content="[最安料金]" Foreground="Red" HorizontalAlignment="Left" Height="26" Margin="419,38,0,0" VerticalAlignment="Top" Width="66" Grid.Row="3" Grid.Column="1"/>
-                <Label Content="[最安料金]" Foreground="Red" HorizontalAlignment="Left" Height="26" Margin="419,38,0,0" VerticalAlignment="Top" Width="66" Grid.Row="4" Grid.Column="1"/>
-                <Label Content="[最安料金]" Foreground="Red" HorizontalAlignment="Left" Height="26" Margin="419,38,0,0" VerticalAlignment="Top" Width="66" Grid.Row="5" Grid.Column="1"/>
-                <Label Content="[最安料金]" Foreground="Red" HorizontalAlignment="Left" Height="26" Margin="419,38,0,0" VerticalAlignment="Top" Width="66" Grid.Row="6" Grid.Column="1"/>
-                <Label Content="[最安料金]" Foreground="Red" HorizontalAlignment="Left" Height="26" Margin="419,38,0,0" VerticalAlignment="Top" Width="66" Grid.Row="7" Grid.Column="1"/>
-                <Label Content="[最安料金]" Foreground="Red" HorizontalAlignment="Left" Height="26" Margin="419,38,0,0" VerticalAlignment="Top" Width="66" Grid.Row="8" Grid.Column="1"/>
-                <Label Content="[最安料金]" Foreground="Red" HorizontalAlignment="Left" Height="26" Margin="419,38,0,0" VerticalAlignment="Top" Width="66" Grid.Row="9" Grid.Column="1"/>
+                <Label Content="[最安料金]" Foreground="Red" HorizontalAlignment="Left" Height="26" Margin="399.2,37,0,0" VerticalAlignment="Top" Width="66" Grid.Row="0" Grid.Column="1"/>
+                <Label Content="[最安料金]" Foreground="Red" HorizontalAlignment="Left" Height="26" Margin="399.2,37,0,0" VerticalAlignment="Top" Width="66" Grid.Row="1" Grid.Column="1"/>
+                <Label Content="[最安料金]" Foreground="Red" HorizontalAlignment="Left" Height="26" Margin="399.2,37,0,0" VerticalAlignment="Top" Width="66" Grid.Row="2" Grid.Column="1"/>
+                <Label Content="[最安料金]" Foreground="Red" HorizontalAlignment="Left" Height="26" Margin="399.2,37,0,0" VerticalAlignment="Top" Width="66" Grid.Row="3" Grid.Column="1"/>
+                <Label Content="[最安料金]" Foreground="Red" HorizontalAlignment="Left" Height="26" Margin="399.2,37,0,0" VerticalAlignment="Top" Width="66" Grid.Row="4" Grid.Column="1"/>
+                <Label Content="[最安料金]" Foreground="Red" HorizontalAlignment="Left" Height="26" Margin="399.2,37,0,0" VerticalAlignment="Top" Width="66" Grid.Row="5" Grid.Column="1"/>
+                <Label Content="[最安料金]" Foreground="Red" HorizontalAlignment="Left" Height="26" Margin="399.2,37,0,0" VerticalAlignment="Top" Width="66" Grid.Row="6" Grid.Column="1"/>
+                <Label Content="[最安料金]" Foreground="Red" HorizontalAlignment="Left" Height="26" Margin="399.2,37,0,0" VerticalAlignment="Top" Width="66" Grid.Row="7" Grid.Column="1"/>
+                <Label Content="[最安料金]" Foreground="Red" HorizontalAlignment="Left" Height="26" Margin="399.2,37,0,0" VerticalAlignment="Top" Width="66" Grid.Row="8" Grid.Column="1"/>
+                <Label Content="[最安料金]" Foreground="Red" HorizontalAlignment="Left" Height="26" Margin="399.2,37,0,0" VerticalAlignment="Top" Width="66" Grid.Row="9" Grid.Column="1"/>
 
-                <Label x:Name="lbMinCharge1" Content="5,300円～" Foreground="Red" HorizontalAlignment="Left" Height="33" Margin="478,31,0,0" VerticalAlignment="Top" Width="97" FontSize="20" Grid.Row="0" Grid.Column="1"/>
-                <Label x:Name="lbMinCharge2" Content="5,300円～" Foreground="Red" HorizontalAlignment="Left" Height="33" Margin="478,31,0,0" VerticalAlignment="Top" Width="97" FontSize="20" Grid.Row="1" Grid.Column="1"/>
-                <Label x:Name="lbMinCharge3" Content="5,300円～" Foreground="Red" HorizontalAlignment="Left" Height="33" Margin="478,31,0,0" VerticalAlignment="Top" Width="97" FontSize="20" Grid.Row="2" Grid.Column="1"/>
-                <Label x:Name="lbMinCharge4" Content="5,300円～" Foreground="Red" HorizontalAlignment="Left" Height="33" Margin="478,31,0,0" VerticalAlignment="Top" Width="97" FontSize="20" Grid.Row="3" Grid.Column="1"/>
-                <Label x:Name="lbMinCharge5" Content="5,300円～" Foreground="Red" HorizontalAlignment="Left" Height="33" Margin="478,31,0,0" VerticalAlignment="Top" Width="97" FontSize="20" Grid.Row="4" Grid.Column="1"/>
-                <Label x:Name="lbMinCharge6" Content="5,300円～" Foreground="Red" HorizontalAlignment="Left" Height="33" Margin="478,31,0,0" VerticalAlignment="Top" Width="97" FontSize="20" Grid.Row="5" Grid.Column="1"/>
-                <Label x:Name="lbMinCharge7" Content="5,300円～" Foreground="Red" HorizontalAlignment="Left" Height="33" Margin="478,31,0,0" VerticalAlignment="Top" Width="97" FontSize="20" Grid.Row="6" Grid.Column="1"/>
-                <Label x:Name="lbMinCharge8" Content="5,300円～" Foreground="Red" HorizontalAlignment="Left" Height="33" Margin="478,31,0,0" VerticalAlignment="Top" Width="97" FontSize="20" Grid.Row="7" Grid.Column="1"/>
-                <Label x:Name="lbMinCharge9" Content="5,300円～" Foreground="Red" HorizontalAlignment="Left" Height="33" Margin="478,31,0,0" VerticalAlignment="Top" Width="97" FontSize="20" Grid.Row="8" Grid.Column="1"/>
-                <Label x:Name="lbMinCharge10" Content="5,300円～" Foreground="Red" HorizontalAlignment="Left" Height="33" Margin="478,31,0,0" VerticalAlignment="Top" Width="97" FontSize="20" Grid.Row="9" Grid.Column="1"/>
-
-
-                <Label Content="(消費税込)" Foreground="Black" HorizontalAlignment="Left" Height="22" Margin="498,54,0,0" VerticalAlignment="Top" Width="62" Grid.Row="0" Grid.Column="1"/>
-                <Label Content="(消費税込)" Foreground="Black" HorizontalAlignment="Left" Height="22" Margin="498,54,0,0" VerticalAlignment="Top" Width="62" Grid.Row="1" Grid.Column="1"/>
-                <Label Content="(消費税込)" Foreground="Black" HorizontalAlignment="Left" Height="22" Margin="498,54,0,0" VerticalAlignment="Top" Width="62" Grid.Row="2" Grid.Column="1"/>
-                <Label Content="(消費税込)" Foreground="Black" HorizontalAlignment="Left" Height="22" Margin="498,54,0,0" VerticalAlignment="Top" Width="62" Grid.Row="3" Grid.Column="1"/>
-                <Label Content="(消費税込)" Foreground="Black" HorizontalAlignment="Left" Height="22" Margin="498,54,0,0" VerticalAlignment="Top" Width="62" Grid.Row="4" Grid.Column="1"/>
-                <Label Content="(消費税込)" Foreground="Black" HorizontalAlignment="Left" Height="22" Margin="498,54,0,0" VerticalAlignment="Top" Width="62" Grid.Row="5" Grid.Column="1"/>
-                <Label Content="(消費税込)" Foreground="Black" HorizontalAlignment="Left" Height="22" Margin="498,54,0,0" VerticalAlignment="Top" Width="62" Grid.Row="6" Grid.Column="1"/>
-                <Label Content="(消費税込)" Foreground="Black" HorizontalAlignment="Left" Height="22" Margin="498,54,0,0" VerticalAlignment="Top" Width="62" Grid.Row="7" Grid.Column="1"/>
-                <Label Content="(消費税込)" Foreground="Black" HorizontalAlignment="Left" Height="22" Margin="498,54,0,0" VerticalAlignment="Top" Width="62" Grid.Row="8" Grid.Column="1"/>
-                <Label Content="(消費税込)" Foreground="Black" HorizontalAlignment="Left" Height="22" Margin="498,54,0,0" VerticalAlignment="Top" Width="62" Grid.Row="9" Grid.Column="1"/>
+                <Label x:Name="lbMinCharge1" Content="5,300円～" Foreground="Red" HorizontalAlignment="Left" Height="33" Margin="458.2,31,0,0" VerticalAlignment="Top" Width="97" FontSize="20" Grid.Row="0" Grid.Column="1"/>
+                <Label x:Name="lbMinCharge2" Content="5,300円～" Foreground="Red" HorizontalAlignment="Left" Height="33" Margin="458.2,31,0,0" VerticalAlignment="Top" Width="97" FontSize="20" Grid.Row="1" Grid.Column="1"/>
+                <Label x:Name="lbMinCharge3" Content="5,300円～" Foreground="Red" HorizontalAlignment="Left" Height="33" Margin="458.2,31,0,0" VerticalAlignment="Top" Width="97" FontSize="20" Grid.Row="2" Grid.Column="1"/>
+                <Label x:Name="lbMinCharge4" Content="5,300円～" Foreground="Red" HorizontalAlignment="Left" Height="33" Margin="458.2,31,0,0" VerticalAlignment="Top" Width="97" FontSize="20" Grid.Row="3" Grid.Column="1"/>
+                <Label x:Name="lbMinCharge5" Content="5,300円～" Foreground="Red" HorizontalAlignment="Left" Height="33" Margin="458.2,31,0,0" VerticalAlignment="Top" Width="97" FontSize="20" Grid.Row="4" Grid.Column="1"/>
+                <Label x:Name="lbMinCharge6" Content="5,300円～" Foreground="Red" HorizontalAlignment="Left" Height="33" Margin="458.2,31,0,0" VerticalAlignment="Top" Width="97" FontSize="20" Grid.Row="5" Grid.Column="1"/>
+                <Label x:Name="lbMinCharge7" Content="5,300円～" Foreground="Red" HorizontalAlignment="Left" Height="33" Margin="458.2,31,0,0" VerticalAlignment="Top" Width="97" FontSize="20" Grid.Row="6" Grid.Column="1"/>
+                <Label x:Name="lbMinCharge8" Content="5,300円～" Foreground="Red" HorizontalAlignment="Left" Height="33" Margin="458.2,31,0,0" VerticalAlignment="Top" Width="97" FontSize="20" Grid.Row="7" Grid.Column="1"/>
+                <Label x:Name="lbMinCharge9" Content="5,300円～" Foreground="Red" HorizontalAlignment="Left" Height="33" Margin="458.2,31,0,0" VerticalAlignment="Top" Width="97" FontSize="20" Grid.Row="8" Grid.Column="1"/>
+                <Label x:Name="lbMinCharge10" Content="5,300円～" Foreground="Red" HorizontalAlignment="Left" Height="33" Margin="458.2,31,0,0" VerticalAlignment="Top" Width="97" FontSize="20" Grid.Row="9" Grid.Column="1"/>
 
 
-                <Label x:Name="lbServiceAverage1" Content="4.61" Foreground="Red" HorizontalAlignment="Left" Height="24" Margin="142,40,0,0" VerticalAlignment="Top" Width="36" FontSize="14" Grid.Row="0" Grid.Column="1"/>
-                <Label x:Name="lbServiceAverage2" Content="4.61" Foreground="Red" HorizontalAlignment="Left" Height="24" Margin="142,40,0,0" VerticalAlignment="Top" Width="36" FontSize="14" Grid.Row="1" Grid.Column="1"/>
-                <Label x:Name="lbServiceAverage3" Content="4.61" Foreground="Red" HorizontalAlignment="Left" Height="24" Margin="142,40,0,0" VerticalAlignment="Top" Width="36" FontSize="14" Grid.Row="2" Grid.Column="1"/>
-                <Label x:Name="lbServiceAverage4" Content="4.61" Foreground="Red" HorizontalAlignment="Left" Height="24" Margin="142,40,0,0" VerticalAlignment="Top" Width="36" FontSize="14" Grid.Row="3" Grid.Column="1"/>
-                <Label x:Name="lbServiceAverage5" Content="4.61" Foreground="Red" HorizontalAlignment="Left" Height="24" Margin="142,40,0,0" VerticalAlignment="Top" Width="36" FontSize="14" Grid.Row="4" Grid.Column="1"/>
-                <Label x:Name="lbServiceAverage6" Content="4.61" Foreground="Red" HorizontalAlignment="Left" Height="24" Margin="142,40,0,0" VerticalAlignment="Top" Width="36" FontSize="14" Grid.Row="5" Grid.Column="1"/>
-                <Label x:Name="lbServiceAverage7" Content="4.61" Foreground="Red" HorizontalAlignment="Left" Height="24" Margin="142,40,0,0" VerticalAlignment="Top" Width="36" FontSize="14" Grid.Row="6" Grid.Column="1"/>
-                <Label x:Name="lbServiceAverage8" Content="4.61" Foreground="Red" HorizontalAlignment="Left" Height="24" Margin="142,40,0,0" VerticalAlignment="Top" Width="36" FontSize="14" Grid.Row="7" Grid.Column="1"/>
-                <Label x:Name="lbServiceAverage9" Content="4.61" Foreground="Red" HorizontalAlignment="Left" Height="24" Margin="142,40,0,0" VerticalAlignment="Top" Width="36" FontSize="14" Grid.Row="8" Grid.Column="1"/>
-                <Label x:Name="lbServiceAverage10" Content="4.61" Foreground="Red" HorizontalAlignment="Left" Height="24" Margin="142,40,0,0" VerticalAlignment="Top" Width="36" FontSize="14" Grid.Row="9" Grid.Column="1"/>
+                <Label Content="(消費税込)" Foreground="Black" HorizontalAlignment="Left" Height="22" Margin="480.2,54,0,0" VerticalAlignment="Top" Width="62" Grid.Row="0" Grid.Column="1"/>
+                <Label Content="(消費税込)" Foreground="Black" HorizontalAlignment="Left" Height="22" Margin="4480.2,54,0,0" VerticalAlignment="Top" Width="62" Grid.Row="1" Grid.Column="1"/>
+                <Label Content="(消費税込)" Foreground="Black" HorizontalAlignment="Left" Height="22" Margin="480.2,54,0,0" VerticalAlignment="Top" Width="62" Grid.Row="2" Grid.Column="1"/>
+                <Label Content="(消費税込)" Foreground="Black" HorizontalAlignment="Left" Height="22" Margin="480.2,54,0,0" VerticalAlignment="Top" Width="62" Grid.Row="3" Grid.Column="1"/>
+                <Label Content="(消費税込)" Foreground="Black" HorizontalAlignment="Left" Height="22" Margin="480.2,54,0,0" VerticalAlignment="Top" Width="62" Grid.Row="4" Grid.Column="1"/>
+                <Label Content="(消費税込)" Foreground="Black" HorizontalAlignment="Left" Height="22" Margin="480.2,54,0,0" VerticalAlignment="Top" Width="62" Grid.Row="5" Grid.Column="1"/>
+                <Label Content="(消費税込)" Foreground="Black" HorizontalAlignment="Left" Height="22" Margin="480.2,54,0,0" VerticalAlignment="Top" Width="62" Grid.Row="6" Grid.Column="1"/>
+                <Label Content="(消費税込)" Foreground="Black" HorizontalAlignment="Left" Height="22" Margin="480.2,54,0,0" VerticalAlignment="Top" Width="62" Grid.Row="7" Grid.Column="1"/>
+                <Label Content="(消費税込)" Foreground="Black" HorizontalAlignment="Left" Height="22" Margin="480.2,54,0,0" VerticalAlignment="Top" Width="62" Grid.Row="8" Grid.Column="1"/>
+                <Label Content="(消費税込)" Foreground="Black" HorizontalAlignment="Left" Height="22" Margin="480.2,54,0,0" VerticalAlignment="Top" Width="62" Grid.Row="9" Grid.Column="1"/>
+
+
+                <Label x:Name="lbServiceAverage1" Content="4.61" Foreground="Red" HorizontalAlignment="Left" Height="24" Margin="142,40,0,0" VerticalAlignment="Top" Width="148" FontSize="14" Grid.Row="0" Grid.Column="1"/>
+                <Label x:Name="lbServiceAverage2" Content="4.61" Foreground="Red" HorizontalAlignment="Left" Height="24" Margin="142,40,0,0" VerticalAlignment="Top" Width="148" FontSize="14" Grid.Row="1" Grid.Column="1"/>
+                <Label x:Name="lbServiceAverage3" Content="4.61" Foreground="Red" HorizontalAlignment="Left" Height="24" Margin="142,40,0,0" VerticalAlignment="Top" Width="148" FontSize="14" Grid.Row="2" Grid.Column="1"/>
+                <Label x:Name="lbServiceAverage4" Content="4.61" Foreground="Red" HorizontalAlignment="Left" Height="24" Margin="142,40,0,0" VerticalAlignment="Top" Width="148" FontSize="14" Grid.Row="3" Grid.Column="1"/>
+                <Label x:Name="lbServiceAverage5" Content="4.61" Foreground="Red" HorizontalAlignment="Left" Height="24" Margin="142,40,0,0" VerticalAlignment="Top" Width="148" FontSize="14" Grid.Row="4" Grid.Column="1"/>
+                <Label x:Name="lbServiceAverage6" Content="4.61" Foreground="Red" HorizontalAlignment="Left" Height="24" Margin="142,40,0,0" VerticalAlignment="Top" Width="148" FontSize="14" Grid.Row="5" Grid.Column="1"/>
+                <Label x:Name="lbServiceAverage7" Content="4.61" Foreground="Red" HorizontalAlignment="Left" Height="24" Margin="142,40,0,0" VerticalAlignment="Top" Width="148" FontSize="14" Grid.Row="6" Grid.Column="1"/>
+                <Label x:Name="lbServiceAverage8" Content="4.61" Foreground="Red" HorizontalAlignment="Left" Height="24" Margin="142,40,0,0" VerticalAlignment="Top" Width="148" FontSize="14" Grid.Row="7" Grid.Column="1"/>
+                <Label x:Name="lbServiceAverage9" Content="4.61" Foreground="Red" HorizontalAlignment="Left" Height="24" Margin="142,40,0,0" VerticalAlignment="Top" Width="148" FontSize="14" Grid.Row="8" Grid.Column="1"/>
+                <Label x:Name="lbServiceAverage10" Content="4.61" Foreground="Red" HorizontalAlignment="Left" Height="24" Margin="142,40,0,0" VerticalAlignment="Top" Width="148" FontSize="14" Grid.Row="9" Grid.Column="1"/>
 
 
                 <Label x:Name="lbHotelSpecial1" Content="◆全室バス・トイレ別々のセミセパレート◆JR青森駅から徒歩5分◆" Foreground="Black" HorizontalAlignment="Left" Height="25" Margin="3,76,0,0" VerticalAlignment="Top" Width="657" FontSize="14" Grid.Row="0" Grid.Column="1"/>
@@ -216,18 +221,6 @@
                 <Label x:Name="lbaddress8" Content="青森県青森市新町1-11-16" Foreground="Black" HorizontalAlignment="Left" Height="28" Margin="10,129,0,0" VerticalAlignment="Top" Width="480" FontSize="14" Grid.Row="7" Grid.Column="1"/>
                 <Label x:Name="lbaddress9" Content="青森県青森市新町1-11-16" Foreground="Black" HorizontalAlignment="Left" Height="28" Margin="10,129,0,0" VerticalAlignment="Top" Width="480" FontSize="14" Grid.Row="8" Grid.Column="1"/>
                 <Label x:Name="lbaddress10" Content="青森県青森市新町1-11-16" Foreground="Black" HorizontalAlignment="Left" Height="28" Margin="10,129,0,0" VerticalAlignment="Top" Width="480" FontSize="14" Grid.Row="9" Grid.Column="1"/>
-
-                <Button x:Name="btMap1" Content="地図を見る" HorizontalAlignment="Left" Height="23" Margin="59,157,0,0" VerticalAlignment="Top" Width="80" FontSize="10" Grid.Column="1" Grid.Row="0" Click="btMap1_Click"/>
-                <Button x:Name="btMap2" Content="地図を見る" HorizontalAlignment="Left" Height="23" Margin="59,157,0,0" VerticalAlignment="Top" Width="80" FontSize="10" Grid.Column="1" Grid.Row="1" Click="btMap2_Click"/>
-                <Button x:Name="btMap3" Content="地図を見る" HorizontalAlignment="Left" Height="23" Margin="59,157,0,0" VerticalAlignment="Top" Width="80" FontSize="10" Grid.Column="1" Grid.Row="2" Click="btMap3_Click"/>
-                <Button x:Name="btMap4" Content="地図を見る" HorizontalAlignment="Left" Height="23" Margin="59,157,0,0" VerticalAlignment="Top" Width="80" FontSize="10" Grid.Column="1" Grid.Row="3" Click="btMap4_Click"/>
-                <Button x:Name="btMap5" Content="地図を見る" HorizontalAlignment="Left" Height="23" Margin="59,157,0,0" VerticalAlignment="Top" Width="80" FontSize="10" Grid.Column="1" Grid.Row="4" Click="btMap5_Click"/>
-                <Button x:Name="btMap6" Content="地図を見る" HorizontalAlignment="Left" Height="23" Margin="59,157,0,0" VerticalAlignment="Top" Width="80" FontSize="10" Grid.Column="1" Grid.Row="5" Click="btMap6_Click"/>
-                <Button x:Name="btMap7" Content="地図を見る" HorizontalAlignment="Left" Height="23" Margin="59,157,0,0" VerticalAlignment="Top" Width="80" FontSize="10" Grid.Column="1" Grid.Row="6" Click="btMap7_Click"/>
-                <Button x:Name="btMap8" Content="地図を見る" HorizontalAlignment="Left" Height="23" Margin="59,157,0,0" VerticalAlignment="Top" Width="80" FontSize="10" Grid.Column="1" Grid.Row="7" Click="btMap8_Click"/>
-                <Button x:Name="btMap9" Content="地図を見る" HorizontalAlignment="Left" Height="23" Margin="59,157,0,0" VerticalAlignment="Top" Width="80" FontSize="10" Grid.Column="1" Grid.Row="8" Click="btMap9_Click"/>
-                <Button x:Name="btMap10" Content="地図を見る" HorizontalAlignment="Left" Height="23" Margin="59,157,0,0" VerticalAlignment="Top" Width="80" FontSize="10" Grid.Column="1" Grid.Row="9" Click="btMap10_Click"/>
-
 
                 <Label Content="アクセス：" Foreground="Black" HorizontalAlignment="Left" Height="23" Margin="3,157,0,0" VerticalAlignment="Top" Width="58" Grid.Row="0" Grid.Column="1" RenderTransformOrigin="0.698,0.5"/>
                 <Label Content="アクセス：" Foreground="Black" HorizontalAlignment="Left" Height="23" Margin="3,157,0,0" VerticalAlignment="Top" Width="58" Grid.Row="1" Grid.Column="1" RenderTransformOrigin="0.698,0.5"/>

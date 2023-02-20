@@ -42,6 +42,8 @@ namespace LodgingSearchSystem
         int page = 1;
         string sort = null;
         int array = 0;
+        int check = 0;
+
         public string optionStr = "";
 
 
@@ -72,7 +74,7 @@ namespace LodgingSearchSystem
             if (recordcount < 10)
             {
                 max = recordcount - 1;
-                recordmax = recordmax - 1;
+                recordmax = recordcount - 1;
                 btNext.IsEnabled = false;
             }
 
@@ -132,16 +134,16 @@ namespace LodgingSearchSystem
                 {
                     ;
                 }
-                else if (ser >= 3.8)
+                else if (ser >= 4)
                 {
                     image5[j].Source = null;
                 }
-                else if (ser >= 2.8)
+                else if (ser >= 3)
                 {
                     image5[j].Source = null;
                     image4[j].Source = null;
                 }
-                else if (ser >= 1.8)
+                else if (ser >= 2)
                 {
                     image5[j].Source = null;
                     image4[j].Source = null;
@@ -166,9 +168,12 @@ namespace LodgingSearchSystem
                 j++;
             }
 
+
             if (recordcount == recordmax + 1)
             {
-
+                sort = null;
+                optionStr = null;
+                CallJson(wc);
                 Random rnd = new Random();
                 int rand = rnd.Next(1, recordcount);
                 Recomendhotel(rand);
@@ -177,7 +182,11 @@ namespace LodgingSearchSystem
                 {
                     if (array >= 30)
                     {
-                        page++;
+                        if(array <= recordmax)
+                        {
+                            page++;
+                            array = 0;
+                        }
                         array = 0;
                     }
 
@@ -200,16 +209,16 @@ namespace LodgingSearchSystem
                     {
                         ;
                     }
-                    else if (ser >= 3.8)
+                    else if (ser >= 4)
                     {
                         image5[i].Source = null;
                     }
-                    else if (ser >= 2.8)
+                    else if (ser >= 3)
                     {
                         image5[i].Source = null;
                         image4[i].Source = null;
                     }
-                    else if (ser >= 1.8)
+                    else if (ser >= 2)
                     {
                         image5[i].Source = null;
                         image4[i].Source = null;
@@ -236,6 +245,7 @@ namespace LodgingSearchSystem
             }
 
             lbPrefName.Content = area + "　ホテル・旅館";
+            
             lbRecordCount.Content = String.Format("{0}件中", recordcount);
             lbDisplay.Content = String.Format("{0} ～{1} 表示", displayfirst, displaylast);
         }
@@ -252,62 +262,7 @@ namespace LodgingSearchSystem
         }
 
 
-        private void CallJson(WebClient wc)
-        {
-
-            optionStr = CheckBoxSearch(optionStr);
-
-
-            if (sort != null && optionStr == "")
-            {
-                string regionnum2 = string.Format(
-                        "https://app.rakuten.co.jp/services/api/Travel/SimpleHotelSearch/20170426?format=json&largeClassCode=japan&middleClassCode={0}&smallClassCode={1}&page={2}&sort={3}&applicationId=1023910507139864215", pref, code, page, sort);
-                var dString2 = wc.DownloadString(regionnum2);
-                var json2 = JsonConvert.DeserializeObject<Rootobject>(dString2);
-                json = json2;
-            }
-            else if (sort == null && optionStr != "")
-            {
-                try
-                {
-                    string regionnum3 = string.Format(
-                        "https://app.rakuten.co.jp/services/api/Travel/SimpleHotelSearch/20170426?format=json&largeClassCode=japan&middleClassCode={0}&smallClassCode={1}&page={2}&squeezeCondition={3}&applicationId=1023910507139864215", pref, code, page, optionStr);
-                    var dString3 = wc.DownloadString(regionnum3);
-                    var json3 = JsonConvert.DeserializeObject<Rootobject>(dString3);
-                    json = json3;
-                }
-                catch (System.Net.WebException e)
-                {
-                    MessageBox.Show("該当ホテル・旅館がありません。");
-                }
-            }
-            else if (sort != null && optionStr != "")
-            {
-                try
-                {
-                    string regionnum4 = string.Format(
-                         "https://app.rakuten.co.jp/services/api/Travel/SimpleHotelSearch/20170426?format=json&largeClassCode=japan&middleClassCode={0}&smallClassCode={1}&page={2}&sort={3}&squeezeCondition={4}&applicationId=1023910507139864215", pref, code, page, sort, optionStr);
-                    var dString4 = wc.DownloadString(regionnum4);
-                    var json4 = JsonConvert.DeserializeObject<Rootobject>(dString4);
-                    json = json4;
-                }
-                catch (WebException e)
-                {
-                    MessageBox.Show("該当ホテル・旅館がありません。");
-                }
-            }
-            else
-            {
-                string regionnum1 = string.Format(
-                                  "https://app.rakuten.co.jp/services/api/Travel/SimpleHotelSearch/20170426?format=json&largeClassCode=japan&middleClassCode={0}&smallClassCode={1}&page={2}&applicationId=1023910507139864215", pref, code, page);
-                var dString1 = wc.DownloadString(regionnum1);
-                var json1 = JsonConvert.DeserializeObject<Rootobject>(dString1);
-                json = json1;
-
-            }
-        }
-
-
+       
 
         private string CheckBoxSearch(string optionStr)
         {
@@ -357,7 +312,7 @@ namespace LodgingSearchSystem
                 max = 9;
             }
 
-            if (recordmax >= recordcount)
+            if (recordmax >= recordcount - 1)
             {
                 if (page >= 2)
                 {
@@ -448,12 +403,7 @@ namespace LodgingSearchSystem
             btNext.IsEnabled = true;
         }
 
-        private void Mapshow(int i)
-        {
-            Map map = new Map(pref, code, i, page, sort, optionStr);
-            map.Show();
-        }
-
+        
         private void btRecommend_Click(object sender, RoutedEventArgs e)
         {
             sort = null;
@@ -481,8 +431,83 @@ namespace LodgingSearchSystem
 
         private void btsqueeze_Click(object sender, RoutedEventArgs e)
         {
+            optionStr = null;
             NewData(sender, e);
             Page_Loaded(sender, e);
         }
+
+        private void CallJson(WebClient wc)
+        {
+
+            if (recordcount == recordmax + 1)
+            {
+                ;
+            }
+            else
+            {
+                optionStr = CheckBoxSearch(optionStr);
+            }
+
+
+            if (sort != null && optionStr == "")
+            {
+                string regionnum2 = string.Format(
+                        "https://app.rakuten.co.jp/services/api/Travel/SimpleHotelSearch/20170426?format=json&largeClassCode=japan&middleClassCode={0}&smallClassCode={1}&page={2}&sort={3}&applicationId=1023910507139864215", pref, code, page, sort);
+                var dString2 = wc.DownloadString(regionnum2);
+                var json2 = JsonConvert.DeserializeObject<Rootobject>(dString2);
+                json = json2;
+            }
+            else if (sort == null && optionStr != "")
+            {
+                try
+                {
+                    string regionnum3 = string.Format(
+                        "https://app.rakuten.co.jp/services/api/Travel/SimpleHotelSearch/20170426?format=json&largeClassCode=japan&middleClassCode={0}&smallClassCode={1}&page={2}&squeezeCondition={3}&applicationId=1023910507139864215", pref, code, page, optionStr);
+                    var dString3 = wc.DownloadString(regionnum3);
+                    var json3 = JsonConvert.DeserializeObject<Rootobject>(dString3);
+                    json = json3;
+                }
+                catch (System.Net.WebException)
+                {
+                    if (check == 0)
+                    {
+                        MessageBox.Show("該当ホテル・旅館がありません。");
+                        check++;
+                    }
+                }
+            }
+            else if (sort != null && optionStr != "")
+            {
+
+                try
+                {
+                    string regionnum4 = string.Format(
+                         "https://app.rakuten.co.jp/services/api/Travel/SimpleHotelSearch/20170426?format=json&largeClassCode=japan&middleClassCode={0}&smallClassCode={1}&page={2}&sort={3}&squeezeCondition={4}&applicationId=1023910507139864215", pref, code, page, sort, optionStr);
+                    var dString4 = wc.DownloadString(regionnum4);
+                    var json4 = JsonConvert.DeserializeObject<Rootobject>(dString4);
+                    json = json4;
+
+                }
+                catch (WebException)
+                {
+                    if (check == 0)
+                    {
+                        MessageBox.Show("該当ホテル・旅館がありません。");
+                        check++;
+                    }
+                }
+            }
+            else
+            {
+                string regionnum1 = string.Format(
+                                  "https://app.rakuten.co.jp/services/api/Travel/SimpleHotelSearch/20170426?format=json&largeClassCode=japan&middleClassCode={0}&smallClassCode={1}&page={2}&applicationId=1023910507139864215", pref, code, page);
+                var dString1 = wc.DownloadString(regionnum1);
+                var json1 = JsonConvert.DeserializeObject<Rootobject>(dString1);
+                json = json1;
+
+            }
+        }
+
+
     }
 }

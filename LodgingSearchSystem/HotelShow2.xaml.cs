@@ -37,6 +37,12 @@ namespace LodgingSearchSystem
         int recordcount;
         int page = 1;
         string sort = null;
+        int array = 0;
+        int check = 0;
+
+        public string optionStr = "";
+
+
         Rootobject json;
 
         WebClient wc = new WebClient()
@@ -57,10 +63,21 @@ namespace LodgingSearchSystem
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             DetailCodeSerch();
-
             CallJson(wc);
+
             //レコードの数
             recordcount = json.pagingInfo.recordCount;
+            if (recordcount < 10)
+            {
+                max = recordcount - 1;
+                recordmax = recordcount - 1;
+                btNext.IsEnabled = false;
+            }
+
+            if (recordcount == 0)
+            {
+                MessageBox.Show("該当ホテル・旅館がありません。");
+            }
             //表示しているレコードの番号
             var displayfirst = recordmin + 1;
             var displaylast = recordmax + 1;
@@ -89,7 +106,8 @@ namespace LodgingSearchSystem
             //最低代金
             Label[] mincharge = { lbMinCharge1, lbMinCharge2, lbMinCharge3, lbMinCharge4, lbMinCharge5, lbMinCharge6, lbMinCharge7, lbMinCharge8, lbMinCharge9, lbMinCharge10 };
 
-            Button[] map = { btMap1, btMap2, btMap3, btMap4, btMap5, btMap6, btMap7, btMap8, btMap9, btMap10 };
+
+
 
             for (int i = min; i <= max; i++)
             {
@@ -112,16 +130,16 @@ namespace LodgingSearchSystem
                 {
                     ;
                 }
-                else if (ser >= 3.8)
+                else if (ser >= 4)
                 {
                     image5[j].Source = null;
                 }
-                else if (ser >= 2.8)
+                else if (ser >= 3)
                 {
                     image5[j].Source = null;
                     image4[j].Source = null;
                 }
-                else if (ser >= 1.8)
+                else if (ser >= 2)
                 {
                     image5[j].Source = null;
                     image4[j].Source = null;
@@ -145,9 +163,271 @@ namespace LodgingSearchSystem
                 }
                 j++;
             }
+
+
+            if (recordcount == recordmax + 1)
+            {
+                sort = null;
+                optionStr = null;
+                CallJson(wc);
+                Random rnd = new Random();
+                int rand = rnd.Next(1, recordcount);
+                Recomendhotel(rand);
+
+                for (int i = j; i < 10; i++)
+                {
+                    if (array >= 30)
+                    {
+                        if (array <= recordmax)
+                        {
+                            page++;
+                            array = 0;
+                        }
+                        array = 0;
+                    }
+
+                    var imageurl = json.hotels[array].hotel[0].hotelBasicInfo.hotelImageUrl;
+                    BitmapImage imagesourse = new BitmapImage(new Uri(imageurl));
+                    images[i].Source = imagesourse;
+                    labelAccessArray[i].Text = json.hotels[array].hotel[0].hotelBasicInfo.access;
+                    hotelName[i].Content = "★おすすめ★" + json.hotels[array].hotel[0].hotelBasicInfo.hotelName;
+                    serviseaverage[i].Content = json.hotels[array].hotel[1].hotelRatingInfo.serviceAverage;
+                    hotelspecial[i].Content = json.hotels[array].hotel[0].hotelBasicInfo.hotelSpecial;
+                    postalcode[i].Content = "〒" + json.hotels[array].hotel[0].hotelBasicInfo.postalCode;
+                    mincharge[i].Content = String.Format("{0:N0}円", json.hotels[array].hotel[0].hotelBasicInfo.hotelMinCharge);
+                    string address1 = json.hotels[array].hotel[0].hotelBasicInfo.address1;
+                    string address2 = json.hotels[array].hotel[0].hotelBasicInfo.address2;
+                    address[i].Content = String.Format("{0}{1}", address1, address2);
+
+                    int ser = Convert.ToInt32(serviseaverage[i].Content);
+
+                    if (ser >= 5)
+                    {
+                        ;
+                    }
+                    else if (ser >= 4)
+                    {
+                        image5[i].Source = null;
+                    }
+                    else if (ser >= 3)
+                    {
+                        image5[i].Source = null;
+                        image4[i].Source = null;
+                    }
+                    else if (ser >= 2)
+                    {
+                        image5[i].Source = null;
+                        image4[i].Source = null;
+                        image3[i].Source = null;
+                    }
+                    else if (ser >= 1)
+                    {
+                        image5[i].Source = null;
+                        image4[i].Source = null;
+                        image3[i].Source = null;
+                        image2[i].Source = null;
+                    }
+                    else
+                    {
+                        image5[i].Source = null;
+                        image4[i].Source = null;
+                        image3[i].Source = null;
+                        image2[i].Source = null;
+                        image1[i].Source = null;
+                        serviseaverage[i].Content = "口コミ０件";
+                    }
+                    array++;
+                }
+            }
             lbPrefName.Content = area + "　ホテル・旅館";
             lbRecordCount.Content = String.Format("{0}件中", recordcount);
             lbDisplay.Content = String.Format("{0} ～ {1} 表示  ", displayfirst, displaylast);
+        }
+
+        public void Recomendhotel(int rand)
+        {
+            array = rand % 30;
+            page = rand / 30;
+            if (page == 0)
+            {
+                page = 1;
+            }
+            CallJson(wc);
+        }
+
+
+
+
+        private string CheckBoxSearch(string optionStr)
+        {
+            if (chdaiyoku.IsChecked == true)
+            {
+                optionStr = "daiyoku";
+            }
+            if (chinternet.IsChecked == true && optionStr != null)
+            {
+                optionStr += ",internet";
+            }
+            else if (chinternet.IsChecked == true)
+            {
+                optionStr += "internet";
+            }
+            if (chkinen.IsChecked == true && optionStr != null)
+            {
+                optionStr += ",kinen";
+            }
+            else if (chkinen.IsChecked == true)
+            {
+                optionStr += "kinen";
+            }
+            if (chonsen.IsChecked == true && optionStr != null)
+            {
+                optionStr += ",onsen";
+            }
+            else if (chonsen.IsChecked == true)
+            {
+                optionStr += "onsen";
+            }
+
+            return optionStr;
+        }
+
+        private void btNext_Click(object sender, RoutedEventArgs e)
+        {
+
+            next++;
+            min += 10; max += 10;
+            recordmin += 10; recordmax += 10;
+
+            if (next % 3 == 0)
+            {
+                page++;
+                min = 0;
+                max = 9;
+            }
+
+            if (recordmax >= recordcount - 1)
+            {
+                if (page >= 2)
+                {
+                    max = min + (recordcount - (next * 10) - 1);
+                }
+                else
+                {
+                    max = recordcount - 1;
+                }
+                recordmax = recordcount - 1;
+                btNext.IsEnabled = false;
+            }
+
+            j = 0;
+
+            Page_Loaded(sender, e);
+
+            btBack.IsEnabled = true;
+
+
+        }
+
+        private void btBack_Click(object sender, RoutedEventArgs e)
+        {
+
+            btNext.IsEnabled = true;
+
+            if (recordmax + 1 == recordcount)
+            {
+                max = max - (recordcount - (next * 10) - 1) - 1;
+                recordmax = recordcount - (recordcount - (next * 10)) - 1;
+                if (recordmax % 30 != 0)
+                {
+                    page = recordmax / 30 + 1;
+                }
+                else
+                {
+                    page = recordmax / 30;
+                }
+
+                if (page == 0)
+                {
+                    page = 1;
+                }
+                min -= 10;
+                recordmin -= 10;
+                if (max < 0 || min < 0)
+                {
+                    min = 20;
+                    max = 29;
+                }
+            }
+            else if (next % 3 == 0 && next > 0)
+            {
+                page--;
+                min = 20;
+                max = 29;
+                recordmax -= 10;
+                recordmin -= 10;
+            }
+            else
+            {
+                min -= 10; max -= 10;
+                recordmax -= 10; recordmin -= 10;
+            }
+
+            j = 0;
+            Page_Loaded(sender, e);
+
+            if (page == 1 && min == 0)
+            {
+                btBack.IsEnabled = false;
+            }
+
+            next--;
+        }
+
+        private void NewData(object sender, RoutedEventArgs e)
+        {
+            recordmin = 0;
+            recordmax = 9;
+            min = 0;
+            max = 9;
+            j = 0;
+            next = 0;
+            page = 1;
+            btBack.IsEnabled = false;
+            btNext.IsEnabled = true;
+        }
+
+
+        private void btRecommend_Click(object sender, RoutedEventArgs e)
+        {
+            sort = null;
+            NewData(sender, e);
+            sort = "standard";
+            Page_Loaded(sender, e);
+        }
+
+
+        private void btMax_Click(object sender, RoutedEventArgs e)
+        {
+            sort = null;
+            NewData(sender, e);
+            sort = "-roomCharge";
+            Page_Loaded(sender, e);
+        }
+
+        private void btMin_Click(object sender, RoutedEventArgs e)
+        {
+            sort = null;
+            NewData(sender, e);
+            sort = "+roomCharge";
+            Page_Loaded(sender, e);
+        }
+
+        private void btsqueeze_Click(object sender, RoutedEventArgs e)
+        {
+            optionStr = null;
+            NewData(sender, e);
+            Page_Loaded(sender, e);
         }
 
         private void DetailCodeSerch()
@@ -263,184 +543,74 @@ namespace LodgingSearchSystem
 
         private void CallJson(WebClient wc)
         {
-            if (sort != null)
+
+            if (recordcount == recordmax + 1)
             {
-                string regionnum2 = string.Format(
-                        "https://app.rakuten.co.jp/services/api/Travel/SimpleHotelSearch/20170426?format=json&largeClassCode=japan&middleClassCode={0}&smallClassCode={1}&detailClassCode={2}&page={3}&sort={4}&applicationId=1023910507139864215", pref, code,detailcode,page,sort);
-                var dString2 = wc.DownloadString(regionnum2);
-                var json2 = JsonConvert.DeserializeObject<Rootobject>(dString2);
-                json = json2;
+                ;
             }
             else
             {
-                string regionnum = string.Format(
-                "https://app.rakuten.co.jp/services/api/Travel/SimpleHotelSearch/20170426?format=json&largeClassCode=japan&middleClassCode={0}&smallClassCode={1}&detailClassCode={2}&page={3}&applicationId=1023910507139864215", pref, code, detailcode,page);
-                var dString1 = wc.DownloadString(regionnum);
+                optionStr = CheckBoxSearch(optionStr);
+            }
+
+            if (sort != null && optionStr == "")
+            {
+                string regionnum1 = string.Format(
+                        "https://app.rakuten.co.jp/services/api/Travel/SimpleHotelSearch/20170426?format=json&largeClassCode=japan&middleClassCode={0}&smallClassCode={1}&detailClassCode={2}&page={3}&sort={4}&applicationId=1023910507139864215", pref, code, detailcode, page, sort);
+                var dString1 = wc.DownloadString(regionnum1);
                 var json1 = JsonConvert.DeserializeObject<Rootobject>(dString1);
                 json = json1;
             }
-        }
-
-        private void Sort(object sender, RoutedEventArgs e)
-        {
-            sort = null;
-            recordmin = 0;
-            recordmax = 9;
-            min = 0;
-            max = 9;
-            j = 0;
-            next = 1;
-            page = 1;
-            btBack.IsEnabled = false;
-        }
-
-        private void btNext_Click(object sender, RoutedEventArgs e)
-        {
-            next++;
-            min += 10; max += 10;
-            recordmin += 10; recordmax += 10;
-
-            if (next % 3 == 0)
+            else if(sort == null && optionStr != "")
             {
-                page++;
-                min = 0;
-                max = 9;
-            }
-
-            if (recordmax >= recordcount)
-            {
-                if (page >= 2)
+                try
                 {
-                    max = min + (recordcount - (next * 10) - 1);
+                    string regionnum1 = string.Format(
+                        "https://app.rakuten.co.jp/services/api/Travel/SimpleHotelSearch/20170426?format=json&largeClassCode=japan&middleClassCode={0}&smallClassCode={1}&detailClassCode={2}&page={3}&squeezeCondition={4}&applicationId=1023910507139864215", pref, code,detailcode,page, optionStr);
+                    var dString1 = wc.DownloadString(regionnum1);
+                    var json1 = JsonConvert.DeserializeObject<Rootobject>(dString1);
+                    json = json1;
                 }
-                else
+                catch (System.Net.WebException)
                 {
-                    max = recordcount - 1;
+                    if (check == 0)
+                    {
+                        MessageBox.Show("該当ホテル・旅館がありません。");
+                        check++;
+                    }
                 }
-                recordmax = recordcount - 1;
-                btNext.IsEnabled = false;
             }
-
-            j = 0;
-
-            Page_Loaded(sender, e);
-
-            btBack.IsEnabled = true;
-        }
-
-        private void btBack_Click(object sender, RoutedEventArgs e)
-        {
-            btNext.IsEnabled = true;
-
-            int i = max;
-            if (next % 3 == 0 && next > 0)
+            else if (sort != null && optionStr != "")
             {
-                page--;
-                min = 20;
-                max = 29;
-                recordmax -= 10;
-                recordmin -= 10;
-            }
-            else if (recordmax + 1 == recordcount)
-            {
-                max = max - (recordcount - (next * 10) - 1) - 1;
-                recordmax = recordcount - (recordcount - (next * 10)) - 1;
-                min -= 10;
-                recordmin -= 10;
+
+                try
+                {
+                    string regionnum4 = string.Format(
+                         "https://app.rakuten.co.jp/services/api/Travel/SimpleHotelSearch/20170426?format=json&largeClassCode=japan&middleClassCode={0}&smallClassCode={1}&detailClassCode={2}&page={3}&sort={4}&squeezeCondition={5}&applicationId=1023910507139864215", pref, code,detailcode, page, sort, optionStr);
+                    var dString4 = wc.DownloadString(regionnum4);
+                    var json4 = JsonConvert.DeserializeObject<Rootobject>(dString4);
+                    json = json4;
+
+                }
+                catch (WebException)
+                {
+                    if (check == 0)
+                    {
+                        MessageBox.Show("該当ホテル・旅館がありません。");
+                        check++;
+                    }
+                }
             }
             else
             {
-                min -= 10; max -= 10;
-                recordmax -= 10; recordmin -= 10;
+                string regionnum1 = string.Format(
+                                  "https://app.rakuten.co.jp/services/api/Travel/SimpleHotelSearch/20170426?format=json&largeClassCode=japan&middleClassCode={0}&smallClassCode={1}&detailClassCode={2}&page={3}&applicationId=1023910507139864215", pref, code,detailcode, page);
+                var dString1 = wc.DownloadString(regionnum1);
+                var json1 = JsonConvert.DeserializeObject<Rootobject>(dString1);
+                json = json1;
+
             }
-
-            j = 0;
-            Page_Loaded(sender, e);
-
-            if (page == 1 && min == 0 && next == 0)
-            {
-                btBack.IsEnabled = false;
-            }
-
-            next--;
-        }
-
-
-        private void btRecommend_Click(object sender, RoutedEventArgs e)
-        {
-            Sort(sender, e);
-            sort = "standard";
-            Page_Loaded(sender, e);
-        }
-
-        private void btMax_Click(object sender, RoutedEventArgs e)
-        {
-            Sort(sender, e);
-            sort = "-roomCharge";
-            Page_Loaded(sender, e);
-        }
-
-        private void btMin_Click(object sender, RoutedEventArgs e)
-        {
-            Sort(sender, e);
-            sort = "+roomCharge";
-            Page_Loaded(sender, e);
-        }
-
-        private void Mapshow2(int i)
-        {
-            Map2 map = new Map2(pref, code,detailcode,i);
-            map.Show();
-        }
-
-        private void btMap1_Click(object sender, RoutedEventArgs e)
-        {
-            Mapshow2(0);
-        }
-
-        private void btMap2_Click(object sender, RoutedEventArgs e)
-        {
-            Mapshow2(1);
-        }
-
-        private void btMap3_Click(object sender, RoutedEventArgs e)
-        {
-            Mapshow2(2);
-        }
-
-        private void btMap4_Click(object sender, RoutedEventArgs e)
-        {
-            Mapshow2(3);
-        }
-
-        private void btMap5_Click(object sender, RoutedEventArgs e)
-        {
-            Mapshow2(4);
-        }
-
-        private void btMap6_Click(object sender, RoutedEventArgs e)
-        {
-            Mapshow2(5);
-        }
-
-        private void btMap7_Click(object sender, RoutedEventArgs e)
-        {
-            Mapshow2(6);
-        }
-
-        private void btMap8_Click(object sender, RoutedEventArgs e)
-        {
-            Mapshow2(7);
-        }
-
-        private void btMap9_Click(object sender, RoutedEventArgs e)
-        {
-            Mapshow2(8);
-        }
-
-        private void btMap10_Click(object sender, RoutedEventArgs e)
-        {
-            Mapshow2(9);
         }
     }
+       
 }

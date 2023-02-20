@@ -10,7 +10,7 @@
       Title="Japan">
 
     <Grid>
-
+        <Image Margin="488,83,243,323" Source="kazoku.png" Stretch="Fill"/>
         <Button x:Name="btHokkaido" Content="北海道" HorizontalAlignment="Left" Height="117" Margin="829,34,0,0" VerticalAlignment="Top" Width="116" Background="#FF4545D6"  Foreground="White" Click="btHokkaido_Click"/>
         <Button x:Name="btAomori" Content="青森" HorizontalAlignment="Left" Height="42" Margin="819,169,0,0" VerticalAlignment="Top" Width="60" Background="CornflowerBlue" Foreground="White" Click="btAomori_Click"/>
         <Button x:Name="btAkita" Content="秋田" HorizontalAlignment="Left" Height="42" Margin="759,212,0,0" VerticalAlignment="Top" Width="60" Background="CornflowerBlue" Foreground="White" Click="btAkita_Click" />
@@ -59,16 +59,17 @@
         <Button x:Name="btMiyazaki" Content="宮&#10;崎" HorizontalAlignment="Left" Height="85" Margin="150,428,0,0" VerticalAlignment="Top" Width="60" Background="#FFFF005D" Foreground="White" Click="btMiyazaki_Click"/>
         <Button x:Name="btOkinawa" Content="沖縄" HorizontalAlignment="Left" Height="42" Margin="394,171,0,0" VerticalAlignment="Top" Width="60" Background="#FFFF005D" Foreground="White" RenderTransformOrigin="0.119,0.512" Click="btOkinawa_Click"/>
         <Label Content="一一一一一一一一一一一一一一一一一一" HorizontalAlignment="Left" Height="20" Margin="243,236,0,0" VerticalAlignment="Top" Width="240"/>
-        <Label Content="一一一一一一一一一一一一一一一一一一" HorizontalAlignment="Left" Height="20" Margin="408,143,0,0" VerticalAlignment="Top" Width="240" RenderTransformOrigin="0.5,0.5">
+        <Label Content="一一一一一一一一一一一一一一一一一一" HorizontalAlignment="Left" Height="20" Margin="363,125,0,0" VerticalAlignment="Top" Width="240" RenderTransformOrigin="0.5,0.5">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
-                    <RotateTransform Angle="-54.503"/>
+                    <RotateTransform Angle="-78.433"/>
                     <TranslateTransform/>
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
+        <Image Margin="67,33,695,369" Source="ryokou.png" Stretch="Fill"/>
 
 
     </Grid>
