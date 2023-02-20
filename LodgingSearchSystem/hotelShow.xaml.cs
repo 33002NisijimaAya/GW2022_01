@@ -180,6 +180,7 @@ namespace LodgingSearchSystem
 
                 for (int i = j; i < 10; i++)
                 {
+
                     if (array >= 30)
                     {
                         if(array <= recordmax)
@@ -189,57 +190,63 @@ namespace LodgingSearchSystem
                         }
                         array = 0;
                     }
+                    try
+                    {
+                        var imageurl = json.hotels[array].hotel[0].hotelBasicInfo.hotelImageUrl;
+                        BitmapImage imagesourse = new BitmapImage(new Uri(imageurl));
+                        images[i].Source = imagesourse;
+                        labelAccessArray[i].Text = json.hotels[array].hotel[0].hotelBasicInfo.access;
+                        hotelName[i].Content = "★おすすめ★" + json.hotels[array].hotel[0].hotelBasicInfo.hotelName;
+                        serviseaverage[i].Content = json.hotels[array].hotel[1].hotelRatingInfo.serviceAverage;
+                        hotelspecial[i].Content = json.hotels[array].hotel[0].hotelBasicInfo.hotelSpecial;
+                        postalcode[i].Content = "〒" + json.hotels[array].hotel[0].hotelBasicInfo.postalCode;
+                        mincharge[i].Content = String.Format("{0:N0}円", json.hotels[array].hotel[0].hotelBasicInfo.hotelMinCharge);
+                        string address1 = json.hotels[array].hotel[0].hotelBasicInfo.address1;
+                        string address2 = json.hotels[array].hotel[0].hotelBasicInfo.address2;
+                        address[i].Content = String.Format("{0}{1}", address1, address2);
 
-                    var imageurl = json.hotels[array].hotel[0].hotelBasicInfo.hotelImageUrl;
-                    BitmapImage imagesourse = new BitmapImage(new Uri(imageurl));
-                    images[i].Source = imagesourse;
-                    labelAccessArray[i].Text = json.hotels[array].hotel[0].hotelBasicInfo.access;
-                    hotelName[i].Content = "★おすすめ★" + json.hotels[array].hotel[0].hotelBasicInfo.hotelName;
-                    serviseaverage[i].Content = json.hotels[array].hotel[1].hotelRatingInfo.serviceAverage;
-                    hotelspecial[i].Content = json.hotels[array].hotel[0].hotelBasicInfo.hotelSpecial;
-                    postalcode[i].Content = "〒" + json.hotels[array].hotel[0].hotelBasicInfo.postalCode;
-                    mincharge[i].Content = String.Format("{0:N0}円", json.hotels[array].hotel[0].hotelBasicInfo.hotelMinCharge);
-                    string address1 = json.hotels[array].hotel[0].hotelBasicInfo.address1;
-                    string address2 = json.hotels[array].hotel[0].hotelBasicInfo.address2;
-                    address[i].Content = String.Format("{0}{1}", address1, address2);
-
-                    int ser = Convert.ToInt32(serviseaverage[i].Content);
-
-                    if (ser >= 5)
-                    {
-                        ;
+                        int ser = Convert.ToInt32(serviseaverage[i].Content);
+                        if (ser >= 5)
+                        {
+                            ;
+                        }
+                        else if (ser >= 4)
+                        {
+                            image5[i].Source = null;
+                        }
+                        else if (ser >= 3)
+                        {
+                            image5[i].Source = null;
+                            image4[i].Source = null;
+                        }
+                        else if (ser >= 2)
+                        {
+                            image5[i].Source = null;
+                            image4[i].Source = null;
+                            image3[i].Source = null;
+                        }
+                        else if (ser >= 1)
+                        {
+                            image5[i].Source = null;
+                            image4[i].Source = null;
+                            image3[i].Source = null;
+                            image2[i].Source = null;
+                        }
+                        else
+                        {
+                            image5[i].Source = null;
+                            image4[i].Source = null;
+                            image3[i].Source = null;
+                            image2[i].Source = null;
+                            image1[i].Source = null;
+                            serviseaverage[i].Content = "口コミ０件";
+                        }
                     }
-                    else if (ser >= 4)
+                    catch (Exception)
                     {
-                        image5[i].Source = null;
+                        return;
                     }
-                    else if (ser >= 3)
-                    {
-                        image5[i].Source = null;
-                        image4[i].Source = null;
-                    }
-                    else if (ser >= 2)
-                    {
-                        image5[i].Source = null;
-                        image4[i].Source = null;
-                        image3[i].Source = null;
-                    }
-                    else if (ser >= 1)
-                    {
-                        image5[i].Source = null;
-                        image4[i].Source = null;
-                        image3[i].Source = null;
-                        image2[i].Source = null;
-                    }
-                    else
-                    {
-                        image5[i].Source = null;
-                        image4[i].Source = null;
-                        image3[i].Source = null;
-                        image2[i].Source = null;
-                        image1[i].Source = null;
-                        serviseaverage[i].Content = "口コミ０件";
-                    }
+                    
                     array++;
                 }
             }
